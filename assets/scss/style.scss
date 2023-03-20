@@ -4,3 +4,7 @@
 @import 'partials/search';
 @import 'partials/test';
 
+:root {
+    @include color-palette(#000000, #121212, #FFFFFF, #1FDF64);
+}
+

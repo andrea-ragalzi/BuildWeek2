@@ -1,10 +1,10 @@
 @import 'mixin';
 
 :root {
-    @include color-palette(#FF5733, #C70039, #900C3F);
+    @include color-palette(#000000, #121212, #FFFFFF, #1FDF64);
 }
 
 .test-body {
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
+    background-color: var(--color-black);
+    color: var(--color-white);
 }
