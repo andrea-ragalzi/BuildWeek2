@@ -2,7 +2,7 @@
     $primary: $primary-color;
     $secondary: $secondary-color;
     $tertiary: $tertiary-color;
-  
+
     // Lighten and darken variations
     $primary-light: lighten($primary, 10%);
     $primary-dark: darken($primary, 10%);
@@ -10,22 +10,25 @@
     $secondary-dark: darken($secondary, 10%);
     $tertiary-light: lighten($tertiary, 10%);
     $tertiary-dark: darken($tertiary, 10%);
-  
+
     // Color palette map
-    $colors: (
-      "primary": $primary,
-      "primary-light": $primary-light,
-      "primary-dark": $primary-dark,
-      "secondary": $secondary,
-      "secondary-light": $secondary-light,
-      "secondary-dark": $secondary-dark,
-      "tertiary": $tertiary,
-      "tertiary-light": $tertiary-light,
-      "tertiary-dark": $tertiary-dark
-    );
-  
+    $colors: ("primary": $primary,
+        "primary-light": $primary-light,
+        "primary-dark": $primary-dark,
+        "secondary": $secondary,
+        "secondary-light": $secondary-light,
+        "secondary-dark": $secondary-dark,
+        "tertiary": $tertiary,
+        "tertiary-light": $tertiary-light,
+        "tertiary-dark": $tertiary-dark );
+
     // Define color variables
-    @each $color, $value in $colors {
-      --color-#{$color}: #{$value};
+    @each $color,
+    $value in $colors {
+        --color-#{$color}: #{$value};
     }
-  }
+}
+
+// bg-black: #000000
+// bg-grey: #0C1120
+// grey-secondary: #0C1120

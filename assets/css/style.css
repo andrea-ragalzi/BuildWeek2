@@ -1,3 +1,16 @@
-body {
-  background-color: #008000;
+:root {
+  --color-primary: #FF5733;
+  --color-primary-light: #ff8166;
+  --color-primary-dark: #ff2d00;
+  --color-secondary: #C70039;
+  --color-secondary-light: #fa0048;
+  --color-secondary-dark: #94002a;
+  --color-tertiary: #900C3F;
+  --color-tertiary-light: #bf1054;
+  --color-tertiary-dark: #61082a;
+}
+
+.test-body {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
 }/*# sourceMappingURL=style.css.map */
