@@ -1,3 +1,27 @@
+a {
+  color: black;
+}
+
+.album-body {
+  background: rgb(34, 193, 195);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.863) 60%, rgb(253, 187, 45) 100%);
+  color: white;
+}
+.album-body .play i {
+  padding: 0.5em;
+  background-color: green;
+  border-radius: 50%;
+}
+
+.albumFooter {
+  position: sticky;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+.albumFooter .playBar {
+  background-color: rgba(128, 128, 128, 0.185);
+}
+
 :root {
   --color-primary: #FF5733;
   --color-primary-light: #ff8166;
