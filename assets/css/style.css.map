@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"style.css"}
+{"version":3,"sources":["../scss/partials/_global.scss","../scss/partials/_color.scss","style.css"],"names":[],"mappings":"AAEA;EACI,yBCHY;ACEhB","file":"style.css"}

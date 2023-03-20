@@ -1,0 +1,8 @@
+@import 'mixin';
+
+@include color-palette(#FF5733, #C70039, #900C3F);
+
+.test-body {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
