@@ -34,3 +34,7 @@
         --color-#{$color}: #{$value};
     }
 }
+
+:root {
+    @include color-palette(#000000, #121212, #FFFFFF, #1FDF64);
+}
