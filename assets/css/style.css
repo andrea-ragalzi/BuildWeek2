@@ -13,6 +13,29 @@
   --color-green-dark: #19b250;
 }
 
+a {
+  color: black;
+}
+
+.album-body {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.863) 60%, rgb(253, 187, 45) 100%);
+  color: white;
+}
+.album-body .play i {
+  padding: 0.5em;
+  background-color: var(--color-green-dark);
+  border-radius: 50%;
+}
+
+.albumFooter {
+  position: sticky;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+.albumFooter .playBar {
+  background-color: rgba(128, 128, 128, 0.185);
+}
+
 :root {
   --color-black: #000000;
   --color-black-light: #1a1a1a;
