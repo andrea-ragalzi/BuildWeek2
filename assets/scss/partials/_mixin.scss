@@ -1,26 +1,32 @@
-@mixin color-palette($primary-color, $secondary-color, $tertiary-color) {
-    $primary: $primary-color;
-    $secondary: $secondary-color;
-    $tertiary: $tertiary-color;
+@mixin color-palette($black-color, $grey-color, $white-color, $green-color) {
+    $black: $black-color;
+    $grey: $grey-color;
+    $white: $white-color;
+    $green: $green-color;
 
     // Lighten and darken variations
-    $primary-light: lighten($primary, 10%);
-    $primary-dark: darken($primary, 10%);
-    $secondary-light: lighten($secondary, 10%);
-    $secondary-dark: darken($secondary, 10%);
-    $tertiary-light: lighten($tertiary, 10%);
-    $tertiary-dark: darken($tertiary, 10%);
+    $black-light: lighten($black, 10%);
+    $black-dark: darken($black, 10%);
+    $grey-light: lighten($grey, 10%);
+    $grey-dark: darken($grey, 10%);
+    $white-light: lighten($white, 10%);
+    $white-dark: darken($white, 10%);
+    $green-light: lighten($green, 10%);
+    $green-dark: darken($green, 10%);
 
     // Color palette map
-    $colors: ("primary": $primary,
-        "primary-light": $primary-light,
-        "primary-dark": $primary-dark,
-        "secondary": $secondary,
-        "secondary-light": $secondary-light,
-        "secondary-dark": $secondary-dark,
-        "tertiary": $tertiary,
-        "tertiary-light": $tertiary-light,
-        "tertiary-dark": $tertiary-dark );
+    $colors: ("black": $black,
+        "black-light": $black-light,
+        "black-dark": $black-dark,
+        "grey": $grey,
+        "grey-light": $grey-light,
+        "grey-dark": $grey-dark,
+        "white": $white,
+        "white-light": $white-light,
+        "white-dark": $white-dark,
+        "green": $green,
+        "green-light": $green-light,
+        "green-dark": $green-dark );
 
     // Define color variables
     @each $color,
@@ -29,6 +35,6 @@
     }
 }
 
-// bg-black: #000000
-// bg-grey: #0C1120
-// grey-secondary: #0C1120
+:root {
+    @include color-palette(#000000, #121212, #FFFFFF, #1FDF64);
+}
