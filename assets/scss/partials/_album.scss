@@ -1,11 +1,126 @@
 
 @import 'colors';
 
+
+@media screen and (max-width:768px) {
+    .sidebar_left{
+        display: none;
+    }
+}
+    @media screen and (max-width:992px) {
+        .sidebar_right{
+            display: none;
+        }
+}
+@media screen and (min-width:768px) {
+    .mobile{
+        display: none;
+    }
+}
+
+
+
+
+ul{
+    padding: 0;
+}
+li{
+    color: rgb(140, 140, 140);
+    font-size: 0.9em;
+    margin: 0.2em 0;
+    list-style: none;
+}
+.titleAlbumMain{
+    color: rgb(140, 140, 140);
+    border-bottom: 1px solid rgb(50, 50, 50);
+}
+.bi-play-fill{
+    color: #000000;
+    padding: 0.5em;
+    border-radius: 50%;
+    background-color: var(--color-green-dark);
+}
+.buttonDropdown{
+    img{
+        width: 25px;
+    }
+    font-size: 0.8em;
+background-color: rgba(0, 0, 0, 0.700);
+    padding: 0.2em;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+.bodyContain{
+    #album{
+        font-size: 0.7em;
+    }
+    h4{
+        font-size: 1.5em;
+    }
+    .information{
+        font-size: 0.7em;
+        p{
+            color: white;
+        }
+    }
+    p{
+        color:rgb(180, 180, 180);
+    }
+    padding: 0;
+}
+.mainDiv{
+    font-size: 0.6em;
+    background-color: #00000055;
+}
+.sidebar_left{
+    overflow-y: scroll;
+    height: 1000px;
+}
+.row{
+    .sidebar_left,.sidebar_right {
+        font-size: 0.7em;
+        color: rgb(160, 160, 160);
+        background-color: rgb(10, 10, 10);
+        left: 0;
+        position: sticky;
+     
+    }
+}
+.sidebar_left>div{
+    margin: 0.5em;
+    border-bottom:1px solid rgb(75, 75, 75) ;
+ }   
+ .small{
+    font-size: 0.7em;
+    color: rgb(140, 140, 140);
+}
+.sidebar_right span{
+    color: white;
+    font-weight: bold;
+}
+.sidebar_right>div{
+    margin: 0.5em;
+}
 a{
    color: black;
 }
+
+.bi-caret-left,.bi-caret-right{
+    padding: 0.2em;
+    border-radius: 50%;
+    background-color: #00000055;
+}
+
+.playDekstop>div{
+    font-size: 1.5em;
+}
+
+
+
+
+
 .album-body{
-background: linear-gradient(0deg,rgba(0, 0, 0, 0.863)60%,rgba(253,187,45,1) 100%);
+background: linear-gradient(0deg,rgba(0, 0, 0, 0.800)60%,rgb(255, 215, 104) 100%);
 color: white;
 #albumImg img{
     -webkit-box-shadow: 0px 0px 20px 0px #000000; 
