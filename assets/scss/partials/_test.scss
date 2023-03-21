@@ -1,6 +1,12 @@
-@import 'mixin';
+@import 'colors';
 
 .test-body {
-    background-color: var(--color-black);
-    color: var(--color-white);
+    background-color: var(--color-white);
+    color: var(--color-green-dark);
+
+    .cyclic-text {
+        animation: cyclic-scroll 10s linear infinite;
+        white-space: nowrap;
+        /* Prevent text from wrapping */
+    }
 }
