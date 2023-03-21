@@ -7,13 +7,13 @@
     }
 
     100% {
-        transform: translateX(1000%);
+        transform: translateX(-100%);
     }
 }
 
 /* Apply the animation to an HTML element */
 .cyclic-text {
-    animation: 1s linear infinite;
+    animation: 10s linear infinite;
     white-space: pre-wrap;
     /* Prevent text from wrapping */
 }
