@@ -1,22 +1,24 @@
 @import 'colors';
 
-.artist-body {
-    background-color: var(--color-black);
-    color: white;
+    .artist-body {
+        background-color: black;
+        color: white;
+    }
+
     .card{
         background-color: black;
     }
 
-    .play2 {
-        padding: 0.5em;
-        background-color: var(--color-green-dark);
-        border-radius: 50%;
-    }
+.play2 {
+    padding: 0.5em;
+    background-color: var(--color-green-dark);
+    border-radius: 50%;
+}
 
-    .shuffle {
-        color: var(--color-green-dark);
-        font-size: 1.5em;
-    }
+.shuffle {
+    color: var(--color-green-dark);
+    font-size: 1.5em;
+}
 
     .artistFooter{
         position: sticky;
@@ -29,6 +31,12 @@
             background-color: rgba(2, 2, 2, 0.965);
         }
     }
-}
 
-   
+=========
+@import 'colors';
+
+.artist-body {
+    background-color: var(--color-black);
+    color: white;
+}
+>>>>>>>>> Temporary merge branch 2
