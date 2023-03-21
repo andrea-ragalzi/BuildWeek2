@@ -32,7 +32,7 @@ const fetchTracklist = async (tracklistUrl) => {
 
 URL_ARTIST = 'https://striveschool-api.herokuapp.com/api/deezer/artist/';
 
-const artistId = 412;
+const artistId = 4149;
 
 window.onload = async () => {
     const artist = await fetchArtist(artistId);
