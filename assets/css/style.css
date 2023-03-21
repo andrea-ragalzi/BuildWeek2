@@ -13,6 +13,21 @@
   --color-green-dark: #19b250;
 }
 
+@keyframes cyclic-scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/* Apply the animation to an HTML element */
+.cyclic-text {
+  animation: cyclic-scroll 10s linear infinite;
+  white-space: nowrap;
+  /* Prevent text from wrapping */
+}
+
 :root {
   --color-black: #000000;
   --color-black-light: #1a1a1a;
@@ -75,5 +90,25 @@
 
 .test-body {
   background-color: var(--color-black);
-  color: var(--color-white);
+  color: var(--color-green-dark);
+}
+.test-body .cyclic-text {
+  animation: cyclic-scroll 10s linear infinite;
+  white-space: nowrap;
+  /* Prevent text from wrapping */
+}
+
+@keyframes cyclic-scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/* Apply the animation to an HTML element */
+.cyclic-text {
+  animation: cyclic-scroll 10s linear infinite;
+  white-space: nowrap;
+  /* Prevent text from wrapping */
 }/*# sourceMappingURL=style.css.map */
