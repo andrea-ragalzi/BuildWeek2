@@ -14,11 +14,15 @@ color: white;
 }
 }
 .albumFooter{
+   
     position: sticky;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0);
     .playBar{
         background-color: rgba(128, 128, 128, 0.185);
+    }
+    div i+p{
+        font-size: 0.7em;
     }
 }
 

@@ -35,6 +35,9 @@ a {
 .albumFooter .playBar {
   background-color: rgba(128, 128, 128, 0.185);
 }
+.albumFooter div i + p {
+  font-size: 0.7em;
+}
 
 :root {
   --color-black: #000000;
