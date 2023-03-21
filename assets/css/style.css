@@ -1,18 +1,3 @@
-@keyframes cyclic-scroll {
-  0% {
-    transform: translateyx(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-/* Apply the animation to an HTML element */
-.cyclic-text {
-  animation: 10s linear infinite;
-  white-space: pre-wrap;
-  /* Prevent text from wrapping */
-}
-
 a {
   color: black;
 }
@@ -36,7 +21,7 @@ a {
   background-color: rgba(0, 0, 0, 0.2);
 }
 .albumFooter .playBar {
-  background-color: rgba(75, 75, 75, 0.8);
+  background-color: rgba(70, 70, 70, 0.8);
 }
 .albumFooter div i + p {
   font-size: 0.7em;
@@ -77,16 +62,16 @@ i:hover {
 }
 
 .cyclic-text {
-  animation: cyclic-scroll 10s linear infinite;
+  animation: cyclic-scroll 5s linear infinite;
   white-space: nowrap;
   /* Prevent text from wrapping */
 }
 
 @keyframes cyclic-scroll {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-180%);
   }
 }/*# sourceMappingURL=style.css.map */
