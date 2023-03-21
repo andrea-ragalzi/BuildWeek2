@@ -23,18 +23,81 @@ a {
 }
 
 :root {
-  --color-primary: #FF5733;
-  --color-primary-light: #ff8166;
-  --color-primary-dark: #ff2d00;
-  --color-secondary: #C70039;
-  --color-secondary-light: #fa0048;
-  --color-secondary-dark: #94002a;
-  --color-tertiary: #900C3F;
-  --color-tertiary-light: #bf1054;
-  --color-tertiary-dark: #61082a;
+  --color-black: #000000;
+  --color-black-light: #1a1a1a;
+  --color-black-dark: black;
+  --color-grey: #121212;
+  --color-grey-light: #2c2c2c;
+  --color-grey-dark: black;
+  --color-white: #FFFFFF;
+  --color-white-light: white;
+  --color-white-dark: #e6e6e6;
+  --color-green: #1FDF64;
+  --color-green-light: #4be683;
+  --color-green-dark: #19b250;
+}
+
+:root {
+  --color-black: #000000;
+  --color-black-light: #1a1a1a;
+  --color-black-dark: black;
+  --color-grey: #121212;
+  --color-grey-light: #2c2c2c;
+  --color-grey-dark: black;
+  --color-white: #FFFFFF;
+  --color-white-light: white;
+  --color-white-dark: #e6e6e6;
+  --color-green: #1FDF64;
+  --color-green-light: #4be683;
+  --color-green-dark: #19b250;
+}
+
+:root {
+  --color-black: #000000;
+  --color-black-light: #1a1a1a;
+  --color-black-dark: black;
+  --color-grey: #121212;
+  --color-grey-light: #2c2c2c;
+  --color-grey-dark: black;
+  --color-white: #FFFFFF;
+  --color-white-light: white;
+  --color-white-dark: #e6e6e6;
+  --color-green: #1FDF64;
+  --color-green-light: #4be683;
+  --color-green-dark: #19b250;
+}
+
+:root {
+  --color-black: #000000;
+  --color-black-light: #1a1a1a;
+  --color-black-dark: black;
+  --color-grey: #121212;
+  --color-grey-light: #2c2c2c;
+  --color-grey-dark: black;
+  --color-white: #FFFFFF;
+  --color-white-light: white;
+  --color-white-dark: #e6e6e6;
+  --color-green: #1FDF64;
+  --color-green-light: #4be683;
+  --color-green-dark: #19b250;
+}
+
+:root {
+  --color-black: #000000;
+  --color-black-light: #1a1a1a;
+  --color-black-dark: black;
+  --color-grey: #121212;
+  --color-grey-light: #2c2c2c;
+  --color-grey-dark: black;
+  --color-white: #FFFFFF;
+  --color-white-light: white;
+  --color-white-dark: #e6e6e6;
+  --color-green: #1FDF64;
+  --color-green-light: #4be683;
+  --color-green-dark: #19b250;
 }
 
 .test-body {
-  background-color: var(--color-primary);
-  color: var(--color-secondary);
+  background-color: var(--color-black);
+  color: var(--color-white);
 }/*# sourceMappingURL=style.css.map */
