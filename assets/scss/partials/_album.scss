@@ -3,7 +3,7 @@
 
 @keyframes cyclic-scroll {
     0% {
-        transform: translateX(100%);
+        transform: translateX(10%);
     }
 
     100% {
@@ -13,8 +13,8 @@
 
 /* Apply the animation to an HTML element */
 .cyclic-text {
-    animation: cyclic-scroll 10s linear infinite;
-    white-space: nowrap;
+    animation: 10s linear infinite;
+    white-space: pre-wrap;
     /* Prevent text from wrapping */
 }
 a{
