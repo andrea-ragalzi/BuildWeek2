@@ -4,12 +4,11 @@ a{
    color: black;
 }
 .album-body{
-    background: rgb(34,193,195);
 background: linear-gradient(0deg,rgba(0, 0, 0, 0.863)60%,rgba(253,187,45,1) 100%);
 color: white;
 .play i{
     padding: 0.5em;
-    background-color: green;
+    background-color: var(--color-green-dark);
     border-radius: 50%;
 }
 }
