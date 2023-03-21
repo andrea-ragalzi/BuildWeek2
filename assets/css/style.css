@@ -148,17 +148,33 @@ i:hover {
 
 .artist-body {
   background-color: var(--color-black);
-  color: white;
+  color: var(--color-white);
+}
+.artist-body #coverImg {
+  height: 20em;
 }
 
 .test-body {
   background-color: var(--color-white);
   color: var(--color-green-dark);
 }
-.test-body .cyclic-text {
-  animation: cyclic-scroll 10s linear infinite;
-  white-space: nowrap;
-  /* Prevent text from wrapping */
+@media (min-width: 768px) {
+  .test-body .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    display: block;
+    background-color: #f8f9fa;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* Scrollable contents if viewport is shorter than content. */
+  }
+  .test-body .content {
+    margin-left: 300px;
+  }
 }
 
 :root {
