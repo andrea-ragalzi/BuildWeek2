@@ -1,1 +1,9 @@
-@import 'mixin';
+@import 'colors';
+
+.artist-body {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    #coverImg {
+        height: 20em;
+    }
+}

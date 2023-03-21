@@ -1,1 +1,33 @@
-@import 'mixin';
+
+@import 'colors';
+
+a{
+   color: black;
+}
+.album-body{
+background: linear-gradient(0deg,rgba(0, 0, 0, 0.863)60%,rgba(253,187,45,1) 100%);
+color: white;
+#albumImg img{
+    -webkit-box-shadow: 0px 0px 20px 0px #000000; 
+box-shadow: 0px 0px 20px 0px #000000;
+}
+.play i{
+    padding: 0.5em;
+    background-color: var(--color-green-dark);
+    border-radius: 50%;
+}
+}
+.albumFooter{
+    position: sticky;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.200);
+    .playBar{
+        background-color: rgba(70, 70, 70, 0.8);
+    }
+    div i+p{
+        font-size: 0.7em;
+    }
+}
+i:hover{
+    cursor: pointer;
+}
