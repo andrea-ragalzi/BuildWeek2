@@ -2,7 +2,7 @@ const createAlbumRef = (album) => {
     console.log(album);
     const albumRef = document.createElement('div');
     albumRef.innerHTML = `    <div class="row row-cols-3">
-    <img class="songImg" src="${album.album.cover}" alt="Image Album">
+    <img src="${album.album.cover}" alt="Image Album">
     <div>
       <p id="albumTitle">${album.title}</p>
       <p id="listeners">${album.rank}</p>
