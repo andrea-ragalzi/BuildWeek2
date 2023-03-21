@@ -80,6 +80,9 @@ a {
   --color-green-light: #4be683;
   --color-green-dark: #19b250;
 }
+.albumFooter div i + p {
+  font-size: 0.7em;
+}
 
 :root {
   --color-black: #000000;
