@@ -68,6 +68,11 @@ const myAlbum = function () {
     </div>
     </div>
 </div>`;
+let cyclic =document.getElementsByClassName('playBar')[0]
+    cyclic.innerHTML=`<div class="mx-2 cyclic-text"><p >${music.title}</p></div>
+    <div class="mx-2"><i class="bi bi-pc-display"></i></div>
+          <div class="mx-2"><i class="bi bi-heart"></i></div>
+          <div class="mx-2"><i class="bi bi-play"></i></div>`
       });
     });
 };
