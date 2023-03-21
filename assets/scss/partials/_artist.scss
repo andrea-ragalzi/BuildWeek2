@@ -1,8 +1,23 @@
 @import 'mixin';
 
     .artist-body {
-     background-color: red;    
-     color: white;
+        background-color: black;
+        color: white;
+    }
+
+    .card{
+        background-color: black;
+    }
+
+    .play2 {
+        padding: 0.5em;
+        background-color: var(--color-green-dark);
+        border-radius: 50%;
+    }
+
+    .shuffle {
+        color: var(--color-green-dark);
+        font-size: 1.5em;
     }
 
     .artistFooter{
@@ -10,7 +25,11 @@
         bottom: 0;
         background-color: rgba(0, 0, 0, 0);
         .playBar{
-            background-color: red;
+            background-color: rgba(49, 49, 49, 0.86);
+        }
+        .playUnder{
+            background-color: rgba(2, 2, 2, 0.965);
         }
     }
     
+
