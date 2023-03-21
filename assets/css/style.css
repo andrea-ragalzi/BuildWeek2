@@ -14,8 +14,8 @@
 }
 
 @keyframes cyclic-scroll {
-  100% {
-    transform: translateX(100%);
+  0% {
+    transform: translateyx(100%);
   }
   100% {
     transform: translateX(1000%);
@@ -53,7 +53,8 @@ a {
 .albumFooter div i + p {
   font-size: 0.7em;
 }
-.albumFooter i:hover {
+
+i:hover {
   cursor: pointer;
 }
 

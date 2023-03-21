@@ -2,8 +2,8 @@
 @import 'mixin';
 
 @keyframes cyclic-scroll {
-    100% {
-        transform: translateX(100%);
+    0% {
+        transform: translateyx(100%);
     }
 
     100% {
@@ -39,8 +39,9 @@ color: white;
     div i+p{
         font-size: 0.7em;
     }
-    i:hover{
-        cursor: pointer;
-    }
+
 }
 
+i:hover{
+    cursor: pointer;
+}
