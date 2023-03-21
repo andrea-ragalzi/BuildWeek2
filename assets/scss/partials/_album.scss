@@ -10,7 +10,6 @@
         transform: translateX(-100%);
     }
 }
-
 /* Apply the animation to an HTML element */
 .cyclic-text {
     animation: 10s linear infinite;
@@ -43,9 +42,7 @@ box-shadow: 0px 0px 20px 0px #000000;
     div i+p{
         font-size: 0.7em;
     }
-
 }
-
 i:hover{
     cursor: pointer;
 }
