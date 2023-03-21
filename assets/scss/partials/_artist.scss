@@ -2,5 +2,8 @@
 
 .artist-body {
     background-color: var(--color-black);
-    color: white;
+    color: var(--color-white);
+    #coverImg {
+        height: 20em;
+    }
 }
