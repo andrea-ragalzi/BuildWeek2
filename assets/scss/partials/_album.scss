@@ -3,18 +3,17 @@
 
 @keyframes cyclic-scroll {
     0% {
-        transform: translateX(100%);
+        transform: translateyx(100%);
     }
 
     100% {
         transform: translateX(-100%);
     }
 }
-
 /* Apply the animation to an HTML element */
 .cyclic-text {
-    animation: cyclic-scroll 10s linear infinite;
-    white-space: nowrap;
+    animation: 10s linear infinite;
+    white-space: pre-wrap;
     /* Prevent text from wrapping */
 }
 a{
@@ -23,6 +22,10 @@ a{
 .album-body{
 background: linear-gradient(0deg,rgba(0, 0, 0, 0.863)60%,rgba(253,187,45,1) 100%);
 color: white;
+#albumImg img{
+    -webkit-box-shadow: 0px 0px 20px 0px #000000; 
+box-shadow: 0px 0px 20px 0px #000000;
+}
 .play i{
     padding: 0.5em;
     background-color: var(--color-green-dark);
@@ -39,8 +42,7 @@ color: white;
     div i+p{
         font-size: 0.7em;
     }
-    i:hover{
-        cursor: pointer;
-    }
 }
-
+i:hover{
+    cursor: pointer;
+}
