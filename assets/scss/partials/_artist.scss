@@ -1,1 +1,16 @@
 @import 'mixin';
+
+    .artist-body {
+     background-color: black;    
+     color: white;
+    }
+
+    .artistFooter{
+        position: sticky;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0);
+        .playBar{
+            background-color: red;
+        }
+    }
+    
