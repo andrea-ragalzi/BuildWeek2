@@ -13,7 +13,6 @@ color: white;
 }
 }
 .albumFooter{
-   
     position: sticky;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.200);
@@ -22,6 +21,9 @@ color: white;
     }
     div i+p{
         font-size: 0.7em;
+    }
+    i:hover{
+        cursor: pointer;
     }
 }
 
