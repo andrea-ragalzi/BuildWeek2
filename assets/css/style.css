@@ -51,6 +51,20 @@ a {
   --color-green-dark: #19b250;
 }
 
+.artist-body {
+  background-color: red;
+  color: white;
+}
+
+.artistFooter {
+  position: sticky;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+.artistFooter .playBar {
+  background-color: red;
+}
+
 :root {
   --color-black: #000000;
   --color-black-light: #1a1a1a;
