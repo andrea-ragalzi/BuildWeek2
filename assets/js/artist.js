@@ -2,6 +2,7 @@ const createAlbumRef = (album) => {
     const albumRef = document.createElement('div');
     albumRef.innerHTML = `    <div class="row row-cols-3">
     <img src="./assets/img/ricordi.jpeg" alt="Image Album">
+    <img class="songImg" src="${album.album.cover}" alt="Image Album">
     <div>
       <p id="albumTitle"></p>
       <p id="listeners"></p>
