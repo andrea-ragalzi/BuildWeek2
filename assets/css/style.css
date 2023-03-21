@@ -1,26 +1,13 @@
-:root {
-  --color-black: #000000;
-  --color-black-light: #1a1a1a;
-  --color-black-dark: black;
-  --color-grey: #121212;
-  --color-grey-light: #2c2c2c;
-  --color-grey-dark: black;
-  --color-white: #FFFFFF;
-  --color-white-light: white;
-  --color-white-dark: #e6e6e6;
-  --color-green: #1FDF64;
-  --color-green-light: #4be683;
-  --color-green-dark: #19b250;
-}
-
 @keyframes cyclic-scroll {
   0% {
     transform: translateyx(100%);
   }
+
   100% {
     transform: translateX(1000%);
   }
 }
+
 /* Apply the animation to an HTML element */
 .cyclic-text {
   animation: 1s linear infinite;
@@ -36,9 +23,13 @@ a {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.863) 60%, rgb(253, 187, 45) 100%);
   color: white;
 }
+
 .album-body #albumImg img {
   box-shadow: 0px 0px 20px 0px #000000;
 }
+
+
+
 .album-body .play i {
   padding: 0.5em;
   background-color: var(--color-green-dark);
@@ -50,6 +41,7 @@ a {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.2);
 }
+
 .albumFooter .playBar {
   background-color: rgba(75, 75, 75, 0.8);
 }
@@ -106,6 +98,17 @@ i:hover {
   --color-green-dark: #19b250;
 }
 
+.test-body {
+  background-color: var(--color-white);
+  color: var(--color-green-dark);
+}
+
+.test-body .cyclic-text {
+  animation: cyclic-scroll 10s linear infinite;
+  white-space: nowrap;
+  /* Prevent text from wrapping */
+}
+
 :root {
   --color-black: #000000;
   --color-black-light: #1a1a1a;
@@ -121,27 +124,4 @@ i:hover {
   --color-green-dark: #19b250;
 }
 
-.test-body {
-  background-color: var(--color-black);
-  color: var(--color-green-dark);
-}
-.test-body .cyclic-text {
-  animation: cyclic-scroll 10s linear infinite;
-  white-space: nowrap;
-  /* Prevent text from wrapping */
-}
-
-@keyframes cyclic-scroll {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-/* Apply the animation to an HTML element */
-.cyclic-text {
-  animation: cyclic-scroll 10s linear infinite;
-  white-space: nowrap;
-  /* Prevent text from wrapping */
-}/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */

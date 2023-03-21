@@ -1,7 +1,7 @@
-@import 'mixin';
+@import 'colors';
 
 .test-body {
-    background-color: var(--color-black);
+    background-color: var(--color-white);
     color: var(--color-green-dark);
 
     .cyclic-text {
@@ -9,21 +9,4 @@
         white-space: nowrap;
         /* Prevent text from wrapping */
     }
-}
-
-@keyframes cyclic-scroll {
-    0% {
-        transform: translateX(100%);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-/* Apply the animation to an HTML element */
-.cyclic-text {
-    animation: cyclic-scroll 10s linear infinite;
-    white-space: nowrap;
-    /* Prevent text from wrapping */
 }
