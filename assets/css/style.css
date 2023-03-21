@@ -32,43 +32,44 @@ i:hover {
 }
 
 .artist-body {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  margin: 10px;
+}
+.artist-body #coverImg {
+  height: 20em;
+}
+.artist-body .card {
   background-color: black;
+}
+.artist-body .follow.btn {
+  background-color: var(--color-grey-dark);
   color: white;
 }
-
-.card {
-  background-color: black;
-}
-
-.play2 {
-  padding: 0.5em;
-  background-color: var(--color-green-dark);
+.artist-body .like {
   border-radius: 50%;
+  width: 100px;
+  height: 80px;
+  margin: 10px;
 }
-
-.shuffle {
+.artist-body .play {
   color: var(--color-green-dark);
-  font-size: 1.5em;
+  font-size: 1.8em;
 }
-
-.artistFooter {
+.artist-body .play .bi.bi-play-circle-fill {
+  font-size: 1.5em;
+  margin-right: 5px;
+}
+.artist-body .artistFooter {
   position: sticky;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0);
 }
-.artistFooter .playBar {
+.artist-body .artistFooter .playBar {
   background-color: rgba(49, 49, 49, 0.86);
 }
-.artistFooter .playUnder {
+.artist-body .artistFooter .playUnder {
   background-color: rgba(2, 2, 2, 0.965);
-}
-
-.artist-body {
-  background-color: var(--color-black);
-  color: var(--color-white);
-}
-.artist-body #coverImg {
-  height: 20em;
 }
 
 .test-body {

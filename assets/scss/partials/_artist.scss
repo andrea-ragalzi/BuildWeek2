@@ -1,23 +1,34 @@
 @import 'colors';
 
-    .artist-body {
-        background-color: black;
-        color: white;
+.artist-body {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    margin: 10px;
+    #coverImg {
+        height: 20em;
     }
 
     .card{
         background-color: black;
     }
-
-.play2 {
-    padding: 0.5em;
-    background-color: var(--color-green-dark);
-    border-radius: 50%;
+.follow.btn {
+    background-color: var(--color-grey-dark);
+    color: white;
 }
 
-.shuffle {
+.like {
+    border-radius: 50%;
+    width: 100px;
+    height: 80px;
+    margin: 10px;
+}
+.play {
     color: var(--color-green-dark);
-    font-size: 1.5em;
+    font-size: 1.8em;
+    .bi.bi-play-circle-fill {
+        font-size: 1.5em;
+        margin-right: 5px;
+    }
 }
 
     .artistFooter{
@@ -30,14 +41,5 @@
         .playUnder{
             background-color: rgba(2, 2, 2, 0.965);
         }
-    }
-
-@import 'colors';
-
-.artist-body {
-    background-color: var(--color-black);
-    color: var(--color-white);
-    #coverImg {
-        height: 20em;
     }
 }
