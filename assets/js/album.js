@@ -1,5 +1,5 @@
 const ALBUM_API =
-  "https://striveschool-api.herokuapp.com/api/deezer/album/272727";
+  "https://striveschool-api.herokuapp.com/api/deezer/album/474747";
 
 const myAlbum = function () {
   fetch(ALBUM_API)
@@ -16,7 +16,7 @@ const myAlbum = function () {
         </div>
         <div id="albumImg" class="text-center">
           <img
-            src="${events.cover}"
+            src="${events.cover_medium}"
             alt=""
           />
         </div>
@@ -25,13 +25,13 @@ const myAlbum = function () {
             <h2>${events.title}</h2>
             <div class="d-flex">
               <div>
-                <img
+                <img width='30px'
                   class="rounded-circle"
-                  src="${events.artist.picture_small}"
+                  src="${events.artist.picture}"
                   alt=""
                 />
               </div>
-              <div class="mx-2"><h4>Pinguini Tattici Nucleari</h4></div>
+              <div class="mx-2"><h4>${events.artist.name}</h4></div>
             </div>
             <p>${events.record_type} &middot ${events.release_date}</p>
             <div class="d-flex justify-content-between">
@@ -44,7 +44,7 @@ const myAlbum = function () {
               </div>
               <div class="d-flex">
                 <div class="mx-2"><i class="bi bi-shuffle"></i></div>
-                <div class="play mx-2"><i class="bi bi-play-fill"> <div></div></i></div>
+                <div class="play mx-2"><i class="bi bi-play-fill"></i></div>
               </div>
             </div>
           </div>
