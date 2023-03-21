@@ -36,6 +36,9 @@ a {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.863) 60%, rgb(253, 187, 45) 100%);
   color: white;
 }
+.album-body #albumImg img {
+  box-shadow: 0px 0px 20px 0px #000000;
+}
 .album-body .play i {
   padding: 0.5em;
   background-color: var(--color-green-dark);
