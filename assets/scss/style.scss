@@ -10,17 +10,17 @@
 }
 
 .cyclic-text {
-    animation: cyclic-scroll 10s linear infinite;
+    animation: cyclic-scroll 5s linear infinite;
     white-space: nowrap;
     /* Prevent text from wrapping */
 }
 
 @keyframes cyclic-scroll {
     0% {
-        transform: translateX(100%);
+        transform: translateX(0%);
     }
 
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-180%);
     }
 }
