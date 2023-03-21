@@ -1,9 +1,26 @@
 @import 'partials/album';
 @import 'partials/artist';
+@import 'partials/colors';
 @import 'partials/index';
 @import 'partials/search';
 @import 'partials/test';
 
 :root {
     @include color-palette(#000000, #121212, #FFFFFF, #1FDF64);
+}
+
+.cyclic-text {
+    animation: cyclic-scroll 10s linear infinite;
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+}
+
+@keyframes cyclic-scroll {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
