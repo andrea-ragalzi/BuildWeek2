@@ -8,8 +8,13 @@
     display: none;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
   .mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dekstop {
     display: none;
   }
 }
@@ -26,14 +31,18 @@ li {
 
 .titleAlbumMain {
   color: rgb(140, 140, 140);
-  border-bottom: 1px solid rgb(50, 50, 50);
+  border-bottom: 1px solid rgb(80, 80, 80);
 }
 
-.bi-play-fill {
+.playFill {
   color: #000000;
   padding: 0.5em;
   border-radius: 50%;
   background-color: var(--color-green-dark);
+}
+
+.buttonDropdown:hover {
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .buttonDropdown {
@@ -71,12 +80,21 @@ li {
   background-color: rgba(0, 0, 0, 0.3333333333);
 }
 
-.sidebar_left {
-  overflow-y: scroll;
-  height: 1000px;
+::-webkit-scrollbar {
+  width: 0.8em;
+  height: 0.8em;
+  background: rgb(50, 50, 50);
+  margin-right: 10px;
 }
 
-.row .sidebar_left, .row .sidebar_right {
+.casual-music {
+  overflow-y: scroll;
+  height: 500px;
+}
+
+.row .sidebar_left,
+.row .sidebar_right {
+  padding: 0;
   font-size: 0.7em;
   color: rgb(160, 160, 160);
   background-color: rgb(10, 10, 10);
@@ -84,7 +102,7 @@ li {
   position: sticky;
 }
 
-.sidebar_left > div {
+#icons {
   margin: 0.5em;
   border-bottom: 1px solid rgb(75, 75, 75);
 }
@@ -107,10 +125,16 @@ a {
   color: black;
 }
 
-.bi-caret-left, .bi-caret-right {
+.bi-caret-left,
+.bi-caret-right {
   padding: 0.2em;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.3333333333);
+}
+
+.bi-caret-left:hover,
+.bi-caret-right:hover {
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .playDekstop > div {
@@ -192,10 +216,6 @@ i:hover {
   --color-green-dark: #19b250;
 }
 
-html, body {
-  height: 100vh;
-}
-
 .cyclic-text {
   animation: cyclic-scroll 5s linear infinite;
   white-space: nowrap;
@@ -209,4 +229,51 @@ html, body {
   100% {
     transform: translateX(-180%);
   }
+}
+.footerDekstop {
+  padding: 0.5em;
+  background-color: rgb(30, 30, 30);
+  position: sticky;
+  bottom: 0;
+}
+.footerDekstop .imgBar img {
+  width: 40px;
+}
+.footerDekstop .imgBar p:last-of-type {
+  color: rgb(140, 140, 140);
+}
+.footerDekstop .imgBar i:hover {
+  color: var(--color-green-dark);
+}
+.footerDekstop .imgBar p {
+  font-size: 0.7em;
+  margin-bottom: 0;
+}
+.footerDekstop span {
+  font-size: 0.7em;
+  color: rgb(140, 140, 140);
+}
+.footerDekstop .bi-play-fill, .footerDekstop .bi-pause-fill {
+  border-radius: 50%;
+  background-color: white;
+  padding: 0.2em;
+  color: black;
+}
+.footerDekstop .bi-shuffle:hover, .footerDekstop .bi-arrow-return-left:hover {
+  color: var(--color-green-dark);
+}
+.footerDekstop .progress {
+  height: 3px;
+  background-color: rgb(70, 70, 70);
+  width: 50%;
+}
+.footerDekstop .settingsBar {
+  font-size: 0.7em;
+  color: rgb(180, 180, 180);
+}
+.footerDekstop .settingsBar i:hover {
+  color: var(--color-green-dark);
+}
+.footerDekstop .settingsBar .bar {
+  width: 30%;
 }/*# sourceMappingURL=style.css.map */
