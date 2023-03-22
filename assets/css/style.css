@@ -212,6 +212,10 @@ i:hover {
   --color-green-dark: #19b250;
 }
 
+html, body {
+  height: 100vh;
+}
+
 .cyclic-text {
   animation: cyclic-scroll 5s linear infinite;
   white-space: nowrap;
