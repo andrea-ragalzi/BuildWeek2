@@ -1,13 +1,50 @@
 
-const createAlbumRef = (album) => {
+const createBigAlbumRef = album => {
   const albumRef = document.createElement('div');
-  albumRef.innerHTML = `<div>
+  albumRef.innerHTML = `
+  <div class='rounded'>
+        <div class="d-flex">
+          <div class="">
+            <img id="albumCover" src="${album.cover}" alt="Album cover" />
+          </div>
+          <div class="mx-3">
+            <div>
+              <p>Playlist</p>
+            </div>
+            <div>
+              <p id="albumTitle">${album.title}</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="d-flex justify-content-between">
+          <div class="d-flex my-2 ">
+            <i class="bi bi-heart mx-2"></i>
+            <i class="bi bi-three-dots mx-2"></i>
+          </div>
+          <div class="d-flex mx-3">
+            <p class="mb-0 mx-2">${album.tracklist.length} brani</p>
+            <i class="bi bi-play-circle-fill mx-2"></i>
+          </div>
+        </div>
+      </div>
+`;
+  return albumRef;
+}
+
+
+const createSmallAlbumRef = album => {
+  const albumRef = document.createElement('div');
+  albumRef.innerHTML = `
+  <div class="d-flex mx-3 my-2">
+  <div>
     <img src="${album.cover_small}" />
+  </div>
+  <div class="mx-2">
     <p>${album.title}</p>
   </div>
-</div>
-</div>`;
-  return albumRef;
+</div>  `;
+return albumRef;
 }
 
 const fetchSong = async (target) => {
@@ -26,11 +63,6 @@ const fetchSong = async (target) => {
   }
 };
 
-
-const randomInt = (min, max) => {
-  return Math.floor(Math.random(Date.now()) * (max - min + 1)) + min;
-};
-
 const shuffleArray = (arr) => {
   /*
   Fisher-Yates shuffle algorithm
@@ -44,19 +76,39 @@ const shuffleArray = (arr) => {
   return arr;
 }
 
-
-
-const URL_SEARCH = 'https://striveschool-api.herokuapp.com/api/deezer/search?q=';
+const URL_SEARCH =
+  'https://striveschool-api.herokuapp.com/api/deezer/search?q=';
 const ALBUM_ID_RANGE = [40000, 50000];
-const SONGS_NR = 6;
+const ALBUMS_NR = 6;
 
-
-const albums1Ref = document.getElementById('albums1');
-const albums2Ref = document.getElementById('albums2');
+const albumsSmall1Ref = document.getElementById('albumsSmall1');
+const albumsSmall2Ref = document.getElementById('albumsSmall2');
+const albumsBigRef = document.getElementById('albumsBig');
+const albumsRef = document.getElementsByClassName('album-class');
 
 window.onload = async () => {
-  const search_results = await fetchSong('rock');
-  console.log(search_results );
-  let albums = search_results.map(search_result => search_result.album);
-  console.log(albums);
+  let search_results = await fetchSong('rock');
+  search_results = shuffleArray(search_results);
+  const smallAalbums =
+    search_results.slice(0, 6).map(search_result => search_result.album);
+  for (let index = 0; index < ALBUMS_NR; index++) {
+    const smallAlbum = smallAalbums[index];
+    if (index < ALBUMS_NR / 2) {
+      albumsSmall1Ref.appendChild(createSmallAlbumRef(smallAlbum));
+    }
+    else {
+      albumsSmall2Ref.appendChild(createSmallAlbumRef(smallAlbum));
+    }
+  }
+  const bigAlbums =
+    search_results.slice(6).map(search_result => search_result.album);
+  bigAlbums.forEach(bigAlbum => {
+    albumsBigRef.appendChild(createBigAlbumRef(bigAlbum));
+  });
+  Array.from(albumsRef).forEach(albumRef => {
+    console.log(albumRef);
+    albumRef.addEventListener('click', () => {
+      console.log('Album clicked:', albumRef);
+    });
+  });
 }

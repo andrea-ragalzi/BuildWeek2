@@ -103,7 +103,8 @@ const myAlbumDekstop = function () {
     </div>
   </div>
   `;
-      events.tracks.data.forEach((music) => {
+      events.tracks.data.forEach((music,i) => {
+i++
         console.log(music)
         let musicAlbum = document.getElementById("brani");
         musicAlbum.innerHTML += `
@@ -111,7 +112,7 @@ const myAlbumDekstop = function () {
                         <div class="d-flex col-4">
                           <div>
                             <div>
-                              <p>1</p>
+                              <p>${i}</p>
                             </div>
                           </div>
                           <div class="mx-3 ">
@@ -137,6 +138,8 @@ const myAlbumDekstop = function () {
                       </div>
 
       `;
+
+
 //FOOTER
       let musicBar = document.getElementsByClassName('musicBar')[0]
       musicBar.innerHTML = `
@@ -151,12 +154,12 @@ const myAlbumDekstop = function () {
         imgBar.innerHTML = `
         <div class="d-flex align-items-center">
                 <div class="mx-2">
-                  <img class="" src="http://placekitten.com/40" alt="">
+                  <img class="" src="${music.album.cover}" alt="">
                 </div>
                 
                 <div class="mx-2">
-                  <p>Fat funny</p>
-                  <p>Maddy</p>
+                  <p>${music.title}</p>
+                  <p>${music.album.title}</p>
                 </div> 
                 <div class="mx-2">
                   <i class="bi bi-heart"></i>
@@ -164,21 +167,21 @@ const myAlbumDekstop = function () {
               </div>
       `
       
-//FOOTER
+
       });
+
+//FOOTER
+
       let play = document.getElementById('playFill')
       let pause = document.getElementById('pause')
       let comando = document.getElementById('comand')
       comando.addEventListener('click', () => {
         if (pause.classList.contains('d-none')) {
-
           pause.classList.remove('d-none')
           play.classList.add('d-none')
-          Avvia()
         } else {
           pause.classList.add('d-none')
           play.classList.remove('d-none')
-          Ferma()
         }
       })
     });

@@ -57,6 +57,8 @@ li {
 }
 
 .bodyContain {
+  overflow-y: scroll;
+  height: 100vh;
   padding: 0;
 }
 .bodyContain #album {
@@ -87,9 +89,14 @@ li {
   margin-right: 10px;
 }
 
-.casual-music {
+.utents {
   overflow-y: scroll;
   height: 500px;
+}
+
+.casual-music {
+  overflow-y: scroll;
+  height: 400px;
 }
 
 .row .sidebar_left,
@@ -139,51 +146,6 @@ a {
 
 .playDekstop > div {
   font-size: 1.5em;
-}
-
-.footerDekstop {
-  padding: 0.5em;
-  background-color: rgb(30, 30, 30);
-  position: sticky;
-  bottom: 0;
-}
-.footerDekstop .imgBar p:last-of-type {
-  color: rgb(140, 140, 140);
-}
-.footerDekstop .imgBar i:hover {
-  color: var(--color-green-dark);
-}
-.footerDekstop .imgBar p {
-  font-size: 0.7em;
-  margin-bottom: 0;
-}
-.footerDekstop span {
-  font-size: 0.7em;
-  color: rgb(140, 140, 140);
-}
-.footerDekstop .bi-play-fill {
-  border-radius: 50%;
-  background-color: white;
-  padding: 0.2em;
-  color: black;
-}
-.footerDekstop .bi-shuffle:hover, .footerDekstop .bi-arrow-return-left:hover {
-  color: var(--color-green-dark);
-}
-.footerDekstop .progress {
-  height: 3px;
-  background-color: rgb(70, 70, 70);
-  width: 50%;
-}
-.footerDekstop .settingsBar {
-  font-size: 0.7em;
-  color: rgb(180, 180, 180);
-}
-.footerDekstop .settingsBar i:hover {
-  color: var(--color-green-dark);
-}
-.footerDekstop .settingsBar .bar {
-  width: 30%;
 }
 
 .album-body {
@@ -408,6 +370,25 @@ i:hover {
   position: sticky;
 }
 
+.index-body {
+  background-color: rgb(20, 20, 20);
+  color: white;
+}
+.index-body a {
+  color: white;
+}
+.index-body #albumsBig .rounded {
+  background: rgb(55, 55, 55);
+  background: linear-gradient(-45deg, rgb(55, 55, 55) 60%, rgba(255, 0, 0, 0.381) 100%);
+  padding: 0.5em;
+  margin: 1em;
+  background-color: rgb(55, 55, 55);
+  color: white;
+}
+.index-body #albumsBig .rounded img {
+  width: 150px;
+}
+
 .test-body {
   background-color: var(--color-white);
   color: var(--color-green-dark);
@@ -446,6 +427,10 @@ i:hover {
   --color-green-dark: #19b250;
 }
 
+body {
+  height: 100%;
+}
+
 .cyclic-text {
   animation: cyclic-scroll 5s linear infinite;
   white-space: nowrap;
@@ -459,4 +444,51 @@ i:hover {
   100% {
     transform: translateX(-180%);
   }
+}
+.footerDekstop {
+  padding: 0.5em;
+  background-color: rgb(30, 30, 30);
+  position: sticky;
+  bottom: 0;
+}
+.footerDekstop .imgBar img {
+  width: 40px;
+}
+.footerDekstop .imgBar p:last-of-type {
+  color: rgb(140, 140, 140);
+}
+.footerDekstop .imgBar i:hover {
+  color: var(--color-green-dark);
+}
+.footerDekstop .imgBar p {
+  font-size: 0.7em;
+  margin-bottom: 0;
+}
+.footerDekstop span {
+  font-size: 0.7em;
+  color: rgb(140, 140, 140);
+}
+.footerDekstop .bi-play-fill, .footerDekstop .bi-pause-fill {
+  border-radius: 50%;
+  background-color: white;
+  padding: 0.2em;
+  color: black;
+}
+.footerDekstop .bi-shuffle:hover, .footerDekstop .bi-arrow-return-left:hover {
+  color: var(--color-green-dark);
+}
+.footerDekstop .progress {
+  height: 3px;
+  background-color: rgb(70, 70, 70);
+  width: 50%;
+}
+.footerDekstop .settingsBar {
+  font-size: 0.7em;
+  color: rgb(180, 180, 180);
+}
+.footerDekstop .settingsBar i:hover {
+  color: var(--color-green-dark);
+}
+.footerDekstop .settingsBar .bar {
+  width: 30%;
 }/*# sourceMappingURL=style.css.map */
