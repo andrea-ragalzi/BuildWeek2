@@ -1,0 +1,309 @@
+@media screen and (max-width: 768px) {
+  .sidebar_left {
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  .sidebar_right {
+    display: none;
+  }
+}
+@media screen and (min-width: 767px) {
+  .mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dekstop {
+    display: none;
+  }
+}
+ul {
+  padding: 0;
+}
+
+li {
+  color: rgb(140, 140, 140);
+  font-size: 0.9em;
+  margin: 0.2em 0;
+  list-style: none;
+}
+
+.titleAlbumMain {
+  color: rgb(140, 140, 140);
+  border-bottom: 1px solid rgb(80, 80, 80);
+}
+
+.playFill {
+  color: #000000;
+  padding: 0.5em;
+  border-radius: 50%;
+  background-color: var(--color-green-dark);
+}
+
+.buttonDropdown:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.buttonDropdown {
+  font-size: 0.8em;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0.2em;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+.buttonDropdown img {
+  width: 25px;
+}
+
+.bodyContain {
+  overflow-y: scroll;
+  height: 100vh;
+  padding: 0;
+}
+.bodyContain #album {
+  font-size: 0.7em;
+}
+.bodyContain h4 {
+  font-size: 1.5em;
+}
+.bodyContain .information {
+  font-size: 0.7em;
+}
+.bodyContain .information p {
+  color: white;
+}
+.bodyContain p {
+  color: rgb(180, 180, 180);
+}
+
+.mainDiv {
+  font-size: 0.6em;
+  background-color: rgba(0, 0, 0, 0.3333333333);
+}
+
+::-webkit-scrollbar {
+  width: 0.8em;
+  height: 0.8em;
+  background: rgb(50, 50, 50);
+  margin-right: 10px;
+}
+
+.utents {
+  overflow-y: scroll;
+  height: 500px;
+}
+
+.casual-music {
+  overflow-y: scroll;
+  height: 400px;
+}
+
+.row .sidebar_left,
+.row .sidebar_right {
+  padding: 0;
+  font-size: 0.7em;
+  color: rgb(160, 160, 160);
+  background-color: rgb(10, 10, 10);
+  left: 0;
+  position: sticky;
+}
+
+#icons {
+  margin: 0.5em;
+  border-bottom: 1px solid rgb(75, 75, 75);
+}
+
+.small {
+  font-size: 0.7em;
+  color: rgb(140, 140, 140);
+}
+
+.sidebar_right span {
+  color: white;
+  font-weight: bold;
+}
+
+.sidebar_right > div {
+  margin: 0.5em;
+}
+
+a {
+  color: black;
+}
+
+.bi-caret-left,
+.bi-caret-right {
+  padding: 0.2em;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3333333333);
+}
+
+.bi-caret-left:hover,
+.bi-caret-right:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.playDekstop > div {
+  font-size: 1.5em;
+}
+
+.album-body {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 60%, rgb(255, 215, 104) 100%);
+  color: white;
+}
+.album-body #albumImg img {
+  box-shadow: 0px 0px 20px 0px #000000;
+}
+.album-body .play i {
+  padding: 0.5em;
+  background-color: var(--color-green-dark);
+  border-radius: 50%;
+}
+
+.albumFooter {
+  position: sticky;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.albumFooter .playBar {
+  background-color: rgba(70, 70, 70, 0.8);
+}
+.albumFooter div i + p {
+  font-size: 0.7em;
+}
+
+i:hover {
+  cursor: pointer;
+}
+
+.artist-body {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+.artist-body #coverImg {
+  height: 20em;
+}
+
+.index-body {
+  background-color: rgb(20, 20, 20);
+  color: white;
+}
+.index-body a {
+  color: white;
+}
+.index-body #albumsBig .rounded {
+  background: rgb(55, 55, 55);
+  background: linear-gradient(-45deg, rgb(55, 55, 55) 60%, rgba(255, 0, 0, 0.381) 100%);
+  padding: 0.5em;
+  margin: 1em;
+  background-color: rgb(55, 55, 55);
+  color: white;
+}
+.index-body #albumsBig .rounded img {
+  width: 150px;
+}
+
+.test-body {
+  background-color: var(--color-white);
+  color: var(--color-green-dark);
+}
+@media (min-width: 768px) {
+  .test-body .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    display: block;
+    background-color: #f8f9fa;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* Scrollable contents if viewport is shorter than content. */
+  }
+  .test-body .content {
+    margin-left: 300px;
+  }
+}
+
+:root {
+  --color-black: #000000;
+  --color-black-light: #1a1a1a;
+  --color-black-dark: black;
+  --color-grey: #121212;
+  --color-grey-light: #2c2c2c;
+  --color-grey-dark: black;
+  --color-white: #FFFFFF;
+  --color-white-light: white;
+  --color-white-dark: #e6e6e6;
+  --color-green: #1FDF64;
+  --color-green-light: #4be683;
+  --color-green-dark: #19b250;
+}
+
+body {
+  height: 100%;
+}
+
+.cyclic-text {
+  animation: cyclic-scroll 5s linear infinite;
+  white-space: nowrap;
+  /* Prevent text from wrapping */
+}
+
+@keyframes cyclic-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-180%);
+  }
+}
+.footerDekstop {
+  padding: 0.5em;
+  background-color: rgb(30, 30, 30);
+  position: sticky;
+  bottom: 0;
+}
+.footerDekstop .imgBar img {
+  width: 40px;
+}
+.footerDekstop .imgBar p:last-of-type {
+  color: rgb(140, 140, 140);
+}
+.footerDekstop .imgBar i:hover {
+  color: var(--color-green-dark);
+}
+.footerDekstop .imgBar p {
+  font-size: 0.7em;
+  margin-bottom: 0;
+}
+.footerDekstop span {
+  font-size: 0.7em;
+  color: rgb(140, 140, 140);
+}
+.footerDekstop .bi-play-fill, .footerDekstop .bi-pause-fill {
+  border-radius: 50%;
+  background-color: white;
+  padding: 0.2em;
+  color: black;
+}
+.footerDekstop .bi-shuffle:hover, .footerDekstop .bi-arrow-return-left:hover {
+  color: var(--color-green-dark);
+}
+.footerDekstop .progress {
+  height: 3px;
+  background-color: rgb(70, 70, 70);
+  width: 50%;
+}
+.footerDekstop .settingsBar {
+  font-size: 0.7em;
+  color: rgb(180, 180, 180);
+}
+.footerDekstop .settingsBar i:hover {
+  color: var(--color-green-dark);
+}
+.footerDekstop .settingsBar .bar {
+  width: 30%;
+}/*# sourceMappingURL=style.css.map */

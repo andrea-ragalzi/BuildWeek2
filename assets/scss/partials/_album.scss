@@ -68,7 +68,8 @@ li {
 }
 
 .bodyContain {
-
+    overflow-y: scroll;
+    height: 100vh;
     #album {
         font-size: 0.7em;
     }
@@ -93,6 +94,7 @@ li {
 }
 
 .mainDiv {
+    
     font-size: 0.6em;
     background-color: #00000055;
 }
@@ -104,9 +106,13 @@ li {
     margin-right: 10px;
 }
 
-.casual-music {
+.utents{
     overflow-y: scroll;
     height: 500px;
+}
+.casual-music {
+    overflow-y: scroll;
+    height: 400px;
 }
 
 .row {
