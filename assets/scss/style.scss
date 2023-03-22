@@ -9,6 +9,10 @@
     @include color-palette(#000000, #121212, #FFFFFF, #1FDF64);
 }
 
+html, body{
+    height: 100vh;
+}
+
 .cyclic-text {
     animation: cyclic-scroll 5s linear infinite;
     white-space: nowrap;
