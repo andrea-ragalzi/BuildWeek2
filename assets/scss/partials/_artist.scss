@@ -8,6 +8,46 @@
         height: 20em;
     }
 
+    .info, h4, p {
+        white-space: nowrap;
+        font-size: 1rem;
+    }
+
+    .info, h4 {
+        font-size: 1.1em;
+    }
+
+    i.bi.bi-three-dots-vertical {   
+    width: 24px;
+    height: 0px;
+    margin-left: 130px;
+    }
+
+    #albumTitle {
+        width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      #albumTitle, #listeners {
+        
+      }
+      
+
+      .artist-likes {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+      }
+
+      .artist-likes h4, 
+      .artist-likes p {
+         margin: 0;
+         margin-left: -15px;
+      }
+
+      
     .card{
         background-color: black;
     }
@@ -16,10 +56,15 @@
     color: white;
 }
 
+.img-song {
+    width: 70px;
+    height: 50px;
+}
+
 .like {
     border-radius: 50%;
-    width: 100px;
-    height: 80px;
+    width: 85px;
+    height: 65px;
     margin: 10px;
 }
 .play {

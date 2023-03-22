@@ -154,6 +154,34 @@ i:hover {
 .artist-body #coverImg {
   height: 20em;
 }
+.artist-body .info, .artist-body h4, .artist-body p {
+  white-space: nowrap;
+  font-size: 1rem;
+}
+.artist-body .info, .artist-body h4 {
+  font-size: 1.1em;
+}
+.artist-body i.bi.bi-three-dots-vertical {
+  width: 24px;
+  height: 0px;
+  margin-left: 130px;
+}
+.artist-body #albumTitle {
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.artist-body .artist-likes {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+.artist-body .artist-likes h4,
+.artist-body .artist-likes p {
+  margin: 0;
+  margin-left: -15px;
+}
 .artist-body .card {
   background-color: black;
 }
@@ -161,10 +189,14 @@ i:hover {
   background-color: var(--color-grey-dark);
   color: white;
 }
+.artist-body .img-song {
+  width: 70px;
+  height: 50px;
+}
 .artist-body .like {
   border-radius: 50%;
-  width: 100px;
-  height: 80px;
+  width: 85px;
+  height: 65px;
   margin: 10px;
 }
 .artist-body .play {
