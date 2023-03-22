@@ -1,5 +1,18 @@
 @import 'colors';
+.album-body {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.800)60%, rgb(255, 215, 104) 100%);
+    color: white;
 
+    #albumImg img {
+        -webkit-box-shadow: 0px 0px 20px 0px #000000;
+        box-shadow: 0px 0px 20px 0px #000000;
+    }
+
+    .play i {
+        padding: 0.5em;
+        background-color: var(--color-green-dark);
+        border-radius: 50%;
+    }
 
 @media screen and (max-width:768px) {
     .sidebar_left {
@@ -172,20 +185,7 @@ a {
 
 
 
-.album-body {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.800)60%, rgb(255, 215, 104) 100%);
-    color: white;
 
-    #albumImg img {
-        -webkit-box-shadow: 0px 0px 20px 0px #000000;
-        box-shadow: 0px 0px 20px 0px #000000;
-    }
-
-    .play i {
-        padding: 0.5em;
-        background-color: var(--color-green-dark);
-        border-radius: 50%;
-    }
 }
 
 .albumFooter {
