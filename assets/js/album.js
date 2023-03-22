@@ -1,5 +1,5 @@
 const ALBUM_API =
-  "https://striveschool-api.herokuapp.com/api/deezer/album/252672";
+  "https://striveschool-api.herokuapp.com/api/deezer/album/363782";
 
 const myAlbumMobile = function () {
   fetch(ALBUM_API)
@@ -68,8 +68,8 @@ const myAlbumMobile = function () {
     </div>
     </div>
 </div>`;
-let cyclic =document.getElementsByClassName('playBar')[0]
-    cyclic.innerHTML=`<div class="mx-2 cyclic-text"><p >${music.title}</p></div>
+        let cyclic = document.getElementsByClassName('playBar')[0]
+        cyclic.innerHTML = `<div class="mx-2 cyclic-text"><p >${music.title}</p></div>
     <div class="mx-2"><i class="bi bi-pc-display"></i></div>
           <div class="mx-2"><i class="bi bi-heart"></i></div>
           <div class="mx-2"><i class="bi bi-play"></i></div>`
@@ -78,18 +78,18 @@ let cyclic =document.getElementsByClassName('playBar')[0]
 };
 myAlbumMobile();
 
+//VERSIONE DEKSTOP
 
-
-const myAlbumDekstop=function(){
+const myAlbumDekstop = function () {
   fetch(ALBUM_API)
-  .then((response) => {
-    console.log(response);
-    return response.json();
-  })
-  .then((events) => {
-    console.log(events);
-    let album = document.getElementById("albumDekstop");
-    album.innerHTML = `
+    .then((response) => {
+      console.log(response);
+      return response.json();
+    })
+    .then((events) => {
+      console.log(events);
+      let album = document.getElementById("albumDekstop");
+      album.innerHTML = `
     <div>
     <div><img src="${events.cover_medium}" alt=""></div>
   </div>
@@ -108,10 +108,10 @@ const myAlbumDekstop=function(){
     </div>
   </div>
   `;
-    events.tracks.data.forEach((music) => {
-      console.log(music);
-      let musicAlbum = document.getElementById("brani");
-      musicAlbum.innerHTML += `
+      events.tracks.data.forEach((music) => {
+        console.log(music);
+        let musicAlbum = document.getElementById("brani");
+        musicAlbum.innerHTML += `
       <div class="d-flex">
                         <div class="d-flex col-4">
                           <div>
@@ -139,9 +139,8 @@ const myAlbumDekstop=function(){
                           </div>
                         </div>
                       </div>
-
       `
+      });
     });
-  });
 };
 myAlbumDekstop()
