@@ -154,6 +154,29 @@ i:hover {
   height: 20em;
 }
 
+.search-body {
+  background-color: var(--color-black);
+}
+.search-body h1 {
+  color: white;
+}
+.search-body .navbar {
+  color: white;
+  background-color: rgba(70, 70, 70, 0.8);
+  margin: 2em;
+  border-radius: 5px;
+  padding: 0.5em;
+}
+.search-body h2 {
+  color: white;
+}
+.search-body .icon {
+  color: white;
+}
+.search-body .playbar {
+  color: white;
+}
+
 .test-body {
   background-color: var(--color-white);
   color: var(--color-green-dark);
