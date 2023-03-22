@@ -9,9 +9,11 @@
     @include color-palette(#000000, #121212, #FFFFFF, #1FDF64);
 }
 
-html, body{
-    height: 100vh;
+body{
+
+    height: 100%;
 }
+
 
 .cyclic-text {
     animation: cyclic-scroll 5s linear infinite;
@@ -26,5 +28,60 @@ html, body{
 
     100% {
         transform: translateX(-180%);
+    }
+}
+
+.footerDekstop {
+    .imgBar {
+        img{
+            width: 40px;
+        }
+        p:last-of-type {
+            color: rgb(140, 140, 140);
+        }
+        i:hover{
+            color: var(--color-green-dark);
+        }
+        p {
+            font-size: 0.7em;
+            margin-bottom: 0;
+        }
+    }
+
+    span {
+        font-size: 0.7em;
+        color: rgb(140, 140, 140);
+    }
+
+    .bi-play-fill,.bi-pause-fill {
+        border-radius: 50%;
+        background-color: white;
+        padding: 0.2em;
+        color: black;
+    }
+    .bi-shuffle:hover,.bi-arrow-return-left:hover{
+        color: var(--color-green-dark);
+    }
+    .progress {
+        height: 3px;
+        background-color: rgb(70, 70, 70);
+        width: 50%;
+    }
+
+    padding: 0.5em;
+    background-color: rgb(30, 30, 30);
+    position: sticky;
+    bottom: 0;
+
+    .settingsBar {
+        i:hover{
+            color: var(--color-green-dark);
+        }
+        font-size: 0.7em;
+        color: rgb(180, 180, 180);
+
+        .bar {
+            width: 30%;
+        }
     }
 }

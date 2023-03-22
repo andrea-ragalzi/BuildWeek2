@@ -57,9 +57,7 @@ const artistId = 412;
 
 window.onload = async () => {
     const artist = await fetchArtist(artistId);
-    console.log(artist);
     const tracklist = await fetchTracklist(artist.tracklist);
-    console.log(tracklist);
     coverImgRef.style.backgroundImage = `url(${artist.picture_xl})`;
     coverImgRef.style.backgroundSize = 'cover';
     artistNameRef.innerText = artist.name;
