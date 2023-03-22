@@ -165,6 +165,9 @@ a {
 
 .footerDekstop {
     .imgBar {
+        img{
+            width: 40px;
+        }
         p:last-of-type {
             color: rgb(140, 140, 140);
         }
@@ -182,7 +185,7 @@ a {
         color: rgb(140, 140, 140);
     }
 
-    .bi-play-fill {
+    .bi-play-fill,.bi-pause-fill {
         border-radius: 50%;
         background-color: white;
         padding: 0.2em;

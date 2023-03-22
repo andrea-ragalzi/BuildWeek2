@@ -147,6 +147,9 @@ a {
   position: sticky;
   bottom: 0;
 }
+.footerDekstop .imgBar img {
+  width: 40px;
+}
 .footerDekstop .imgBar p:last-of-type {
   color: rgb(140, 140, 140);
 }
@@ -161,7 +164,7 @@ a {
   font-size: 0.7em;
   color: rgb(140, 140, 140);
 }
-.footerDekstop .bi-play-fill {
+.footerDekstop .bi-play-fill, .footerDekstop .bi-pause-fill {
   border-radius: 50%;
   background-color: white;
   padding: 0.2em;
