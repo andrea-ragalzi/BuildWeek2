@@ -1,5 +1,4 @@
-const createAlbumRef = (album) => {
-    console.log(album);
+const createSongRef = (album) => {
     const albumRef = document.createElement('div');
     albumRef.innerHTML = `    <div class="row row-cols-3">
     <img class="img-song" src="${album.album.cover}" alt="Image Album">
@@ -20,11 +19,11 @@ const fetchArtist = async (artistId) => {
             let artist = await response.json();
             return artist;
         } else {
-            alert('We were able to contact the server, but there was a problem');
+            console.log('We were able to contact the server, but there was a problem');
             return null;
         }
     } catch (error) {
-        alert(error);
+        console.logrt(error);
     }
 };
 
@@ -35,11 +34,11 @@ const fetchTracklist = async (tracklistUrl) => {
             let tracklist = await response.json();
             return tracklist.data;
         } else {
-            alert('We were able to contact the server, but there was a problem');
+            console.log('We were able to contact the server, but there was a problem');
             return null;
         }
     } catch (error) {
-        alert(error);
+        console.log(error);
     }
 };
 
@@ -52,7 +51,7 @@ const followersNameRef = document.getElementById('followers');
 const likeImgRef = document.getElementById('likeImg');
 const albumTitleRef = document.getElementById('albumTitle');
 const listenersRef = document.getElementById('listeners');
-const albumsRef = document.getElementById('albums');
+const albumsRef = document.getElementById('tracklist');
 
 const artistId = 412;
 
@@ -66,7 +65,7 @@ window.onload = async () => {
     artistNameRef.innerText = artist.name;
     followersNameRef.innerText = `${artist.nb_fan} ascoltatori mensili`;
     likeImgRef.setAttribute('src', artist.picture_small );
-    tracklist.forEach(album => {
-        albumsRef.appendChild(createAlbumRef(album));
+    tracklist.forEach(song => {
+        albumsRef.appendChild(createSongRef(song));
     });
 }

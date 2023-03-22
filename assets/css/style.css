@@ -1,9 +1,124 @@
+@media screen and (max-width: 768px) {
+  .sidebar_left {
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  .sidebar_right {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+}
+ul {
+  padding: 0;
+}
+
+li {
+  color: rgb(140, 140, 140);
+  font-size: 0.9em;
+  margin: 0.2em 0;
+  list-style: none;
+}
+
+.titleAlbumMain {
+  color: rgb(140, 140, 140);
+  border-bottom: 1px solid rgb(50, 50, 50);
+}
+
+.bi-play-fill {
+  color: #000000;
+  padding: 0.5em;
+  border-radius: 50%;
+  background-color: var(--color-green-dark);
+}
+
+.buttonDropdown {
+  font-size: 0.8em;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0.2em;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+.buttonDropdown img {
+  width: 25px;
+}
+
+.bodyContain {
+  padding: 0;
+}
+.bodyContain #album {
+  font-size: 0.7em;
+}
+.bodyContain h4 {
+  font-size: 1.5em;
+}
+.bodyContain .information {
+  font-size: 0.7em;
+}
+.bodyContain .information p {
+  color: white;
+}
+.bodyContain p {
+  color: rgb(180, 180, 180);
+}
+
+.mainDiv {
+  font-size: 0.6em;
+  background-color: rgba(0, 0, 0, 0.3333333333);
+}
+
+.sidebar_left {
+  overflow-y: scroll;
+  height: 1000px;
+}
+
+.row .sidebar_left, .row .sidebar_right {
+  font-size: 0.7em;
+  color: rgb(160, 160, 160);
+  background-color: rgb(10, 10, 10);
+  left: 0;
+  position: sticky;
+}
+
+.sidebar_left > div {
+  margin: 0.5em;
+  border-bottom: 1px solid rgb(75, 75, 75);
+}
+
+.small {
+  font-size: 0.7em;
+  color: rgb(140, 140, 140);
+}
+
+.sidebar_right span {
+  color: white;
+  font-weight: bold;
+}
+
+.sidebar_right > div {
+  margin: 0.5em;
+}
+
 a {
   color: black;
 }
 
+.bi-caret-left, .bi-caret-right {
+  padding: 0.2em;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3333333333);
+}
+
+.playDekstop > div {
+  font-size: 1.5em;
+}
+
 .album-body {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.863) 60%, rgb(253, 187, 45) 100%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 60%, rgb(255, 215, 104) 100%);
   color: white;
 }
 .album-body #albumImg img {
@@ -75,6 +190,10 @@ i:hover {
   --color-green: #1FDF64;
   --color-green-light: #4be683;
   --color-green-dark: #19b250;
+}
+
+html, body {
+  height: 100vh;
 }
 
 .cyclic-text {
