@@ -327,6 +327,9 @@ i:hover {
   .sidebar_left {
     display: none;
   }
+  .footerDekstop {
+    display: none;
+  }
 }
 @media screen and (max-width: 992px) {
   .sidebar_right {
@@ -336,9 +339,6 @@ i:hover {
 @media screen and (min-width: 768px) {
   .mobile {
     display: none;
-  }
-  .row.align-items-end {
-    height: 600px;
   }
   .albumFooter {
     position: fixed;

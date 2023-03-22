@@ -140,20 +140,26 @@
     .sidebar_left{
         display: none;
     }
+    .footerDekstop {
+        display: none;
+    }
     
 }
     @media screen and (max-width:992px) {
         .sidebar_right{
             display: none;
         }
+        
 }
 @media screen and (min-width:768px) {
     .mobile{
         display: none;
     }
+    
 
     .albumFooter {
         position: fixed;
         display: none;
     }
+    
 }
