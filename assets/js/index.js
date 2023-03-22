@@ -1,5 +1,32 @@
 
-const createAlbumRef = (album) => {
+const createBigAlbumRef = album => {
+  const albumRef = document.createElement('div');
+  albumRef.classList.add('row');
+  albumRef.innerHTML = `
+  <div class="row row-cols-2">
+  <img id="albumCover" src="${album.cover_big}" alt="Album cover" />
+  <div>
+    <p>Playlist</p>
+    <p id="albumTitle">${album.title}</p>
+  </div>
+</div>
+<div class="row">
+  <div class="row row-cols-2 justify-content-between">
+    <div>
+      <i class="bi bi-heart"></i>
+      <i class="bi bi-three-dots"></i>
+    </div>
+    <div class="align-items-center d-flex">
+      <p class="mb-0">${album.tracklist.length} brani</p>
+      <i class="bi bi-play-circle-fill"></i>
+    </div>
+  </div>
+</div>
+`;
+  return albumRef;
+}
+
+const createSmallAlbumRef = album => {
   const albumRef = document.createElement('div');
   albumRef.innerHTML = `<div>
     <img src="${album.cover_small}" />
@@ -26,11 +53,6 @@ const fetchSong = async (target) => {
   }
 };
 
-
-const randomInt = (min, max) => {
-  return Math.floor(Math.random(Date.now()) * (max - min + 1)) + min;
-};
-
 const shuffleArray = (arr) => {
   /*
   Fisher-Yates shuffle algorithm
@@ -44,19 +66,34 @@ const shuffleArray = (arr) => {
   return arr;
 }
 
-
-
-const URL_SEARCH = 'https://striveschool-api.herokuapp.com/api/deezer/search?q=';
+const URL_SEARCH =
+  'https://striveschool-api.herokuapp.com/api/deezer/search?q=';
 const ALBUM_ID_RANGE = [40000, 50000];
-const SONGS_NR = 6;
+const ALBUMS_NR = 6;
 
-
-const albums1Ref = document.getElementById('albums1');
-const albums2Ref = document.getElementById('albums2');
+const albumsSmall1Ref = document.getElementById('albumsSmall1');
+const albumsSmall2Ref = document.getElementById('albumsSmall2');
+const albumsBigRef = document.getElementById('albumsBig');
 
 window.onload = async () => {
-  const search_results = await fetchSong('rock');
-  console.log(search_results );
-  let albums = search_results.map(search_result => search_result.album);
-  console.log(albums);
+  let search_results = await fetchSong('rock');
+  search_results = shuffleArray(search_results);
+  const smallAalbums =
+    search_results.slice(0, 6).map(search_result => search_result.album);
+  for (let index = 0; index < ALBUMS_NR; index++) {
+    const smallAlbum = smallAalbums[index];
+    if (index < ALBUMS_NR / 2) {
+      albumsSmall1Ref.appendChild(createSmallAlbumRef(smallAlbum));
+    }
+    else {
+      albumsSmall2Ref.appendChild(createSmallAlbumRef(smallAlbum));
+    }
+  }
+  const bigAlbums =
+    search_results.slice(6).map(search_result => search_result.album);
+  console.log(bigAlbums);
+  bigAlbums.forEach(bigAlbum => {
+    console.log(bigAlbum);
+    albumsBigRef.appendChild(createBigAlbumRef(bigAlbum));
+  });
 }
