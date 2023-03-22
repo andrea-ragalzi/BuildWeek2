@@ -2,48 +2,37 @@
 const createBigAlbumRef = album => {
   const albumRef = document.createElement('div');
   albumRef.innerHTML = `
-  <div class='rounded'>
-        <div class="d-flex">
-          <div class="">
-            <img id="albumCover" src="${album.cover}" alt="Album cover" />
-          </div>
-          <div class="mx-3">
-            <div>
-              <p>Playlist</p>
-            </div>
-            <div>
-              <p id="albumTitle">${album.title}</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="d-flex justify-content-between">
-          <div class="d-flex my-2 ">
-            <i class="bi bi-heart mx-2"></i>
-            <i class="bi bi-three-dots mx-2"></i>
-          </div>
-          <div class="d-flex mx-3">
-            <p class="mb-0 mx-2">${album.tracklist.length} brani</p>
-            <i class="bi bi-play-circle-fill mx-2"></i>
-          </div>
-        </div>
-      </div>
+  <div class="row row-cols-2">
+  <img id="albumCover" src="${album.cover_big}" alt="Album cover" />
+  <div>
+    <p>Playlist</p>
+    <p id="albumTitle">${album.title}</p>
+  </div>
+</div>
+<div class="row">
+  <div class="row row-cols-2 justify-content-between">
+    <div>
+      <i class="bi bi-heart"></i>
+      <i class="bi bi-three-dots"></i>
+    </div>
+    <div class="align-items-center d-flex">
+      <p class="mb-0">${album.tracklist.length} brani</p>
+      <i class="bi bi-play-circle-fill"></i>
+    </div>
+  </div>
+</div>
 `;
   return albumRef;
 }
 
 const createSmallAlbumRef = album => {
   const albumRef = document.createElement('div');
-  albumRef.innerHTML = `
-  <div class="d-flex mx-3 my-2">
-  <div>
+  albumRef.innerHTML = `<div>
     <img src="${album.cover_small}" />
-  </div>
-  <div class="mx-2">
     <p>${album.title}</p>
   </div>
 </div>
-  `;
+</div>`;
   return albumRef;
 }
 
@@ -84,6 +73,7 @@ const ALBUMS_NR = 6;
 const albumsSmall1Ref = document.getElementById('albumsSmall1');
 const albumsSmall2Ref = document.getElementById('albumsSmall2');
 const albumsBigRef = document.getElementById('albumsBig');
+const albumsRef = document.getElementsByClassName('album-class');
 
 window.onload = async () => {
   let search_results = await fetchSong('rock');
@@ -101,9 +91,13 @@ window.onload = async () => {
   }
   const bigAlbums =
     search_results.slice(6).map(search_result => search_result.album);
-  console.log(bigAlbums);
   bigAlbums.forEach(bigAlbum => {
-    console.log(bigAlbum);
     albumsBigRef.appendChild(createBigAlbumRef(bigAlbum));
+  });
+  Array.from(albumsRef).forEach(albumRef => {
+    console.log(albumRef);
+    albumRef.addEventListener('click', () => {
+      console.log('Album clicked:', albumRef);
+    });
   });
 }
