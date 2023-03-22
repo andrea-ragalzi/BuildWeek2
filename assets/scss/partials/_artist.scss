@@ -4,9 +4,45 @@
     background-color: var(--color-black);
     color: var(--color-white);
     margin: 10px;
+
     #coverImg {
         height: 20em;
     }
+
+    #followers {
+        margin-top: 20px;
+        font-size: 0.8em;
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+      }
+      
+      .img-song {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+      }
+      
+      .row p {
+        margin: 0;
+        line-height: 1;
+      }
+      
+      #albumTitle {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      
+      #listeners {
+        color: var(--color-grey-light);
+      }
+
+
+      
+      
+      
 
     .info, h4, p {
         white-space: nowrap;
@@ -17,21 +53,33 @@
         font-size: 1.1em;
     }
 
-    i.bi.bi-three-dots-vertical {   
+    .info p {
+        color: var(--color-grey-light);
+    }
+
+    .play {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      
+    #tracklist i.bi.bi-three-dots-vertical {   
     width: 24px;
     height: 0px;
     margin-left: 130px;
+    
     }
+
+    .row i {
+        display: flex;
+        align-items: center;
+      }
 
     #albumTitle {
         width: 200px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-      }
-
-      #albumTitle, #listeners {
-        
       }
       
 
@@ -68,23 +116,39 @@
     margin: 10px;
 }
 .play {
-    color: var(--color-green-dark);
-    font-size: 1.8em;
+    color: var(--color-grey-light);
+    font-size: 1.2em;
     .bi.bi-play-circle-fill {
-        font-size: 1.5em;
+        color: var(--color-green-dark);
+        font-size: 1.6em;
         margin-right: 5px;
     }
 }
-
-    .artistFooter{
+    .albumFooter{
         position: sticky;
         bottom: 0;
-        background-color: rgba(0, 0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.951);
         .playBar{
-            background-color: rgba(49, 49, 49, 0.86);
+            background-color: rgba(49, 49, 49, 0.896);
         }
-        .playUnder{
-            background-color: rgba(2, 2, 2, 0.965);
+    }
+}
+
+/*MEDIAQ*/
+
+@media screen and (max-width:768px) {
+    .sidebar_left{
+        display: none;
+    }
+    
+}
+    @media screen and (max-width:992px) {
+        .sidebar_right{
+            display: none;
         }
+}
+@media screen and (min-width:768px) {
+    .mobile{
+        display: none;
     }
 }
