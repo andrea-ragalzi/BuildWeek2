@@ -1,7 +1,7 @@
 const ALBUM_API =
-  "https://striveschool-api.herokuapp.com/api/deezer/album/474747";
+  "https://striveschool-api.herokuapp.com/api/deezer/album/252672";
 
-const myAlbum = function () {
+const myAlbumMobile = function () {
   fetch(ALBUM_API)
     .then((response) => {
       console.log(response);
@@ -76,4 +76,72 @@ let cyclic =document.getElementsByClassName('playBar')[0]
       });
     });
 };
-myAlbum();
+myAlbumMobile();
+
+
+
+const myAlbumDekstop=function(){
+  fetch(ALBUM_API)
+  .then((response) => {
+    console.log(response);
+    return response.json();
+  })
+  .then((events) => {
+    console.log(events);
+    let album = document.getElementById("albumDekstop");
+    album.innerHTML = `
+    <div>
+    <div><img src="${events.cover_medium}" alt=""></div>
+  </div>
+  <div class="d-flex flex-column mx-3  ">
+    <div><h4 id="album">${events.type}</h4></div>
+    <div><h1>${events.title}</h1></div>
+    <div class="d-flex align-items-baseline">
+      <div><img src="${events.picture_small}"' class="rounded-circle" alt=""></div>
+      <div class="d-flex mx-1 information">
+        <b>
+          <p>${events.artist.name}</p>
+        </b>
+        
+        <p class="mx-1">&middot ${events.release_date}</p>
+      </div>
+    </div>
+  </div>
+  `;
+    events.tracks.data.forEach((music) => {
+      console.log(music);
+      let musicAlbum = document.getElementById("brani");
+      musicAlbum.innerHTML += `
+      <div class="d-flex">
+                        <div class="d-flex col-4">
+                          <div>
+                            <div>
+                              <p>1</p>
+                            </div>
+                          </div>
+                          <div class="mx-3 ">
+                            <div>
+                              <h4>${music.title}</h4>
+                            </div>
+                            <div>
+                              <p> ${music.album.title}</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6 text-center">
+                          <div>
+                            <p>${music.rank}</p>
+                          </div>
+                        </div>
+                        <div class="col-2 text-end">
+                          <div>
+                            <p>${music.duration}s</p>
+                          </div>
+                        </div>
+                      </div>
+
+      `
+    });
+  });
+};
+myAlbumDekstop()

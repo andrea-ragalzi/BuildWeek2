@@ -34,11 +34,15 @@ li {
   border-bottom: 1px solid rgb(80, 80, 80);
 }
 
-.bi-play-fill {
+.playFill {
   color: #000000;
   padding: 0.5em;
   border-radius: 50%;
   background-color: var(--color-green-dark);
+}
+
+.buttonDropdown:hover {
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .buttonDropdown {
@@ -118,8 +122,19 @@ a {
   background-color: rgba(0, 0, 0, 0.3333333333);
 }
 
+.bi-caret-left:hover, .bi-caret-right:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
 .playDekstop > div {
   font-size: 1.5em;
+}
+
+.footerDekstop {
+  padding: 1em;
+  background-color: rgb(30, 30, 30);
+  position: sticky;
+  bottom: 0;
 }
 
 .album-body {
