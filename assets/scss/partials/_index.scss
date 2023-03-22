@@ -1,1 +1,77 @@
 @import 'colors';
+
+i:hover{
+    cursor: pointer;
+} 
+
+
+@media screen and (max-width:768px) {
+    .sidebar_left{
+        display: none;
+    }
+}
+    @media screen and (max-width:992px) {
+        .sidebar_right{
+            display: none;
+        }
+}
+@media screen and (min-width:768px) {
+    .mobile{
+        display: none;
+    }
+}
+
+ .index-body {
+    background-color: var(--color-black);
+    color: var(--color-white);
+
+   h2{
+    color: #e6e6e6;
+   }
+   p {
+    color:#e6e6e6;
+   }
+   #m-2 { 
+    color:#e6e6e6;}
+ }
+
+
+
+
+    .sidebar_left{
+        overflow-y: scroll;
+        height: 1000px;
+    }
+
+    .sidebar_left>div{
+        margin: 0.5em;
+        border-bottom:1px solid rgb(75, 75, 75) ;
+     }   
+     .small{
+        font-size: 0.7em;
+        color: rgb(140, 140, 140);
+    }
+    .sidebar_right span{
+        color: white;
+        font-weight: bold;
+    }
+    .sidebar_right>div{
+        margin: 0.5em;
+    }
+    a{
+       color: black;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
