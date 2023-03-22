@@ -4,11 +4,9 @@ const ALBUM_API =
 const myAlbumMobile = function () {
   fetch(ALBUM_API)
     .then((response) => {
-      console.log(response);
       return response.json();
     })
     .then((events) => {
-      console.log(events);
       let album = document.getElementById("albumAttack");
       album.innerHTML = `
     <div class="position-absolute">
@@ -54,7 +52,6 @@ const myAlbumMobile = function () {
           </div>
     `;
       events.tracks.data.forEach((music) => {
-        console.log(music);
         let musicAlbum = document.getElementById("musicAlbum");
         musicAlbum.innerHTML += `
     <div id='musicText'>
@@ -83,11 +80,9 @@ myAlbumMobile();
 const myAlbumDekstop = function () {
   fetch(ALBUM_API)
     .then((response) => {
-      console.log(response);
       return response.json();
     })
     .then((events) => {
-      console.log(events);
       let album = document.getElementById("albumDekstop");
       album.innerHTML = `
     <div>
@@ -109,7 +104,7 @@ const myAlbumDekstop = function () {
   </div>
   `;
       events.tracks.data.forEach((music) => {
-        console.log(music);
+        console.log(music)
         let musicAlbum = document.getElementById("brani");
         musicAlbum.innerHTML += `
       <div class="d-flex">
@@ -128,6 +123,7 @@ const myAlbumDekstop = function () {
                             </div>
                           </div>
                         </div>
+  
                         <div class="col-6 text-center">
                           <div>
                             <p>${music.rank}</p>
@@ -139,8 +135,53 @@ const myAlbumDekstop = function () {
                           </div>
                         </div>
                       </div>
+
+      `;
+//FOOTER
+      let musicBar = document.getElementsByClassName('musicBar')[0]
+      musicBar.innerHTML = `
+    <span class="mx-2">0.00</span>
+                <div class="progress bar" role="progressbar" aria-label="Basic example" aria-valuenow="" aria-valuemin="0"
+                  aria-valuemax="${music.duration}">
+                  <div class="progress-bar "></div>
+                </div>
+                <span class="mx-2">${music.duration}</span>
+    `
+        let imgBar = document.getElementsByClassName('imgBar')[0]
+        imgBar.innerHTML = `
+        <div class="d-flex align-items-center">
+                <div class="mx-2">
+                  <img class="" src="http://placekitten.com/40" alt="">
+                </div>
+                
+                <div class="mx-2">
+                  <p>Fat funny</p>
+                  <p>Maddy</p>
+                </div> 
+                <div class="mx-2">
+                  <i class="bi bi-heart"></i>
+                </div>
+              </div>
       `
+      
+//FOOTER
       });
+      let play = document.getElementById('playFill')
+      let pause = document.getElementById('pause')
+      let comando = document.getElementById('comand')
+      comando.addEventListener('click', () => {
+        if (pause.classList.contains('d-none')) {
+
+          pause.classList.remove('d-none')
+          play.classList.add('d-none')
+          Avvia()
+        } else {
+          pause.classList.add('d-none')
+          play.classList.remove('d-none')
+          Ferma()
+        }
+      })
     });
 };
 myAlbumDekstop()
+
