@@ -1,5 +1,4 @@
 const createSongRef = (album) => {
-    console.log(album);
     const albumRef = document.createElement('div');
     albumRef.innerHTML = `    <div class="row row-cols-3">
     <img class="img-song" src="${album.album.cover}" alt="Image Album">
@@ -20,11 +19,11 @@ const fetchArtist = async (artistId) => {
             let artist = await response.json();
             return artist;
         } else {
-            alert('We were able to contact the server, but there was a problem');
+            console.log('We were able to contact the server, but there was a problem');
             return null;
         }
     } catch (error) {
-        alert(error);
+        console.logrt(error);
     }
 };
 
@@ -35,11 +34,11 @@ const fetchTracklist = async (tracklistUrl) => {
             let tracklist = await response.json();
             return tracklist.data;
         } else {
-            alert('We were able to contact the server, but there was a problem');
+            console.log('We were able to contact the server, but there was a problem');
             return null;
         }
     } catch (error) {
-        alert(error);
+        console.log(error);
     }
 };
 
