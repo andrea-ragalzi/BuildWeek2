@@ -141,54 +141,6 @@ a {
   font-size: 1.5em;
 }
 
-.footerDekstop {
-  padding: 0.5em;
-  background-color: rgb(30, 30, 30);
-  position: sticky;
-  bottom: 0;
-}
-.footerDekstop .imgBar img {
-  width: 40px;
-}
-.footerDekstop .imgBar p:last-of-type {
-  color: rgb(140, 140, 140);
-}
-.footerDekstop .imgBar i:hover {
-  color: var(--color-green-dark);
-}
-.footerDekstop .imgBar p {
-  font-size: 0.7em;
-  margin-bottom: 0;
-}
-.footerDekstop span {
-  font-size: 0.7em;
-  color: rgb(140, 140, 140);
-}
-.footerDekstop .bi-play-fill, .footerDekstop .bi-pause-fill {
-  border-radius: 50%;
-  background-color: white;
-  padding: 0.2em;
-  color: black;
-}
-.footerDekstop .bi-shuffle:hover, .footerDekstop .bi-arrow-return-left:hover {
-  color: var(--color-green-dark);
-}
-.footerDekstop .progress {
-  height: 3px;
-  background-color: rgb(70, 70, 70);
-  width: 50%;
-}
-.footerDekstop .settingsBar {
-  font-size: 0.7em;
-  color: rgb(180, 180, 180);
-}
-.footerDekstop .settingsBar i:hover {
-  color: var(--color-green-dark);
-}
-.footerDekstop .settingsBar .bar {
-  width: 30%;
-}
-
 .album-body {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 60%, rgb(255, 215, 104) 100%);
   color: white;
@@ -277,4 +229,51 @@ i:hover {
   100% {
     transform: translateX(-180%);
   }
+}
+.footerDekstop {
+  padding: 0.5em;
+  background-color: rgb(30, 30, 30);
+  position: sticky;
+  bottom: 0;
+}
+.footerDekstop .imgBar img {
+  width: 40px;
+}
+.footerDekstop .imgBar p:last-of-type {
+  color: rgb(140, 140, 140);
+}
+.footerDekstop .imgBar i:hover {
+  color: var(--color-green-dark);
+}
+.footerDekstop .imgBar p {
+  font-size: 0.7em;
+  margin-bottom: 0;
+}
+.footerDekstop span {
+  font-size: 0.7em;
+  color: rgb(140, 140, 140);
+}
+.footerDekstop .bi-play-fill, .footerDekstop .bi-pause-fill {
+  border-radius: 50%;
+  background-color: white;
+  padding: 0.2em;
+  color: black;
+}
+.footerDekstop .bi-shuffle:hover, .footerDekstop .bi-arrow-return-left:hover {
+  color: var(--color-green-dark);
+}
+.footerDekstop .progress {
+  height: 3px;
+  background-color: rgb(70, 70, 70);
+  width: 50%;
+}
+.footerDekstop .settingsBar {
+  font-size: 0.7em;
+  color: rgb(180, 180, 180);
+}
+.footerDekstop .settingsBar i:hover {
+  color: var(--color-green-dark);
+}
+.footerDekstop .settingsBar .bar {
+  width: 30%;
 }/*# sourceMappingURL=style.css.map */
