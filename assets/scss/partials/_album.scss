@@ -163,57 +163,6 @@ a {
     font-size: 1.5em;
 }
 
-.footerDekstop {
-    .imgBar {
-        p:last-of-type {
-            color: rgb(140, 140, 140);
-        }
-        i:hover{
-            color: var(--color-green-dark);
-        }
-        p {
-            font-size: 0.7em;
-            margin-bottom: 0;
-        }
-    }
-
-    span {
-        font-size: 0.7em;
-        color: rgb(140, 140, 140);
-    }
-
-    .bi-play-fill {
-        border-radius: 50%;
-        background-color: white;
-        padding: 0.2em;
-        color: black;
-    }
-    .bi-shuffle:hover,.bi-arrow-return-left:hover{
-        color: var(--color-green-dark);
-    }
-    .progress {
-        height: 3px;
-        background-color: rgb(70, 70, 70);
-        width: 50%;
-    }
-
-    padding: 0.5em;
-    background-color: rgb(30, 30, 30);
-    position: sticky;
-    bottom: 0;
-
-    .settingsBar {
-        i:hover{
-            color: var(--color-green-dark);
-        }
-        font-size: 0.7em;
-        color: rgb(180, 180, 180);
-
-        .bar {
-            width: 30%;
-        }
-    }
-}
 
 
 
