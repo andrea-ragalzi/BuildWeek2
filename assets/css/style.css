@@ -57,6 +57,8 @@ li {
 }
 
 .bodyContain {
+  overflow-y: scroll;
+  height: 100vh;
   padding: 0;
 }
 .bodyContain #album {
@@ -87,9 +89,14 @@ li {
   margin-right: 10px;
 }
 
-.casual-music {
+.utents {
   overflow-y: scroll;
   height: 500px;
+}
+
+.casual-music {
+  overflow-y: scroll;
+  height: 400px;
 }
 
 .row .sidebar_left,
@@ -214,6 +221,10 @@ i:hover {
   --color-green: #1FDF64;
   --color-green-light: #4be683;
   --color-green-dark: #19b250;
+}
+
+body {
+  height: 100%;
 }
 
 .cyclic-text {
