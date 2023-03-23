@@ -351,7 +351,39 @@ i:hover {
   }
 }
 .search-body {
-  background-color: var(--color-black);
+  background-color: var(--color-grey);
+}
+.search-body nav {
+  z-index: 1;
+  background-color: black;
+  position: sticky;
+  top: 0;
+  padding: 0.5em;
+}
+.search-body nav i {
+  color: white;
+}
+.search-body nav #input {
+  width: 300px;
+  padding: 0.2em;
+  border-radius: 10px;
+  background-color: white;
+}
+.search-body nav input {
+  color: black;
+  background-color: white;
+  margin: 0;
+}
+.search-body .dynamic {
+  color: white;
+}
+.search-body .dynamic .containerDynamic {
+  padding: 1em;
+  width: 38%;
+  background-color: rgb(30, 30, 30);
+}
+.search-body footer {
+  color: white;
 }
 .search-body a:hover, .search-body a {
   cursor: pointer;

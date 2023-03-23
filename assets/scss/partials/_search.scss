@@ -1,6 +1,41 @@
 @import 'colors';
 
 .search-body {
+    nav{
+        z-index: 1;
+        background-color:black;
+        position: sticky;
+        top: 0;
+        i{
+            color: white;
+        }
+        #input{
+            width: 300px;
+            padding: 0.2em;
+            border-radius: 10px;
+            background-color: white;
+        }
+        input{
+            color: black;
+            background-color: white;
+            margin: 0;
+        }
+            padding: 0.5em;
+            
+    }
+    .dynamic{
+        .containerDynamic{
+            padding: 1em;
+            width: 38%;
+            background-color: rgb(30, 30, 30);
+        }
+        color: white;
+    }
+
+
+    footer{
+        color: white;
+    }
     a:hover,a{
         cursor: pointer;
         text-decoration: none;
@@ -23,7 +58,7 @@
     h2{
         color: white;
     }
-    background-color: var(--color-black);
+    background-color:var(--color-grey);
     @media screen and (max-width:768px) {
         .sidebar_left {
             display: none;
