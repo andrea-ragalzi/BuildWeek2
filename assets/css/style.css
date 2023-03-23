@@ -86,47 +86,6 @@
   font-size: 0.6em;
   background-color: rgba(0, 0, 0, 0.3333333333);
 }
-.album-body ::-webkit-scrollbar {
-  width: 0.8em;
-  height: 0.8em;
-  background: rgb(50, 50, 50);
-  margin-right: 10px;
-}
-.album-body .utents {
-  overflow-y: scroll;
-  height: 500px;
-}
-.album-body .casual-music {
-  overflow-y: scroll;
-  height: 400px;
-}
-.album-body .row .sidebar_left,
-.album-body .row .sidebar_right {
-  padding: 0;
-  font-size: 0.7em;
-  color: rgb(160, 160, 160);
-  background-color: rgb(10, 10, 10);
-  left: 0;
-  position: sticky;
-}
-.album-body #icons {
-  margin: 0.5em;
-  border-bottom: 1px solid rgb(75, 75, 75);
-}
-.album-body .small {
-  font-size: 0.7em;
-  color: rgb(140, 140, 140);
-}
-.album-body .sidebar_right span {
-  color: white;
-  font-weight: bold;
-}
-.album-body .sidebar_right > div {
-  margin: 0.5em;
-}
-.album-body a {
-  color: black;
-}
 .album-body .bi-caret-left,
 .album-body .bi-caret-right {
   padding: 0.2em;
@@ -165,6 +124,25 @@ i:hover {
   height: 20em;
 }
 
+.index-body {
+  background-color: rgb(20, 20, 20);
+  color: white;
+}
+.index-body a {
+  color: white;
+}
+.index-body #albumsBig .rounded {
+  background: rgb(55, 55, 55);
+  background: linear-gradient(-45deg, rgb(55, 55, 55) 60%, rgba(255, 0, 0, 0.381) 100%);
+  padding: 0.5em;
+  margin: 1em;
+  background-color: rgb(55, 55, 55);
+  color: white;
+}
+.index-body #albumsBig .rounded img {
+  width: 150px;
+}
+
 @media screen and (max-width: 768px) {
   .sidebar_left {
     display: none;
@@ -185,6 +163,34 @@ i:hover {
     display: none;
   }
 }
+.search-body {
+  background-color: var(--color-black);
+}
+.search-body h1 {
+  color: white;
+}
+.search-body .navbar {
+  color: white;
+  background-color: rgba(70, 70, 70, 0.8);
+  margin: 2em;
+  border-radius: 5px;
+  padding: 0.5em;
+}
+.search-body h2 {
+  color: white;
+}
+.search-body .icon {
+  color: white;
+  margin-top: 15px;
+}
+.search-body .playbar {
+  color: white;
+}
+.search-body .card {
+  background-image: url(https://play-lh.googleusercontent.com/P2VMEenhpIsubG2oWbvuLGrs0GyyzLiDosGTg8bi8htRXg9Uf0eUtHiUjC28p1jgHzo=w600-h300-pc0xffffff-pd);
+  background-size: cover;
+}
+
 .test-body {
   background-color: var(--color-white);
   color: var(--color-green-dark);
@@ -287,4 +293,54 @@ body {
 }
 .footerDekstop .settingsBar .bar {
   width: 30%;
+}
+
+.sidebar_right span {
+  color: white;
+  font-weight: bold;
+}
+
+.sidebar_right > div {
+  margin: 0.5em;
+}
+
+a {
+  color: black;
+}
+
+::-webkit-scrollbar {
+  width: 0.8em;
+  height: 0.8em;
+  background: rgb(50, 50, 50);
+  margin-right: 10px;
+}
+
+.utents {
+  overflow-y: scroll;
+  height: 500px;
+}
+
+.casual-music {
+  overflow-y: scroll;
+  height: 400px;
+}
+
+.row .sidebar_left,
+.row .sidebar_right {
+  padding: 0;
+  font-size: 0.7em;
+  color: rgb(160, 160, 160);
+  background-color: rgb(10, 10, 10);
+  left: 0;
+  position: sticky;
+}
+
+#icons {
+  margin: 0.5em;
+  border-bottom: 1px solid rgb(75, 75, 75);
+}
+
+.small {
+  font-size: 0.7em;
+  color: rgb(140, 140, 140);
 }/*# sourceMappingURL=style.css.map */
