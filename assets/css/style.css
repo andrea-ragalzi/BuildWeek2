@@ -138,6 +138,9 @@ i:hover {
   display: flex;
   align-items: center;
 }
+.artist-body li {
+  list-style: none;
+}
 .artist-body .row p {
   margin: 0;
   line-height: 1;
@@ -253,13 +256,12 @@ i:hover {
   .artist-body main,
   .artist-body header {
     margin-left: 26%;
-    width: 60%;
+    width: 55%;
   }
   .artist-body main {
     background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 64%, rgb(29, 29, 29) 100%);
     margin-top: -20px;
     margin-bottom: 100px;
-    margin-left: 25%;
   }
   .artist-body .sidebar_left {
     margin-top: -1040px;
@@ -267,13 +269,12 @@ i:hover {
     position: fixed;
   }
   .artist-body .sidebar_right {
-    margin-top: -760px;
-    margin-left: 1000px;
+    margin-top: -640px;
+    margin-left: 82%;
     background-color: black;
     height: 100vh;
-    width: 80px;
+    width: 19%;
     position: fixed;
-    width: 70px;
   }
   .artist-body .display-1 {
     margin-bottom: 90px;
