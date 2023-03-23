@@ -1,6 +1,7 @@
 const FOOTER_API_DESKTOP =
   "https://striveschool-api.herokuapp.com/api/deezer/album/";
 
+
 const myAlbumDekstopFooter = function (albumID) {
   const url = `${FOOTER_API_DESKTOP}${albumID}`
   fetch(url)
@@ -9,6 +10,7 @@ const myAlbumDekstopFooter = function (albumID) {
     })
     .then((events) => {
       events.tracks.data.forEach((music, i) => {
+
         let musicBar = document.getElementsByClassName('musicBar')[0]
         musicBar.innerHTML = `
       <span class="mx-2">0.00</span>

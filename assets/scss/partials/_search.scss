@@ -1,26 +1,85 @@
 @import 'colors';
 
 .search-body {
-    background-color: var(--color-black);
-    h1{
+    nav{
+        z-index: 1;
+        background-color:black;
+        position: sticky;
+        top: 0;
+        i{
+            color: white;
+        }
+        #input{
+            width: 300px;
+            padding: 0.2em;
+            border-radius: 10px;
+            background-color: white;
+        }
+        input{
+            color: black;
+            background-color: white;
+            margin: 0;
+        }
+            padding: 0.5em;
+            
+    }
+    .dynamic{
+        .containerDynamic{
+            padding: 1em;
+            width: 38%;
+            background-color: rgb(30, 30, 30);
+        }
         color: white;
     }
-    .navbar{
+
+
+    footer{
         color: white;
-        background-color: rgba(70, 70, 70, 0.8);
-        margin: 2em;
-        border-radius: 5px;
-        padding: 0.5em;
+    }
+    a:hover,a{
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+    }
+    input{
+        border: none;
+        color: white;
+        margin: auto;
+        background-color: rgb(40, 40, 40);
+    }
+    .card{
+        width: 150px;
+        height: 100px;
+    }
+
+    h1{
+        color: white;
     }
     h2{
         color: white;
     }
-    .icon{
-        color: white;
-        margin-top: 15px;
+    background-color:var(--color-grey);
+    @media screen and (max-width:768px) {
+        .sidebar_left {
+            display: none;
+        }
     }
-    .playbar{
-        color: white;
+    
+    @media screen and (max-width:992px) {
+        .sidebar_right {
+            display: none;
+        }
     }
-
+    
+    @media screen and (min-width:767px) {
+        .mobile {
+            display: none;
+        }
+    }
+    
+    @media screen and (max-width:768px) {
+        .dekstop {
+            display: none;
+        }
+    }
 }
