@@ -143,6 +143,13 @@ i:hover {
   width: 150px;
 }
 
+.index-article a {
+  background-color: #1FDF64;
+  border-radius: 38%;
+  padding: 0.7em;
+  color: rgb(20, 20, 20);
+}
+
 @media screen and (max-width: 768px) {
   .sidebar_left {
     display: none;
