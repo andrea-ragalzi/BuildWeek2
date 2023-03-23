@@ -1,5 +1,5 @@
 const ALBUM_API =
-  "https://striveschool-api.herokuapp.com/api/deezer/album/363782";
+  "https://striveschool-api.herokuapp.com/api/deezer/album/";
 
 const myAlbumMobile = function () {
   fetch(ALBUM_API)
@@ -73,8 +73,9 @@ myAlbumMobile();
 
 //VERSIONE DEKSTOP
 
-const myAlbumDekstop = function () {
-  fetch(ALBUM_API)
+const myAlbumDekstop = function (albumID) {
+  const url = `${ALBUM_API}${albumID}`
+  fetch(url)
     .then((response) => {
       return response.json();
     })
@@ -99,8 +100,8 @@ const myAlbumDekstop = function () {
     </div>
   </div>
   `;
-      events.tracks.data.forEach((music,i) => {
-i++
+      events.tracks.data.forEach((music, i) => {
+        i++
         console.log(music)
         let musicAlbum = document.getElementById("brani");
         musicAlbum.innerHTML += `
@@ -136,7 +137,7 @@ i++
       `;
 
 
-
+//FOOTER
       let musicBar = document.getElementsByClassName('musicBar')[0]
       musicBar.innerHTML = `
     <span class="mx-2">0.00</span>
@@ -162,11 +163,11 @@ i++
                 </div>
               </div>
       `
-      
+
 
       });
 
-//FOOTER
+      //FOOTER
 
       let play = document.getElementById('playFill')
       let pause = document.getElementById('pause')
@@ -182,5 +183,5 @@ i++
       })
     });
 };
-myAlbumDekstop()
+myAlbumDekstop(363782)
 
