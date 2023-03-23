@@ -182,12 +182,15 @@
         header {
             margin-left: 26%;
             width: 55%;
+            max-height: 100vh;
         }
 
         main {
             background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 64%, rgb(29, 29, 29) 100%);
             margin-top: -20px;
             margin-bottom: 100px;
+            margin-left: 25%;
+            width: 65%;
             
         }
 
