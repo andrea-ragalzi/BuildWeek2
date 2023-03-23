@@ -34,7 +34,7 @@
 
         <div class="d-flex flex-wrap justify-content-center">
 
-            <div class="container">
+            <div class="container staticContent">
 
                 <div class="row justify-content-center">
 
@@ -127,6 +127,10 @@
 
 
                 </div>
+            </div>
+
+            <div class="container dynamicContent d-none">
+
             </div>
 
 
@@ -253,212 +257,215 @@
                                 <div class="d-flex ">
                                     <div class="mx-2"><i class="bi bi-caret-left"></i></div>
                                     <div class="mx-2"><i class="bi bi-caret-right"></i></div>
-                                  </div>
+                                </div>
                                 <div class="d-flex mx-2 searchInput  py-1 px-2 align-items-center bg-light">
                                     <div><i class="bi bi-search text-dark"></i></div>
-                                    <input type="text"  id="input" class="mx-2 bg-light">
+                                    <input type="text" id="input" class="mx-2 bg-light">
                                 </div>
                             </div>
                         </nav>
-                        <div class="row justify-content-center d-none" id="static">
-                            <div class="card col-6 col-md-4 col-lg-3 mx-3 my-2">
-                                <div>
-                                    <div class="card-body">
-                                        <p class="card-text"> Create per te </p>
-                                    </div>
+                        <div class="staticContent row justify-content-center d-none"">
+                            <div class=" card col-6 col-md-4 col-lg-3 mx-3 my-2">
+                            <div>
+                                <div class="card-body">
+                                    <p class="card-text"> Create per te </p>
                                 </div>
                             </div>
-                            <div class="card col-6 col-md-4 col-lg-3 mx-3 my-2">
-                                <div>
-                                    <div class="card-body">
-                                        <p class="card-text"> Create per te </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card col-6 col-md-4 col-lg-3 mx-3 my-2">
-                                <div>
-                                    <div class="card-body">
-                                        <p class="card-text"> Create per te </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card col-6 col-md-4 col-lg-3 mx-3 my-2">
-                                <div>
-                                    <div class="card-body">
-                                        <p class="card-text"> Create per te </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card col-6 col-md-4 col-lg-3 mx-3 my-2">
-                                <div>
-                                    <div class="card-body">
-                                        <p class="card-text"> Create per te </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card col-6 col-md-4 col-lg-3 mx-3 my-2">
-                                <div>
-                                    <div class="card-body">
-                                        <p class="card-text"> Create per te </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card col-6 col-md-4 col-lg-3 mx-3 my-2">
-                                <div>
-                                    <div class="card-body">
-                                        <p class="card-text"> Create per te </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card col-6 col-md-4 col-lg-3 mx-3 my-2">
-                                <div>
-                                    <div class="card-body">
-                                        <p class="card-text"> Create per te </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card col-6 col-md-4 col-lg-3 mx-3 my-2">
-                                <div>
-                                    <div class="card-body">
-                                        <p class="card-text"> Create per te </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card col-6 col-md-4 col-lg-3 mx-3 my-2">
-                                <div>
-                                    <div class="card-body">
-                                        <p class="card-text"> Create per te </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card col-6 col-md-4 col-lg-3 mx-3 my-2">
-                                <div>
-                                    <div class="card-body">
-                                        <p class="card-text"> Create per te </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card col-6 col-md-4 col-lg-3 mx-3 my-2">
-                                <div>
-                                    <div class="card-body">
-                                        <p class="card-text"> Create per te </p>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
-                        <div class="px-5" id="dynamic">
-
-                            <div class="d-flex flex-column">
-
-                                <div class="d-flex justify-content-between w-50 my-5">
-                                    <div>
-                                        <h4>Risultato più rilevante</h4>
-                                    </div>
-                                    <div>
-                                        <h4>Brani</h4>
-                                    </div>
+                        <div class="card col-6 col-md-4 col-lg-3 mx-3 my-2">
+                            <div>
+                                <div class="card-body">
+                                    <p class="card-text"> Create per te </p>
                                 </div>
-
-                                <div class="d-flex align-items-center"> 
-
-                                    <div class="containerDynamic rounded ">
-                                        <div class="d-flex flex-column align-items-center w-50">
-                                            <div class="my-2"><img class="rounded-circle" src="http://placekitten.com/80" alt=""> </div>
-                                            <div><p>Rocwell</p></div>
-                                            <div><span class="code ">Artista</span class="code"></div>
-                                        </div>
-                                        
-                                    </div>
-    
-                                    <div class="mx-5">
-
-                                        <div class="d-flex align-items-center justify-content-between my-2 smallMusic">
-                                            <div class="d-flex align-items-center">
-                                                <div>
-                                                    <div><img src="http://placekitten.com/30" alt=""> </div>
-                                                </div>
-                                                <div class="mx-3">
-                                                    <p>Rock</p>
-                                                    <span>The weekknd</span>
-                                                </div> 
-                                            </div>
-                                            <div>
-                                                3.52
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-                                    
-                                    
-
-                                </div>
-                                
-
                             </div>
-
-                            <div class="classLists py-5">
-                                <div class="py-3">
-                                    <h4>Altro con rock</h4>
-                                </div>
-                                <div class="d-flex flex-wrap">
-
-                                    <div class="rounded p-2  d-flex cardList flex-column mx-3 my-3">
-                                        <div class="py-1">
-                                            <div><img class="rounded" src="http://placekitten.com/150" alt=""></div>
-                                        </div>
-                                        <div>
-                                            <p>This is rockwell</p>
-                                        </div>
-                                        <div>
-                                            <span>This is rockwell</span>
-                                        </div>
-                                    </div>
-                                    
-
-                                </div>
-
-                            </div>
-
                         </div>
+                        <div class="card col-6 col-md-4 col-lg-3 mx-3 my-2">
+                            <div>
+                                <div class="card-body">
+                                    <p class="card-text"> Create per te </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-6 col-md-4 col-lg-3 mx-3 my-2">
+                            <div>
+                                <div class="card-body">
+                                    <p class="card-text"> Create per te </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-6 col-md-4 col-lg-3 mx-3 my-2">
+                            <div>
+                                <div class="card-body">
+                                    <p class="card-text"> Create per te </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-6 col-md-4 col-lg-3 mx-3 my-2">
+                            <div>
+                                <div class="card-body">
+                                    <p class="card-text"> Create per te </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-6 col-md-4 col-lg-3 mx-3 my-2">
+                            <div>
+                                <div class="card-body">
+                                    <p class="card-text"> Create per te </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-6 col-md-4 col-lg-3 mx-3 my-2">
+                            <div>
+                                <div class="card-body">
+                                    <p class="card-text"> Create per te </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-6 col-md-4 col-lg-3 mx-3 my-2">
+                            <div>
+                                <div class="card-body">
+                                    <p class="card-text"> Create per te </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-6 col-md-4 col-lg-3 mx-3 my-2">
+                            <div>
+                                <div class="card-body">
+                                    <p class="card-text"> Create per te </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-6 col-md-4 col-lg-3 mx-3 my-2">
+                            <div>
+                                <div class="card-body">
+                                    <p class="card-text"> Create per te </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-6 col-md-4 col-lg-3 mx-3 my-2">
+                            <div>
+                                <div class="card-body">
+                                    <p class="card-text"> Create per te </p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+                    <div class="px-5" id="dynamic">
 
+                        <div class="d-flex flex-column">
+
+                            <div class="d-flex justify-content-between w-50 my-5">
+                                <div>
+                                    <h4>Risultato più rilevante</h4>
+                                </div>
+                                <div>
+                                    <h4>Brani</h4>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center">
+
+                                <div class="containerDynamic rounded ">
+                                    <div class="d-flex flex-column align-items-center w-50">
+                                        <div class="my-2"><img class="rounded-circle" src="http://placekitten.com/80"
+                                                alt=""> </div>
+                                        <div>
+                                            <p>Rocwell</p>
+                                        </div>
+                                        <div><span class="code ">Artista</span class="code"></div>
+                                    </div>
+
+                                </div>
+
+                                <div class="mx-5">
+
+                                    <div class="d-flex align-items-center justify-content-between my-2 smallMusic">
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <div><img src="http://placekitten.com/30" alt=""> </div>
+                                            </div>
+                                            <div class="mx-3">
+                                                <p>Rock</p>
+                                                <span>The weekknd</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            3.52
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="classLists py-5">
+                            <div class="py-3">
+                                <h4>Altro con rock</h4>
+                            </div>
+                            <div class="d-flex flex-wrap">
+
+                                <div class="rounded p-2  d-flex cardList flex-column mx-3 my-3">
+                                    <div class="py-1">
+                                        <div><img class="rounded" src="http://placekitten.com/150" alt=""></div>
+                                    </div>
+                                    <div>
+                                        <p>This is rockwell</p>
+                                    </div>
+                                    <div>
+                                        <span>This is rockwell</span>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <footer class="footerDekstop">
+        <div class="row align-items-center">
+            <div class=" col-2 imgBar">
+            </div>
+            <div class=" col-8 playDekstopBar r">
+                <div class="row">
+                    <div class="d-flex justify-content-center my-2">
+                        <div class="mx-1"><i class="bi bi-shuffle"></i></div>
+                        <div class="mx-1"><i class="bi bi-skip-start-fill"></i></div>
+                        <div class="mx-1" id='comand'><i class="bi bi-play-fill " id="playFill"></i><i
+                                class="bi bi-pause-fill d-none" id="pause"></i></div>
+                        <div class="mx-1"><i class="bi bi-skip-end-fill"></i></div>
+                        <div class="mx-1"> <i class="bi bi-arrow-return-left"></i></div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center musicBar">
+                    </div>
+                </div>
+            </div>
+            <div class=" col-2 settingsBar">
+                <div class="d-flex align-items-center">
+                    <div class="mx-1"><i class="bi bi-mic"></i></div>
+                    <div class="mx-1"><i class="bi bi-window-sidebar"></i></div>
+                    <div class="mx-1"><i class="bi bi-pc-display"></i></div>
+                    <div class=""><i class="bi bi-volume-down"></i></div>
+                    <div class="progress bar mx-1" role="progressbar" aria-label="Basic example" aria-valuenow="75"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar w-75"></div>
+                    </div>
+                    <div class="mx-1"><i class="bi bi-fullscreen"></i></div>
                 </div>
             </div>
         </div>
-        <footer class="footerDekstop">
-            <div class="row align-items-center">
-                <div class=" col-2 imgBar">
-                </div>
-                <div class=" col-8 playDekstopBar r">
-                    <div class="row">
-                        <div class="d-flex justify-content-center my-2">
-                            <div class="mx-1"><i class="bi bi-shuffle"></i></div>
-                            <div class="mx-1"><i class="bi bi-skip-start-fill"></i></div>
-                            <div class="mx-1" id='comand'><i class="bi bi-play-fill " id="playFill"></i><i
-                                    class="bi bi-pause-fill d-none" id="pause"></i></div>
-                            <div class="mx-1"><i class="bi bi-skip-end-fill"></i></div>
-                            <div class="mx-1"> <i class="bi bi-arrow-return-left"></i></div>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center musicBar">
-                        </div>
-                    </div>
-                </div>
-                <div class=" col-2 settingsBar">
-                    <div class="d-flex align-items-center">
-                        <div class="mx-1"><i class="bi bi-mic"></i></div>
-                        <div class="mx-1"><i class="bi bi-window-sidebar"></i></div>
-                        <div class="mx-1"><i class="bi bi-pc-display"></i></div>
-                        <div class=""><i class="bi bi-volume-down"></i></div>
-                        <div class="progress bar mx-1" role="progressbar" aria-label="Basic example" aria-valuenow="75"
-                            aria-valuemin="0" aria-valuemax="100">
-                            <div class="progress-bar w-75"></div>
-                        </div>
-                        <div class="mx-1"><i class="bi bi-fullscreen"></i></div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+    </footer>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

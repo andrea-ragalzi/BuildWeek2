@@ -1,44 +1,103 @@
-const SEARCH_API =
-  " https://striveschool-api.herokuapp.com/api/deezer/";
-
-    
-    document.getElementById('input').addEventListener('input',()=>{
-        let static =document.getElementById('static')
-        let dynamic =document.getElementById('dynamic')
-        console.log(static)
-        let searchWord=document.getElementById('input').value;
-        if(searchWord!=''){
-            static.classList.add('d-none')
-            dynamic.classList.remove('d-none')
+const fetchSong = async (target) => {
+    try {
+        const url = `${URL_SEARCH}${target}`;
+        console.log(url);
+        let response = await fetch(url);
+        if (response.ok) {
+            let song = await response.json();
+            return song.data;
+        } else {
+            console.log('There was a problem with the network response.');
+            return null;
         }
-    let searchKey= `search?q={${searchWord}}`
-    console.log(searchKey)
-        fetch(SEARCH_API+searchKey)
-          .then((response) => {
-            return response.json();
-          })
-          .then((events) => {
-              console.log(events)
-            events.foreach(ev=>{
-                console.log(ev)
-            })
-             });  
-})
-  
-/*
-        let searchId= new URLSearchParams(window.location.search).get("q");
+    } catch (error) {
+        console.error(error);
+        return null;
+    }
+};
 
-        let searchKey2= `search?q={${searchId}}` 
-        document.getElementById('href').addEventListener('click',()=>{
-        fetch(SEARCH_API+searchKey2)
-        .then((response) => {
-        return response.json();
-        })
-        .then((events) => {
-        console.log(events)
-        events.forEach(music=>{
-            console.log(music)
-        })
+const getAlbums = (songs) => {
+    return songs.map((song) => song.album);
+};
+
+const getArtists = (songs) => {
+    return songs.map((song) => song.artist);
+};
+
+const showResults = (results) => {
+    // Clear previous search results
+    Array.from(dynamicContentListRef).forEach((dynamicContentRef) => {
+        dynamicContentRef.innerHTML = '';
+    });
+    results.forEach((result) => {
+        const resultRef = document.createElement('div');
+        resultRef.classList.add('row', 'row-cols-2');
+        resultRef.innerHTML = `
+        <div class="row row-cols-2 justify-content-start">
+          <img src="${result.picture || result.cover}" alt="Image Result">
+        </div>
+        <div>
+            <p>${result.title || result.name}</p>
+            <p></p>
+        </div> 
+      `;
+        Array.from(dynamicContentListRef).forEach((dynamicContentRef) => {
+            dynamicContentRef.appendChild(resultRef);
         });
-        })
-        */
+    });
+};
+
+const shuffleArray = (arr) => {
+    /*
+      Fisher-Yates shuffle algorithm
+    */
+    const date = new Date();
+    const seed = date.getMilliseconds() / 1000;
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(seed * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+};
+
+const URL_SEARCH =
+    'https://striveschool-api.herokuapp.com/api/deezer/search?q=';
+
+const searchBarRef = document.getElementById('searchBar');
+const staticContentListRef = document.getElementsByClassName('staticContent');
+const dynamicContentListRef = document.getElementsByClassName('dynamicContent');
+
+searchBarRef.value = '';
+
+searchBarRef.addEventListener('input', async () => {
+    setTimeout(async () => {
+        let query = searchBarRef.value.trim();
+        if (!query) {
+            console.log('Empty query string.');
+            Array.from(staticContentListRef).forEach((staticContentRef) => {
+                staticContentRef.classList.remove('d-none');
+            });
+            Array.from(dynamicContentListRef).forEach((dynamicContentRef) => {
+                dynamicContentRef.classList.add('d-none');
+                dynamicContentRef.innerHTML = '';
+            });
+            return;
+        }
+        let songs = await fetchSong(query);
+        if (!songs) {
+            console.log('Error fetching songs.');
+            return;
+        }
+        Array.from(staticContentListRef).forEach((staticContentRef) => {
+            staticContentRef.classList.add('d-none');
+        });
+        Array.from(dynamicContentListRef).forEach((dynamicContentRef) => {
+            dynamicContentRef.classList.remove('d-none');
+        });
+        let albums = getAlbums(songs);
+        let artists = getArtists(songs);
+        let results = shuffleArray([...albums, ...artists]);
+        console.log(results);
+        showResults(results);
+    }, 500);
+});
