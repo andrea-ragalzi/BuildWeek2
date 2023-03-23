@@ -415,25 +415,6 @@ i:hover {
   position: sticky;
 }
 
-.index-body {
-  background-color: rgb(20, 20, 20);
-  color: white;
-}
-.index-body a {
-  color: white;
-}
-.index-body #albumsBig .rounded {
-  background: rgb(55, 55, 55);
-  background: linear-gradient(-45deg, rgb(55, 55, 55) 60%, rgba(255, 0, 0, 0.381) 100%);
-  padding: 0.5em;
-  margin: 1em;
-  background-color: rgb(55, 55, 55);
-  color: white;
-}
-.index-body #albumsBig .rounded img {
-  width: 150px;
-}
-
 .test-body {
   background-color: var(--color-white);
   color: var(--color-green-dark);
