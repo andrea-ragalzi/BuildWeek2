@@ -34,8 +34,6 @@ const myAlbumDekstopFooter = function (albumID) {
                   </div>
                 </div>
         `
-
-
       });
       //FOOTER  
       let play = document.getElementById('playFill')
