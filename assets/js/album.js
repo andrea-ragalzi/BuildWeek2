@@ -1,8 +1,9 @@
 const ALBUM_API =
   "https://striveschool-api.herokuapp.com/api/deezer/album/";
 
-const myAlbumMobile = function () {
-  fetch(ALBUM_API)
+const myAlbumMobile = function (albumId) {
+  const url = `${ALBUM_API}${albumId}`
+  fetch(url)
     .then((response) => {
       return response.json();
     })
@@ -69,7 +70,7 @@ const myAlbumMobile = function () {
       });
     });
 };
-myAlbumMobile();
+myAlbumMobile(363782);
 
 //VERSIONE DEKSTOP
 
