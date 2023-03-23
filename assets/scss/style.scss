@@ -9,6 +9,10 @@
     @include color-palette(#000000, #121212, #FFFFFF, #1FDF64);
 }
 
+body{
+
+    height: 100%;
+}
 
 
 .cyclic-text {
@@ -80,4 +84,55 @@
             width: 30%;
         }
     }
+}
+.sidebar_right span {
+    color: white;
+    font-weight: bold;
+}
+
+.sidebar_right>div {
+    margin: 0.5em;
+}
+
+a {
+    color: black;
+}
+::-webkit-scrollbar {
+    width: 0.8em;
+    height: 0.8em;
+    background: rgb(50, 50, 50);
+    margin-right: 10px;
+}
+
+.utents{
+    overflow-y: scroll;
+    height: 500px;
+}
+.casual-music {
+    overflow-y: scroll;
+    height: 400px;
+}
+
+.row {
+
+    .sidebar_left,
+    .sidebar_right {
+        padding: 0;
+        font-size: 0.7em;
+        color: rgb(160, 160, 160);
+        background-color: rgb(10, 10, 10);
+        left: 0;
+        position: sticky;
+
+    }
+}
+
+#icons {
+    margin: 0.5em;
+    border-bottom: 1px solid rgb(75, 75, 75);
+}
+
+.small {
+    font-size: 0.7em;
+    color: rgb(140, 140, 140);
 }

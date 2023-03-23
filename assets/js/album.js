@@ -65,11 +65,7 @@ const myAlbumMobile = function () {
     </div>
     </div>
 </div>`;
-        let cyclic = document.getElementsByClassName('playBar')[0]
-        cyclic.innerHTML = `<div class="mx-2 cyclic-text"><p >${music.title}</p></div>
-    <div class="mx-2"><i class="bi bi-pc-display"></i></div>
-          <div class="mx-2"><i class="bi bi-heart"></i></div>
-          <div class="mx-2"><i class="bi bi-play"></i></div>`
+
       });
     });
 };
@@ -103,7 +99,8 @@ const myAlbumDekstop = function () {
     </div>
   </div>
   `;
-      events.tracks.data.forEach((music) => {
+      events.tracks.data.forEach((music,i) => {
+i++
         console.log(music)
         let musicAlbum = document.getElementById("brani");
         musicAlbum.innerHTML += `
@@ -111,7 +108,7 @@ const myAlbumDekstop = function () {
                         <div class="d-flex col-4">
                           <div>
                             <div>
-                              <p>1</p>
+                              <p>${i}</p>
                             </div>
                           </div>
                           <div class="mx-3 ">
@@ -137,7 +134,9 @@ const myAlbumDekstop = function () {
                       </div>
 
       `;
-//FOOTER
+
+
+
       let musicBar = document.getElementsByClassName('musicBar')[0]
       musicBar.innerHTML = `
     <span class="mx-2">0.00</span>
@@ -164,8 +163,11 @@ const myAlbumDekstop = function () {
               </div>
       `
       
-//FOOTER
+
       });
+
+//FOOTER
+
       let play = document.getElementById('playFill')
       let pause = document.getElementById('pause')
       let comando = document.getElementById('comand')

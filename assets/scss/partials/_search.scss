@@ -1,1 +1,29 @@
 @import 'colors';
+
+.search-body {
+    background-color: var(--color-black);
+    h1{
+        color: white;
+    }
+    .navbar{
+        color: white;
+        background-color: rgba(70, 70, 70, 0.8);
+        margin: 2em;
+        border-radius: 5px;
+        padding: 0.5em;
+    }
+    h2{
+        color: white;
+    }
+    .icon{
+        color: white;
+        margin-top: 15px;
+    }
+    .playbar{
+        color: white;
+    }
+    .card{
+        background-image: url(https://play-lh.googleusercontent.com/P2VMEenhpIsubG2oWbvuLGrs0GyyzLiDosGTg8bi8htRXg9Uf0eUtHiUjC28p1jgHzo=w600-h300-pc0xffffff-pd);
+        background-size: cover;
+    }
+}
