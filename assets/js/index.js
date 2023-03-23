@@ -1,6 +1,9 @@
 
 const createBigAlbumRef = album => {
   const albumRef = document.createElement('div');
+  // albumRef.id = album.;
+  albumRef.classList.add('album-class');
+  albumRef.id = album.id;
   albumRef.innerHTML = `
   <div class='rounded'>
         <div class="d-flex">
@@ -12,7 +15,7 @@ const createBigAlbumRef = album => {
               <p>Playlist</p>
             </div>
             <div>
-              <p id="albumTitle">${album.title}</p>
+              <p id="albumTitle">${truncateString(50, album.title)}</p>
             </div>
           </div>
         </div>
@@ -32,19 +35,20 @@ const createBigAlbumRef = album => {
   return albumRef;
 }
 
-
 const createSmallAlbumRef = album => {
   const albumRef = document.createElement('div');
+  albumRef.id = album.id;
+  albumRef.classList.add('album-class');
   albumRef.innerHTML = `
   <div class="d-flex mx-3 my-2">
   <div>
     <img src="${album.cover_small}" />
   </div>
   <div class="mx-2">
-    <p>${album.title}</p>
+    <p>${truncateString(20, album.title)}</p>
   </div>
 </div>  `;
-return albumRef;
+  return albumRef;
 }
 
 const fetchSong = async (target) => {
@@ -76,8 +80,18 @@ const shuffleArray = (arr) => {
   return arr;
 }
 
+const truncateString = (n, str) => {
+  if (str.length > n) {
+    return str.substring(0, n);
+  }
+  else {
+    return str;
+  }
+}
+
 const URL_SEARCH =
   'https://striveschool-api.herokuapp.com/api/deezer/search?q=';
+const URL_ALBUM = '"https://striveschool-api.herokuapp.com/api/deezer/album/";'
 const ALBUM_ID_RANGE = [40000, 50000];
 const ALBUMS_NR = 6;
 
@@ -108,7 +122,7 @@ window.onload = async () => {
   Array.from(albumsRef).forEach(albumRef => {
     console.log(albumRef);
     albumRef.addEventListener('click', () => {
-      console.log('Album clicked:', albumRef);
+      window.location.href = `./album.html?albumId=${albumRef.id}`;
     });
   });
 }
