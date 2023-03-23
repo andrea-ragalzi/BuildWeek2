@@ -4,11 +4,13 @@ const SEARCH_API =
     
     document.getElementById('input').addEventListener('input',()=>{
         let static =document.getElementById('static')
+        let dynamic =document.getElementById('dynamic')
+        console.log(static)
         let searchWord=document.getElementById('input').value;
         if(searchWord!=''){
             static.classList.add('d-none')
+            dynamic.classList.remove('d-none')
         }
-
     let searchKey= `search?q={${searchWord}}`
     console.log(searchKey)
         fetch(SEARCH_API+searchKey)
@@ -17,6 +19,9 @@ const SEARCH_API =
           })
           .then((events) => {
               console.log(events)
+            events.foreach(ev=>{
+                console.log(ev)
+            })
              });  
 })
   

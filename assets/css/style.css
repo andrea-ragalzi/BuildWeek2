@@ -353,7 +353,11 @@ i:hover {
 .search-body {
   background-color: var(--color-grey);
 }
+.search-body .searchInput {
+  border-radius: 20px;
+}
 .search-body nav {
+  padding: 0;
   z-index: 1;
   background-color: black;
   position: sticky;
@@ -366,21 +370,42 @@ i:hover {
 .search-body nav #input {
   width: 300px;
   padding: 0.2em;
-  border-radius: 10px;
-  background-color: white;
 }
 .search-body nav input {
   color: black;
-  background-color: white;
   margin: 0;
 }
-.search-body .dynamic {
+.search-body #dynamic {
   color: white;
 }
-.search-body .dynamic .containerDynamic {
-  padding: 1em;
-  width: 38%;
+.search-body #dynamic .smallMusic {
+  width: 200px;
+}
+.search-body #dynamic .code {
+  border-radius: 20px;
+  font-weight: bold;
+  border: none;
+  padding: 0.5em;
+  background-color: rgb(10, 10, 10);
+}
+.search-body #dynamic span {
+  font-size: 0.7em;
+}
+.search-body #dynamic p {
+  margin: 0;
+  font-weight: bold;
+}
+.search-body #dynamic .cardList {
+  width: 170px;
   background-color: rgb(30, 30, 30);
+}
+.search-body #dynamic .containerDynamic {
+  padding: 0.5em;
+  width: 300px;
+  background-color: rgb(30, 30, 30);
+}
+.search-body #dynamic .containerDynamic img {
+  width: 100px;
 }
 .search-body footer {
   color: white;
