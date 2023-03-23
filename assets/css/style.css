@@ -353,25 +353,46 @@ i:hover {
 .search-body {
   background-color: var(--color-black);
 }
+.search-body a:hover, .search-body a {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+.search-body input {
+  border: none;
+  color: white;
+  margin: auto;
+  background-color: rgb(40, 40, 40);
+}
+.search-body .card {
+  width: 150px;
+  height: 100px;
+}
 .search-body h1 {
   color: white;
-}
-.search-body .navbar {
-  color: white;
-  background-color: rgba(70, 70, 70, 0.8);
-  margin: 2em;
-  border-radius: 5px;
-  padding: 0.5em;
 }
 .search-body h2 {
   color: white;
 }
-.search-body .icon {
-  color: white;
-  margin-top: 15px;
+@media screen and (max-width: 768px) {
+  .search-body .sidebar_left {
+    display: none;
+  }
 }
-.search-body .playbar {
-  color: white;
+@media screen and (max-width: 992px) {
+  .search-body .sidebar_right {
+    display: none;
+  }
+}
+@media screen and (min-width: 767px) {
+  .search-body .mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .search-body .dekstop {
+    display: none;
+  }
 }
 
 .test-body {
