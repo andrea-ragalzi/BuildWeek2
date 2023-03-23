@@ -1,4 +1,3 @@
-
 const footer_apy =
   "https://striveschool-api.herokuapp.com/api/deezer/album/";
 
@@ -64,8 +63,6 @@ const footer_apy =
                         </div>
   
         `;
-  
-  
   //FOOTER
         let musicBar = document.getElementsByClassName('musicBar')[0]
         musicBar.innerHTML = `
@@ -94,10 +91,8 @@ const footer_apy =
         `
   
   
-        });
-  
-        //FOOTER
-  
+        }); 
+        //FOOTER  
         let play = document.getElementById('playFill')
         let pause = document.getElementById('pause')
         let comando = document.getElementById('comand')
@@ -115,7 +110,6 @@ const footer_apy =
 myAlbumDekstopFooter(363782)
 
 /*
-
 DA METTERE NEL FOOTER PARTE DEKSTOP!!!!
 
 <footer class="footerDekstop">
