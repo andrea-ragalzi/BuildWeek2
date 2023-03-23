@@ -1,196 +1,103 @@
+.album-body {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 60%, rgb(255, 215, 104) 100%);
+  color: white;
+}
+.album-body #albumImg img {
+  box-shadow: 0px 0px 20px 0px #000000;
+}
+.album-body .play i {
+  padding: 0.5em;
+  background-color: var(--color-green-dark);
+  border-radius: 50%;
+}
 @media screen and (max-width: 768px) {
-  .sidebar_left {
+  .album-body .sidebar_left {
     display: none;
   }
 }
 @media screen and (max-width: 992px) {
-  .sidebar_right {
+  .album-body .sidebar_right {
     display: none;
   }
 }
 @media screen and (min-width: 767px) {
-  .mobile {
+  .album-body .mobile {
     display: none;
   }
 }
 @media screen and (max-width: 768px) {
-  .dekstop {
+  .album-body .dekstop {
     display: none;
   }
 }
-ul {
+.album-body ul {
   padding: 0;
 }
-
-li {
+.album-body li {
   color: rgb(140, 140, 140);
   font-size: 0.9em;
   margin: 0.2em 0;
   list-style: none;
 }
-
-.titleAlbumMain {
+.album-body .titleAlbumMain {
   color: rgb(140, 140, 140);
   border-bottom: 1px solid rgb(80, 80, 80);
 }
-
-.playFill {
+.album-body .playFill {
   color: #000000;
   padding: 0.5em;
   border-radius: 50%;
   background-color: var(--color-green-dark);
 }
-
-.buttonDropdown:hover {
+.album-body .buttonDropdown:hover {
   background-color: rgba(0, 0, 0, 0.9);
 }
-
-.buttonDropdown {
+.album-body .buttonDropdown {
   font-size: 0.8em;
   background-color: rgba(0, 0, 0, 0.7);
   padding: 0.2em;
   border: 1px solid black;
   border-radius: 20px;
 }
-.buttonDropdown img {
+.album-body .buttonDropdown img {
   width: 25px;
 }
-
-.bodyContain {
+.album-body .bodyContain {
   overflow-y: scroll;
   height: 100vh;
   padding: 0;
 }
-.bodyContain #album {
+.album-body .bodyContain #album {
   font-size: 0.7em;
 }
-.bodyContain h4 {
+.album-body .bodyContain h4 {
   font-size: 1.5em;
 }
-.bodyContain .information {
+.album-body .bodyContain .information {
   font-size: 0.7em;
 }
-.bodyContain .information p {
+.album-body .bodyContain .information p {
   color: white;
 }
-.bodyContain p {
+.album-body .bodyContain p {
   color: rgb(180, 180, 180);
 }
-
-.mainDiv {
+.album-body .mainDiv {
   font-size: 0.6em;
   background-color: rgba(0, 0, 0, 0.3333333333);
 }
-
-::-webkit-scrollbar {
-  width: 0.8em;
-  height: 0.8em;
-  background: rgb(50, 50, 50);
-  margin-right: 10px;
-}
-
-.utents {
-  overflow-y: scroll;
-  height: 500px;
-}
-
-.casual-music {
-  overflow-y: scroll;
-  height: 400px;
-}
-
-.row .sidebar_left,
-.row .sidebar_right {
-  padding: 0;
-  font-size: 0.7em;
-  color: rgb(160, 160, 160);
-  background-color: rgb(10, 10, 10);
-  left: 0;
-  position: sticky;
-}
-
-#icons {
-  margin: 0.5em;
-  border-bottom: 1px solid rgb(75, 75, 75);
-}
-
-.small {
-  font-size: 0.7em;
-  color: rgb(140, 140, 140);
-}
-
-.sidebar_right span {
-  color: white;
-  font-weight: bold;
-}
-
-.sidebar_right > div {
-  margin: 0.5em;
-}
-
-a {
-  color: black;
-}
-
-.bi-caret-left,
-.bi-caret-right {
+.album-body .bi-caret-left,
+.album-body .bi-caret-right {
   padding: 0.2em;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.3333333333);
 }
-
-.bi-caret-left:hover,
-.bi-caret-right:hover {
+.album-body .bi-caret-left:hover,
+.album-body .bi-caret-right:hover {
   background-color: rgba(0, 0, 0, 0.9);
 }
-
-.playDekstop > div {
+.album-body .playDekstop > div {
   font-size: 1.5em;
-}
-
-.footerDekstop {
-  padding: 0.5em;
-  background-color: rgb(30, 30, 30);
-  position: sticky;
-  bottom: 0;
-}
-.footerDekstop .imgBar p:last-of-type {
-  color: rgb(140, 140, 140);
-}
-.footerDekstop .imgBar i:hover {
-  color: var(--color-green-dark);
-}
-.footerDekstop .imgBar p {
-  font-size: 0.7em;
-  margin-bottom: 0;
-}
-.footerDekstop span {
-  font-size: 0.7em;
-  color: rgb(140, 140, 140);
-}
-.footerDekstop .bi-play-fill {
-  border-radius: 50%;
-  background-color: white;
-  padding: 0.2em;
-  color: black;
-}
-.footerDekstop .bi-shuffle:hover, .footerDekstop .bi-arrow-return-left:hover {
-  color: var(--color-green-dark);
-}
-.footerDekstop .progress {
-  height: 3px;
-  background-color: rgb(70, 70, 70);
-  width: 50%;
-}
-.footerDekstop .settingsBar {
-  font-size: 0.7em;
-  color: rgb(180, 180, 180);
-}
-.footerDekstop .settingsBar i:hover {
-  color: var(--color-green-dark);
-}
-.footerDekstop .settingsBar .bar {
-  width: 30%;
 }
 
 .album-body {
@@ -415,6 +322,73 @@ i:hover {
   position: sticky;
 }
 
+.index-body {
+  background-color: rgb(20, 20, 20);
+  color: white;
+}
+.index-body a {
+  color: white;
+}
+.index-body #albumsBig .rounded {
+  background: rgb(55, 55, 55);
+  background: linear-gradient(-45deg, rgb(55, 55, 55) 60%, rgba(255, 0, 0, 0.381) 100%);
+  padding: 0.5em;
+  margin: 1em;
+  background-color: rgb(55, 55, 55);
+  color: white;
+}
+.index-body #albumsBig .rounded img {
+  width: 150px;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar_left {
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  .sidebar_right {
+    display: none;
+  }
+}
+@media screen and (min-width: 767px) {
+  .mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dekstop {
+    display: none;
+  }
+}
+.search-body {
+  background-color: var(--color-black);
+}
+.search-body h1 {
+  color: white;
+}
+.search-body .navbar {
+  color: white;
+  background-color: rgba(70, 70, 70, 0.8);
+  margin: 2em;
+  border-radius: 5px;
+  padding: 0.5em;
+}
+.search-body h2 {
+  color: white;
+}
+.search-body .icon {
+  color: white;
+  margin-top: 15px;
+}
+.search-body .playbar {
+  color: white;
+}
+.search-body .card {
+  background-image: url(https://play-lh.googleusercontent.com/P2VMEenhpIsubG2oWbvuLGrs0GyyzLiDosGTg8bi8htRXg9Uf0eUtHiUjC28p1jgHzo=w600-h300-pc0xffffff-pd);
+  background-size: cover;
+}
+
 .test-body {
   background-color: var(--color-white);
   color: var(--color-green-dark);
@@ -517,4 +491,54 @@ body {
 }
 .footerDekstop .settingsBar .bar {
   width: 30%;
+}
+
+.sidebar_right span {
+  color: white;
+  font-weight: bold;
+}
+
+.sidebar_right > div {
+  margin: 0.5em;
+}
+
+a {
+  color: black;
+}
+
+::-webkit-scrollbar {
+  width: 0.8em;
+  height: 0.8em;
+  background: rgb(50, 50, 50);
+  margin-right: 10px;
+}
+
+.utents {
+  overflow-y: scroll;
+  height: 500px;
+}
+
+.casual-music {
+  overflow-y: scroll;
+  height: 400px;
+}
+
+.row .sidebar_left,
+.row .sidebar_right {
+  padding: 0;
+  font-size: 0.7em;
+  color: rgb(160, 160, 160);
+  background-color: rgb(10, 10, 10);
+  left: 0;
+  position: sticky;
+}
+
+#icons {
+  margin: 0.5em;
+  border-bottom: 1px solid rgb(75, 75, 75);
+}
+
+.small {
+  font-size: 0.7em;
+  color: rgb(140, 140, 140);
 }/*# sourceMappingURL=style.css.map */
