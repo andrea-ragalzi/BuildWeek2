@@ -257,6 +257,9 @@ i:hover {
     margin-left: 26%;
     width: 55%;
   }
+  .artist-body .artist-likes {
+    margin-left: 50%;
+  }
   .artist-body .sidebar_left {
     margin-top: -960px;
     margin-right: 900px;
