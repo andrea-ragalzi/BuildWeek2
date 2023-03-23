@@ -96,7 +96,10 @@ const ALBUMS_NR = 6;
 
 const albumsSmall1Ref = document.getElementById('albumsSmall1');
 const albumsSmall2Ref = document.getElementById('albumsSmall2');
+const albumsSmall1DeskRef = document.getElementById('albumsSmall1Desk');
+const albumsSmall2DeskRef = document.getElementById('albumsSmall2Desk');
 const albumsBigRef = document.getElementById('albumsBig');
+const albumsBigDeskRef = document.getElementById('albumsBigDesk');
 const albumsRef = document.getElementsByClassName('album-class');
 
 window.onload = async () => {
@@ -108,15 +111,18 @@ window.onload = async () => {
     const smallAlbum = smallAalbums[index];
     if (index < ALBUMS_NR / 2) {
       albumsSmall1Ref.appendChild(createSmallAlbumRef(smallAlbum));
+      albumsSmall1DeskRef.appendChild(createSmallAlbumRef(smallAlbum));
     }
     else {
       albumsSmall2Ref.appendChild(createSmallAlbumRef(smallAlbum));
+      albumsSmall2DeskRef.appendChild(createSmallAlbumRef(smallAlbum));
     }
   }
   const bigAlbums =
     search_results.slice(6).map(search_result => search_result.album);
   bigAlbums.forEach(bigAlbum => {
     albumsBigRef.appendChild(createBigAlbumRef(bigAlbum));
+    albumsBigDeskRef.appendChild(createBigAlbumRef(bigAlbum));
   });
   Array.from(albumsRef).forEach(albumRef => {
     albumRef.addEventListener('click', () => {

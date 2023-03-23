@@ -70,7 +70,6 @@ const myAlbumMobile = function (albumId) {
       });
     });
 };
-myAlbumMobile(363782);
 
 //VERSIONE DEKSTOP
 
@@ -138,9 +137,9 @@ const myAlbumDekstop = function (albumID) {
       `;
 
 
-//FOOTER
-      let musicBar = document.getElementsByClassName('musicBar')[0]
-      musicBar.innerHTML = `
+        //FOOTER
+        let musicBar = document.getElementsByClassName('musicBar')[0]
+        musicBar.innerHTML = `
     <span class="mx-2">0.00</span>
                 <div class="progress bar" role="progressbar" aria-label="Basic example" aria-valuenow="" aria-valuemin="0"
                   aria-valuemax="${music.duration}">
@@ -184,5 +183,9 @@ const myAlbumDekstop = function (albumID) {
       })
     });
 };
-myAlbumDekstop(363782)
+
+const urlSearchParams = new URLSearchParams(window.location.search);
+const albumId = urlSearchParams.get('albumId');
+myAlbumMobile(albumId);
+myAlbumDekstop(albumId)
 
