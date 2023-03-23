@@ -1,0 +1,251 @@
+@import 'colors';
+
+.artist-body {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    margin: 10px;
+
+    #coverImg {
+        height: 400px;
+        margin-top: -10px;
+    }
+
+    #followers {
+        margin-top: 20px;
+        font-size: 0.8em;
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+    }
+
+    .img-song {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .row p {
+        margin: 0;
+        line-height: 1;
+    }
+
+    #albumTitle {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    #listeners {
+        color: var(--color-grey-light);
+    }
+
+
+    .info,
+    h4,
+    p {
+        white-space: nowrap;
+        font-size: 1rem;
+    }
+
+    .info,
+    h4 {
+        font-size: 1.1em;
+    }
+
+    .info p {
+        color: var(--color-grey-light);
+    }
+
+    .play {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #tracklist i.bi.bi-three-dots-vertical {
+        width: 24px;
+        height: 0px;
+        margin-left: 130px;
+
+    }
+
+    .row i {
+        display: flex;
+        align-items: center;
+    }
+
+    #albumTitle {
+        width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+    .artist-likes {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+    }
+
+    .artist-likes h4,
+    .artist-likes p {
+        margin: 0;
+        margin-left: -15px;
+    }
+
+
+    .card {
+        background-color: black;
+    }
+
+    .follow.btn {
+        background-color: var(--color-grey-dark);
+        color: white;
+    }
+
+    .img-song {
+        width: 70px;
+        height: 50px;
+    }
+
+    .like {
+        border-radius: 50%;
+        width: 85px;
+        height: 65px;
+        margin: 10px;
+    }
+
+    .play {
+        color: var(--color-grey-light);
+        font-size: 1.2em;
+
+        .bi.bi-play-circle-fill {
+            color: var(--color-green-dark);
+            font-size: 1.6em;
+            margin-right: 5px;
+        }
+    }
+
+    .albumFooter {
+        position: sticky;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.951);
+
+        .playBar {
+            background-color: rgba(49, 49, 49, 0.896);
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        .sidebar_left {
+            display: none;
+        }
+
+        .footerDekstop {
+            display: none;
+        }
+
+    }
+
+    @media screen and (max-width:992px) {
+        .sidebar_right {
+            display: none;
+        }
+
+        .sidebar_left {
+            width: 25%;
+        }
+
+
+    }
+
+    @media screen and (min-width:768px) {
+
+        .mobile {
+            display: none;
+        }
+
+
+        .albumFooter {
+            position: fixed;
+            display: none;
+        }
+
+        main,
+        header {
+            margin-left: 26%;
+            width: 60%;
+        }
+
+        main {
+            background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 64%, rgb(29, 29, 29) 100%);
+            margin-top: -20px;
+            margin-bottom: 100px;
+            margin-left: 25%;
+        }
+
+        .sidebar_left {
+            margin-top: -1040px;
+            margin-right: 900px;
+            position: fixed;
+        }
+
+        .sidebar_right {
+            margin-top: -760px;
+            margin-left: 1000px;
+            background-color: black;
+            height: 100vh;
+            width: 80px;
+            position: fixed;
+            width: 70px;
+        }
+
+        .display-1 {
+            margin-bottom: 90px;
+            font-weight: bolder;
+        }
+
+        #tracklist i.bi.bi-three-dots-vertical {
+            display: none;
+
+        }
+
+        .footerDekstop {
+            position: fixed;
+            width: 100%;
+            margin-left: -10px;
+        }
+
+        .row.row-cols-3 {
+            display: inline-flex;
+            margin-left: 20px;
+        }
+
+        .follow {
+            margin-left: 50px;
+        }
+
+        .play {
+            display: none;
+        }
+
+        .follow.btn {
+            border: 1px solid white;
+
+        }
+
+    }
+
+    .sidebar_left,
+    .sidebar_right {
+        padding: 0;
+        font-size: 0.9em;
+        color: rgb(160, 160, 160);
+        background-color: rgb(10, 10, 10);
+        left: 0;
+        position: sticky;
+
+    }
+}
