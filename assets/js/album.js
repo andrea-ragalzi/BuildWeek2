@@ -65,11 +65,7 @@ const myAlbumMobile = function () {
     </div>
     </div>
 </div>`;
-        let cyclic = document.getElementsByClassName('playBar')[0]
-        cyclic.innerHTML = `<div class="mx-2 cyclic-text"><p >${music.title}</p></div>
-    <div class="mx-2"><i class="bi bi-pc-display"></i></div>
-          <div class="mx-2"><i class="bi bi-heart"></i></div>
-          <div class="mx-2"><i class="bi bi-play"></i></div>`
+
       });
     });
 };
@@ -141,9 +137,9 @@ const myAlbumDekstop = function (albumID) {
       `;
 
 
-        //FOOTER
-        let musicBar = document.getElementsByClassName('musicBar')[0]
-        musicBar.innerHTML = `
+//FOOTER
+      let musicBar = document.getElementsByClassName('musicBar')[0]
+      musicBar.innerHTML = `
     <span class="mx-2">0.00</span>
                 <div class="progress bar" role="progressbar" aria-label="Basic example" aria-valuenow="" aria-valuemin="0"
                   aria-valuemax="${music.duration}">
