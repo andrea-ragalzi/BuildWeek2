@@ -1,8 +1,8 @@
-const FOOTER_API =
+const FOOTER_API_MOBILE =
   "https://striveschool-api.herokuapp.com/api/deezer/album/363782";
 
 const MyFooterMobile = function () {
-  fetch(FOOTER_API)
+  fetch(FOOTER_API_MOBILE)
     .then((response) => {
       return response.json();
     })
