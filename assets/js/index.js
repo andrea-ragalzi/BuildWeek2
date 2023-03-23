@@ -80,9 +80,9 @@ const shuffleArray = (arr) => {
   return arr;
 }
 
-const truncateString = (n, str) => {
-  if (str.length > n) {
-    return str.substring(0, n);
+const truncateString = (limit, str) => {
+  if (str.length > limit) {
+    return str.substring(0, limit);
   }
   else {
     return str;
@@ -92,7 +92,6 @@ const truncateString = (n, str) => {
 const URL_SEARCH =
   'https://striveschool-api.herokuapp.com/api/deezer/search?q=';
 const URL_ALBUM = '"https://striveschool-api.herokuapp.com/api/deezer/album/";'
-const ALBUM_ID_RANGE = [40000, 50000];
 const ALBUMS_NR = 6;
 
 const albumsSmall1Ref = document.getElementById('albumsSmall1');
@@ -120,8 +119,8 @@ window.onload = async () => {
     albumsBigRef.appendChild(createBigAlbumRef(bigAlbum));
   });
   Array.from(albumsRef).forEach(albumRef => {
-    console.log(albumRef);
     albumRef.addEventListener('click', () => {
+      console.log(`./album.html?albumId=${albumRef.id}`);
       window.location.href = `./album.html?albumId=${albumRef.id}`;
     });
   });
