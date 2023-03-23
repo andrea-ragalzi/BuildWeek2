@@ -1,4 +1,4 @@
-@import 'colors';
+/*@import 'colors';
 
 .artist-body {
     background-color: var(--color-black);
@@ -248,4 +248,240 @@
         position: sticky;
 
     }
+}*/
+
+
+
+@import 'colors';
+.artist-body {
+    background: black;
+    color: white;
+
+    #albumImg img {
+        -webkit-box-shadow: 0px 0px 20px 0px #000000;
+        box-shadow: 0px 0px 20px 0px #000000;
+    }
+
+    .play i {
+        padding: 0.5em;
+        background-color: var(--color-green-dark);
+        border-radius: 50%;
+    }
+
+@media screen and (max-width:768px) {
+    .sidebar_left {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width:992px) {
+    .sidebar_right {
+        display: none;
+    }
+
+    
+}
+
+@media screen and (min-width:767px) {
+    .mobile {
+        display: none;
+    }
+    #tracklist i.bi.bi-three-dots-vertical {
+        display: none;
+    }
+
+    i.bi.bi-three-dots-vertical {
+        position: relative;
+        left: 70px;
+        bottom: 20px;
+        font-size: 2em;
+    }
+
+    .number {
+        position: relative;
+        bottom: 50px;
+        right: 20px;
+        color: white;
+        font-size: 1.5em;
+    }
+
+    .follow.btn {
+        border: 1px solid white;
+        position: relative;
+        bottom: 25px;
+        left: 60px;
+    }
+
+    .bi.bi-shuffle {
+        display: none;
+    }
+    .play{
+         position: relative;
+         right: 95%;
+         bottom: 23px;
+         font-size: 2.2em;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    .dekstop {
+        display: none;
+    }
+}
+
+
+
+
+ul {
+    padding: 0;
+}
+
+li {
+    color: rgb(140, 140, 140);
+    font-size: 0.9em;
+    margin: 0.2em 0;
+    list-style: none;
+}
+
+.titleAlbumMain {
+    color: rgb(140, 140, 140);
+    border-bottom: 1px solid rgb(80, 80, 80);
+}
+
+.playFill {
+    color: #000000;
+    padding: 0.5em;
+    border-radius: 50%;
+    background-color: var(--color-green-dark);
+}
+
+.buttonDropdown:hover {
+    background-color: rgba(0, 0, 0, 0.900);
+}
+
+.buttonDropdown {
+    img {
+        width: 25px;
+    }
+
+    font-size: 0.8em;
+    background-color: rgba(0, 0, 0, 0.700);
+    padding: 0.2em;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.bodyContain {
+    overflow-y: scroll;
+    height: 100vh;
+    #album {
+        font-size: 0.7em;
+    }
+
+    h4 {
+        font-size: 1.5em;
+    }
+
+    .information {
+        font-size: 0.7em;
+
+        p {
+            color: white;
+        }
+    }
+
+    p {
+        color: rgb(180, 180, 180);
+    }
+
+    padding: 0;
+}
+
+.mainDiv {
+    
+    font-size: 0.6em;
+    background-color: #00000055;
+}
+
+.track {
+    height: 30%;
+}
+
+.bi-caret-left,
+.bi-caret-right {
+    padding: 0.2em;
+    border-radius: 50%;
+    background-color: #00000055;
+
+}
+
+.bi-caret-left:hover,
+.bi-caret-right:hover {
+    background-color: rgba(0, 0, 0, 0.900);
+}
+
+.playDekstop>div {
+    font-size: 1.5em;
+}
+
+
+.follow.btn {
+    background-color: var(--color-grey-dark);
+    color: white;
+}
+
+.img-song {
+    height: 30px;
+    width: 55px;
+}
+
+.like {
+    width: 80px;
+    border-radius: 50%;
+}
+
+.artist-likes {
+    position: relative;
+    left: 53%;
+}
+
+.d-flex .titleAlbumMain .my-3 {
+    margin-top: 0px;
+}
+
+#coverImg {
+    margin: 0;
+    width: 130%;
+    height: 340px;
+    margin-left: -60px;
+    margin-top: -30px;
+}
+
+.display-1 {
+    font-weight: bolder;
+    margin-bottom: 5%;
+}
+
+
+
+}
+
+.albumFooter {
+    position: sticky;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.200);
+
+    .playBar {
+        background-color: rgba(70, 70, 70, 0.8);
+    }
+
+    div i+p {
+        font-size: 0.7em;
+    }
+}
+
+i:hover {
+    cursor: pointer;
 }

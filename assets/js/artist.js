@@ -53,7 +53,7 @@ const albumTitleRef = document.getElementById('albumTitle');
 const listenersRef = document.getElementById('listeners');
 const albumsRef = document.getElementById('tracklist');
 
-const artistId = 412;
+const artistId = 438;
 
 window.onload = async () => {
     const artist = await fetchArtist(artistId);
