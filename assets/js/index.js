@@ -51,6 +51,11 @@ const createSmallAlbumRef = album => {
   return albumRef;
 }
 
+const desktopMode = () => {
+  console.log('desktop');
+  topIconsRef.classList.add('d-none');
+};
+
 const fetchSong = async (target) => {
   try {
     const url = `${URL_SEARCH}${target}`
@@ -66,6 +71,10 @@ const fetchSong = async (target) => {
     console(error);
   }
 };
+
+const mobileMode = () => {
+  console.log('mobile');
+}
 
 const shuffleArray = (arr) => {
   /*
@@ -96,11 +105,35 @@ const ALBUMS_NR = 6;
 
 const albumsSmall1Ref = document.getElementById('albumsSmall1');
 const albumsSmall2Ref = document.getElementById('albumsSmall2');
+const albumsSmall1DeskRef = document.getElementById('albumsSmall1Desk');
+const albumsSmall2DeskRef = document.getElementById('albumsSmall2Desk');
 const albumsBigRef = document.getElementById('albumsBig');
+const albumsBigDeskRef = document.getElementById('albumsBigDesk');
 const albumsRef = document.getElementsByClassName('album-class');
+const casualMusicRef = document.getElementById('casualMusic');
+
+const topIconsRef = document.getElementById('topIcons');
+
+let savedAlbums = [];
+
+window.matchMedia("(min-width: 768px)").addEventListener('change', (event) => {
+  if (event.matches) {
+    desktopMode();
+  }
+  else {
+    mobileMode();
+  }
+});
 
 window.onload = async () => {
+  if (window.matchMedia("(min-width: 768px)").matches) {
+    desktopMode();
+  }
+  else {
+    mobileMode();
+  }
   let search_results = await fetchSong('rock');
+  let search_results_aside = await fetchSong('coding');
   search_results = shuffleArray(search_results);
   const smallAalbums =
     search_results.slice(0, 6).map(search_result => search_result.album);
@@ -108,20 +141,29 @@ window.onload = async () => {
     const smallAlbum = smallAalbums[index];
     if (index < ALBUMS_NR / 2) {
       albumsSmall1Ref.appendChild(createSmallAlbumRef(smallAlbum));
+      albumsSmall1DeskRef.appendChild(createSmallAlbumRef(smallAlbum));
     }
     else {
       albumsSmall2Ref.appendChild(createSmallAlbumRef(smallAlbum));
+      albumsSmall2DeskRef.appendChild(createSmallAlbumRef(smallAlbum));
     }
   }
   const bigAlbums =
     search_results.slice(6).map(search_result => search_result.album);
   bigAlbums.forEach(bigAlbum => {
     albumsBigRef.appendChild(createBigAlbumRef(bigAlbum));
+    albumsBigDeskRef.appendChild(createBigAlbumRef(bigAlbum));
   });
   Array.from(albumsRef).forEach(albumRef => {
     albumRef.addEventListener('click', () => {
-      console.log(`./album.html?albumId=${albumRef.id}`);
       window.location.href = `./album.html?albumId=${albumRef.id}`;
     });
   });
+  search_results_aside.forEach(song => {
+    const albumTitleRef = document.createElement('li');
+    albumTitleRef.innerText = song.album.title;
+    savedAlbums.push(song.album.title);
+    casualMusicRef.appendChild(albumTitleRef);
+  });
+  localStorage.setItem('savedAlbums', JSON.stringify(savedAlbums));
 }
