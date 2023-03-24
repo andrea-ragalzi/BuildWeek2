@@ -1,13 +1,24 @@
-const createSongRef = (album) => {
+const createSongRef = (album,i) => {
     const albumRef = document.createElement('div');
-    albumRef.innerHTML = `    <div class="row row-cols-3">
-    <img class="img-song" src="${album.album.cover}" alt="Image Album">
-    <div>
-      <p id="albumTitle">${album.title}</p>
-      <p id="listeners">${album.rank}</p>
+    albumRef.innerHTML = `
+    <div class="d-flex align-items-center justify-content-between mx-3 my-3">
+    <div class="d-flex align-items-center">
+      <div>
+        <div>${i}</div>
+      </div>
+      <div class="mx-3">
+        <img src="${album.album.cover}" alt="Image Album">
+      </div>
+      <div class="mx-3">
+        <p id="albumTitle">${album.title}</p>
+        <p id="listeners">${album.rank}</p>
+      </div>
     </div>
-    <i class="bi bi-three-dots-vertical"></i>
-  </div>`;
+    <div>
+      <i class="bi bi-three-dots-vertical"></i>
+    </div>
+  </div>
+  `;
   return albumRef;
 }
 
@@ -65,8 +76,9 @@ window.onload = async () => {
     artistNameRef.innerText = artist.name;
     followersNameRef.innerText = `${artist.nb_fan} ascoltatori mensili`;
     likeImgRef.setAttribute('src', artist.picture_small );
-    tracklist.forEach(song => {
-        albumsRef.appendChild(createSongRef(song));
+    tracklist.forEach((song,i) => {
+        i++
+        albumsRef.appendChild(createSongRef(song,i));
     });
 }
 const localArray = JSON.parse(localStorage.getItem('savedAlbums'));

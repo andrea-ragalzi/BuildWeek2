@@ -5,7 +5,7 @@ const createBigAlbumRef = (album, artist) => {
     albumRef.classList.add('album-class');
     albumRef.id = album.id;
     albumRef.innerHTML = `
-  <div class='rounded'>
+  <div class='rounded big-album'>
         <div class="d-flex">
           <div class="">
             <img id="albumCover" src="${album.cover}" alt="Album cover" />
@@ -53,7 +53,6 @@ const createSmallAlbumRef = album => {
 }
 
 const desktopMode = () => {
-    console.log('desktop');
     topIconsRef.classList.add('d-none');
 };
 
@@ -76,10 +75,6 @@ const fetchSong = async (target) => {
 const albumsCreators = (songs) => {
     return songs.map(song => song.artist);
 };
-
-const mobileMode = () => {
-    console.log('mobile');
-}
 
 const shuffleArray = (arr) => {
     /*
@@ -125,17 +120,11 @@ window.matchMedia("(min-width: 768px)").addEventListener('change', (event) => {
     if (event.matches) {
         desktopMode();
     }
-    else {
-        mobileMode();
-    }
 });
 
 window.onload = async () => {
     if (window.matchMedia("(min-width: 768px)").matches) {
         desktopMode();
-    }
-    else {
-        mobileMode();
     }
     let searchResults = await fetchSong('rock');
     let searchResults_aside = await fetchSong('coding');
