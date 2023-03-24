@@ -148,9 +148,6 @@
         .sidebar_right {
             display: none;
         }
-
-
-
     }
     
     @media screen and (min-width:767px) {
@@ -191,6 +188,25 @@
         .sidebar_right > div {
             margin: 0.5em;
             width: 110%;
+        }
+
+        .number {         
+                margin-top: 0;
+                position: relative;
+                bottom: 60px;
+        }
+
+        h1 {
+                margin: 0;
+                padding: 0;
+                position: relative;
+                bottom: 50px;
+                left: 20px;
+                font-weight: bolder;         
+        }
+
+        #follower p {
+            color: white;
         }
     }
     
