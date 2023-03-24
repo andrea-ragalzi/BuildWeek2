@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 .album-body {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 60%, rgb(255, 215, 104) 100%);
   color: white;
@@ -120,6 +121,7 @@ i:hover {
   background-color: var(--color-black);
   color: var(--color-white);
   margin: 10px;
+  font-family: "Lato", sans-serif;
 }
 .artist-body #coverImg {
   height: 300px;
