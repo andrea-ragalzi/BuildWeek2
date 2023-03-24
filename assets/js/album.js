@@ -189,3 +189,13 @@ const albumId = urlSearchParams.get('albumId');
 myAlbumMobile(albumId);
 myAlbumDekstop(albumId)
 
+const localArray = JSON.parse(localStorage.getItem('savedAlbums'));
+console.log(localArray)
+localArray.forEach(lc=>{
+    console.log(lc)
+    let casualList=document.getElementById('casuaList')
+    casualList.classList.add('list-unstyled')
+    let newLi = document.createElement('li')
+    newLi.innerHTML=lc;
+    casualList.appendChild(newLi)
+})

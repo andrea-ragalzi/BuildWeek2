@@ -1,6 +1,16 @@
 @import 'colors';
 
 .search-body {
+    .dynamicContent{
+    margin: 1em;
+        h4{ font-size: 0.8em;
+            color: white;
+            font-weight: bold;
+        }
+        p{
+            color: rgb(60, 60, 60);
+        }
+    }
     .searchInput{
         border-radius: 20px;
     }

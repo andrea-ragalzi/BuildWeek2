@@ -129,10 +129,6 @@ i:hover {
   margin-top: 20px;
   font-size: 0.8em;
 }
-.artist-body .row {
-  display: flex;
-  align-items: center;
-}
 .artist-body .img-song {
   margin-bottom: 20px;
   display: flex;
@@ -218,12 +214,7 @@ i:hover {
   font-size: 1.6em;
   margin-right: 5px;
 }
-.artist-body .albumFooter {
-  position: sticky;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.951);
-}
-.artist-body .albumFooter .playBar {
+.artist-body .a .playBar {
   background-color: rgba(49, 49, 49, 0.896);
 }
 @media screen and (max-width: 768px) {
@@ -238,77 +229,16 @@ i:hover {
   .artist-body .sidebar_right {
     display: none;
   }
-  .artist-body .sidebar_left {
-    width: 25%;
-  }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
   .artist-body .mobile {
     display: none;
   }
-  .artist-body .albumFooter {
-    position: fixed;
-    display: none;
-  }
-  .artist-body main,
-  .artist-body header {
-    margin-left: 26%;
-    width: 60%;
-  }
-  .artist-body main {
-    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 64%, rgb(29, 29, 29) 100%);
-    margin-top: -20px;
-    margin-bottom: 100px;
-    margin-left: 25%;
-  }
-  .artist-body .sidebar_left {
-    margin-top: -1040px;
-    margin-right: 900px;
-    position: fixed;
-  }
-  .artist-body .sidebar_right {
-    margin-top: -760px;
-    margin-left: 1000px;
-    background-color: black;
-    height: 100vh;
-    width: 80px;
-    position: fixed;
-    width: 70px;
-  }
-  .artist-body .display-1 {
-    margin-bottom: 90px;
-    font-weight: bolder;
-  }
-  .artist-body #tracklist i.bi.bi-three-dots-vertical {
-    display: none;
-  }
-  .artist-body .footerDekstop {
-    position: fixed;
-    width: 100%;
-    margin-left: -10px;
-  }
-  .artist-body .row.row-cols-3 {
-    display: inline-flex;
-    margin-left: 20px;
-  }
-  .artist-body .follow {
-    margin-left: 50px;
-  }
-  .artist-body .play {
-    display: none;
-  }
-  .artist-body .follow.btn {
-    border: 1px solid white;
-  }
 }
-.artist-body .sidebar_left,
-.artist-body .sidebar_right {
-  padding: 0;
-  font-size: 0.9em;
-  color: rgb(160, 160, 160);
-  background-color: rgb(10, 10, 10);
-  left: 0;
-  position: sticky;
+@media screen and (max-width: 768px) {
+  .artist-body .dekstop {
+    display: none;
+  }
 }
 
 .index-body {
@@ -352,6 +282,17 @@ i:hover {
 }
 .search-body {
   background-color: var(--color-grey);
+}
+.search-body .dynamicContent {
+  margin: 1em;
+}
+.search-body .dynamicContent h4 {
+  font-size: 0.8em;
+  color: white;
+  font-weight: bold;
+}
+.search-body .dynamicContent p {
+  color: rgb(60, 60, 60);
 }
 .search-body .searchInput {
   border-radius: 20px;

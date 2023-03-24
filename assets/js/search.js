@@ -31,14 +31,14 @@ const showResults = (results) => {
     });
     results.forEach((result) => {
         const resultRef = document.createElement('div');
-        resultRef.classList.add('row', 'row-cols-2');
+        resultRef.classList.add('row', 'row-cols-2','align-items-center');
         resultRef.innerHTML = `
-        <div class="row row-cols-2 justify-content-start">
+        <div class="row row-cols-2 justify-content-start my-2">
           <img src="${result.picture || result.cover}" alt="Image Result">
         </div>
         <div>
-            <p>${result.title || result.name}</p>
-            <p></p>
+            <h4>${result.title || result.name}</h4>
+            <p>${result.type|| result.type}</p>
         </div> 
       `;
         Array.from(dynamicContentListRef).forEach((dynamicContentRef) => {
@@ -101,3 +101,12 @@ searchBarRef.addEventListener('input', async () => {
         showResults(results);
     }, 500);
 });
+
+const localArray = JSON.parse(localStorage.getItem('savedAlbums'));
+localArray.forEach(lc=>{
+    let casualList=document.getElementById('casuaList')
+    casualList.classList.add('list-unstyled')
+    let newLi = document.createElement('li')
+    newLi.innerHTML=lc;
+    casualList.appendChild(newLi)
+})
