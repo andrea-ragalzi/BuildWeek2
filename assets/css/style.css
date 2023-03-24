@@ -251,6 +251,13 @@ i:hover {
   .artist-body #tracklist i.bi.bi-three-dots-vertical {
     display: none;
   }
+  .artist-body .bi-play-circle-fill::before {
+    font-size: 1.8em;
+  }
+  .artist-body .sidebar_right > div {
+    margin: 0.5em;
+    width: 110%;
+  }
 }
 @media screen and (max-width: 768px) {
   .artist-body .dekstop {
