@@ -361,61 +361,90 @@ i:hover {
   background-color: rgb(255, 72, 0);
   color: white;
   font-size: 1.2em;
+  overflow: hidden;
 }
 .search-body .events {
   background-color: rgb(94, 34, 234);
   color: white;
   font-size: 1.2em;
+  overflow: hidden;
 }
 .search-body .created {
   background-color: rgb(43, 42, 122);
   color: white;
   font-size: 1.2em;
+  overflow: hidden;
 }
 .search-body .new {
   background-color: rgb(255, 86, 86);
   color: white;
   font-size: 1.2em;
+  font-weight: bold;
+  overflow: hidden;
 }
 .search-body .sanremo {
   background-color: rgb(203, 90, 255);
   color: white;
   font-size: 1.2em;
+  overflow: hidden;
 }
 .search-body .pop {
   background-color: green;
   color: white;
   font-size: 1.2em;
+  overflow: hidden;
 }
 .search-body .hipHop {
   background-color: rgb(157, 100, 0);
   color: white;
   font-size: 1.2em;
+  overflow: hidden;
 }
 .search-body .classified {
   background-color: rgb(120, 91, 148);
   color: white;
   font-size: 1.2em;
+  overflow: hidden;
 }
 .search-body .dance {
   background-color: rgb(255, 106, 0);
   color: white;
   font-size: 1.2em;
+  overflow: hidden;
 }
 .search-body .rock {
   background-color: red;
   color: white;
   font-size: 1.2em;
+  overflow: hidden;
 }
 .search-body .latina {
   background-color: rgb(255, 116, 139);
   color: white;
   font-size: 1.2em;
+  overflow: hidden;
 }
 .search-body .indie {
   background-color: violet;
   color: white;
   font-size: 1.2em;
+  overflow: hidden;
+}
+.search-body .card-body {
+  position: relative;
+}
+.search-body .card-text {
+  position: relative;
+  padding-bottom: 50px;
+}
+.search-body .card-text img {
+  position: absolute;
+  bottom: 20;
+  right: -20%;
+  transform: translateY(50%) rotate(40deg);
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
 }
 .search-body footer {
   color: white;
@@ -433,7 +462,7 @@ i:hover {
 }
 .search-body .card {
   width: 40%;
-  height: 100px;
+  height: 110px;
 }
 .search-body h1 {
   color: white;
