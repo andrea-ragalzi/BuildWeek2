@@ -122,8 +122,10 @@ i:hover {
   margin: 10px;
 }
 .artist-body #coverImg {
-  height: 400px;
+  height: 300px;
   margin-top: -10px;
+  margin-left: -22px;
+  margin-right: -23px;
 }
 .artist-body #followers {
   margin-top: 20px;
@@ -223,6 +225,9 @@ i:hover {
   }
   .artist-body .footerDekstop {
     display: none;
+  }
+  .artist-body .col-8 {
+    width: 100%;
   }
 }
 @media screen and (max-width: 992px) {

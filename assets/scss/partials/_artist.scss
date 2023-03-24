@@ -6,10 +6,12 @@
     margin: 10px;
 
     #coverImg {
-        height: 400px;
+        height: 300px;
         margin-top: -10px;
+        margin-left: -22px;
+        margin-right: -23px;    
     }
-
+      
     #followers {
         margin-top: 20px;
         font-size: 0.8em;
@@ -132,6 +134,13 @@
         .footerDekstop{
             display: none;
         }
+
+        .col-8 {
+            width: 100%;
+        }
+
+
+        
     }
     
     @media screen and (max-width:992px) {
