@@ -259,6 +259,12 @@ i:hover {
 .index-body #albumsBig .rounded img {
   width: 150px;
 }
+.index-body .artistButton {
+  background-color: var(--color-grey);
+  border: none;
+  color: var(--color-grey-light);
+  font-size: 1em;
+}
 
 @media screen and (max-width: 768px) {
   .sidebar_left {
@@ -421,7 +427,7 @@ i:hover {
   --color-black-light: #1a1a1a;
   --color-black-dark: black;
   --color-grey: #121212;
-  --color-grey-light: #2c2c2c;
+  --color-grey-light: #929292;
   --color-grey-dark: black;
   --color-white: #FFFFFF;
   --color-white-light: white;
@@ -472,13 +478,15 @@ body {
   font-size: 0.7em;
   color: rgb(140, 140, 140);
 }
-.footerDekstop .bi-play-fill, .footerDekstop .bi-pause-fill {
+.footerDekstop .bi-play-fill,
+.footerDekstop .bi-pause-fill {
   border-radius: 50%;
   background-color: white;
   padding: 0.2em;
   color: black;
 }
-.footerDekstop .bi-shuffle:hover, .footerDekstop .bi-arrow-return-left:hover {
+.footerDekstop .bi-shuffle:hover,
+.footerDekstop .bi-arrow-return-left:hover {
   color: var(--color-green-dark);
 }
 .footerDekstop .progress {
@@ -506,10 +514,6 @@ body {
   margin: 0.5em;
 }
 
-a {
-  color: black;
-}
-
 ::-webkit-scrollbar {
   width: 0.8em;
   height: 0.8em;
@@ -525,24 +529,4 @@ a {
 .casual-music {
   overflow-y: scroll;
   height: 400px;
-}
-
-.row .sidebar_left,
-.row .sidebar_right {
-  padding: 0;
-  font-size: 0.7em;
-  color: rgb(160, 160, 160);
-  background-color: rgb(10, 10, 10);
-  left: 0;
-  position: sticky;
-}
-
-#icons {
-  margin: 0.5em;
-  border-bottom: 1px solid rgb(75, 75, 75);
-}
-
-.small {
-  font-size: 0.7em;
-  color: rgb(140, 140, 140);
 }/*# sourceMappingURL=style.css.map */
