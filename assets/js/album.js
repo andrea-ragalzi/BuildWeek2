@@ -1,8 +1,9 @@
 const ALBUM_API =
   "https://striveschool-api.herokuapp.com/api/deezer/album/";
 
-const myAlbumMobile = function () {
-  fetch(ALBUM_API)
+const myAlbumMobile = function (albumId) {
+  const url = `${ALBUM_API}${albumId}`
+  fetch(url)
     .then((response) => {
       return response.json();
     })
@@ -69,7 +70,6 @@ const myAlbumMobile = function () {
       });
     });
 };
-myAlbumMobile();
 
 //VERSIONE DEKSTOP
 
@@ -137,9 +137,9 @@ const myAlbumDekstop = function (albumID) {
       `;
 
 
-//FOOTER
-      let musicBar = document.getElementsByClassName('musicBar')[0]
-      musicBar.innerHTML = `
+        //FOOTER
+        let musicBar = document.getElementsByClassName('musicBar')[0]
+        musicBar.innerHTML = `
     <span class="mx-2">0.00</span>
                 <div class="progress bar" role="progressbar" aria-label="Basic example" aria-valuenow="" aria-valuemin="0"
                   aria-valuemax="${music.duration}">
@@ -183,5 +183,19 @@ const myAlbumDekstop = function (albumID) {
       })
     });
 };
-myAlbumDekstop(363782)
 
+const urlSearchParams = new URLSearchParams(window.location.search);
+const albumId = urlSearchParams.get('albumId');
+myAlbumMobile(albumId);
+myAlbumDekstop(albumId)
+
+const localArray = JSON.parse(localStorage.getItem('savedAlbums'));
+console.log(localArray)
+localArray.forEach(lc=>{
+    console.log(lc)
+    let casualList=document.getElementById('casuaList')
+    casualList.classList.add('list-unstyled')
+    let newLi = document.createElement('li')
+    newLi.innerHTML=lc;
+    casualList.appendChild(newLi)
+})

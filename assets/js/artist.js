@@ -53,7 +53,9 @@ const albumTitleRef = document.getElementById('albumTitle');
 const listenersRef = document.getElementById('listeners');
 const albumsRef = document.getElementById('tracklist');
 
-const artistId = 413;
+
+const urlSearchParams = new URLSearchParams(window.location.search);
+const artistId = urlSearchParams.get('artistId');
 
 window.onload = async () => {
     const artist = await fetchArtist(artistId);
@@ -67,3 +69,13 @@ window.onload = async () => {
         albumsRef.appendChild(createSongRef(song));
     });
 }
+const localArray = JSON.parse(localStorage.getItem('savedAlbums'));
+console.log(localArray)
+localArray.forEach(lc=>{
+    console.log(lc)
+    let casualList=document.getElementById('casuaList')
+    casualList.classList.add('list-unstyled')
+    let newLi = document.createElement('li')
+    newLi.innerHTML=lc;
+    casualList.appendChild(newLi)
+})

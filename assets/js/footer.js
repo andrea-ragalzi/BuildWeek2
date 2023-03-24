@@ -1,8 +1,8 @@
-const footer_mobile_apy =
+const FOOTER_API_MOBILE =
   "https://striveschool-api.herokuapp.com/api/deezer/album/363782";
 
-const myAlbumMobile = function () {
-  fetch(footer_mobile_apy)
+const MyFooterMobile = function () {
+  fetch(FOOTER_API_MOBILE)
     .then((response) => {
       return response.json();
     })
@@ -17,7 +17,7 @@ const myAlbumMobile = function () {
     });
 };
 
-  myAlbumMobile()
+  MyFooterMobile()
 
   /* 
 

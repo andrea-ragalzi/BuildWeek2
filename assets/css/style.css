@@ -129,10 +129,6 @@ i:hover {
   margin-top: 20px;
   font-size: 0.8em;
 }
-.artist-body .row {
-  display: flex;
-  align-items: center;
-}
 .artist-body .img-song {
   margin-bottom: 20px;
   display: flex;
@@ -149,11 +145,14 @@ i:hover {
 .artist-body #listeners {
   color: var(--color-grey-light);
 }
-.artist-body .info, .artist-body h4, .artist-body p {
+.artist-body .info,
+.artist-body h4,
+.artist-body p {
   white-space: nowrap;
   font-size: 1rem;
 }
-.artist-body .info, .artist-body h4 {
+.artist-body .info,
+.artist-body h4 {
   font-size: 1.1em;
 }
 .artist-body .info p {
@@ -215,21 +214,54 @@ i:hover {
   font-size: 1.6em;
   margin-right: 5px;
 }
-.artist-body .albumFooter {
-  position: sticky;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.951);
-}
-.artist-body .albumFooter .playBar {
+.artist-body .a .playBar {
   background-color: rgba(49, 49, 49, 0.896);
 }
-
-/*MEDIAQ*/
 @media screen and (max-width: 768px) {
-  .sidebar_left {
+  .artist-body .sidebar_left {
     display: none;
   }
-  .footerDekstop {
+  .artist-body .footerDekstop {
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  .artist-body .sidebar_right {
+    display: none;
+  }
+}
+@media screen and (min-width: 767px) {
+  .artist-body .mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .artist-body .dekstop {
+    display: none;
+  }
+}
+
+.index-body {
+  background-color: rgb(20, 20, 20);
+  color: white;
+}
+.index-body a {
+  color: white;
+}
+.index-body #albumsBig .rounded {
+  background: rgb(55, 55, 55);
+  background: linear-gradient(-45deg, rgb(55, 55, 55) 60%, rgba(255, 0, 0, 0.381) 100%);
+  padding: 0.5em;
+  margin: 1em;
+  background-color: rgb(55, 55, 55);
+  color: white;
+}
+.index-body #albumsBig .rounded img {
+  width: 150px;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar_left {
     display: none;
   }
 }
@@ -237,76 +269,128 @@ i:hover {
   .sidebar_right {
     display: none;
   }
-  .sidebar_left {
-    width: 25%;
-  }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
   .mobile {
     display: none;
   }
-  .albumFooter {
-    position: fixed;
+}
+@media screen and (max-width: 768px) {
+  .dekstop {
     display: none;
-  }
-  main, header {
-    margin-left: 26%;
-    width: 60%;
-  }
-  main {
-    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 64%, rgb(29, 29, 29) 100%);
-    margin-top: -20px;
-    margin-bottom: 100px;
-    margin-left: 25%;
-  }
-  .sidebar_left {
-    margin-top: -1040px;
-    margin-right: 900px;
-    position: fixed;
-  }
-  .sidebar_right {
-    margin-top: -760px;
-    margin-left: 1000px;
-    background-color: black;
-    height: 100vh;
-    width: 80px;
-    position: fixed;
-    width: 70px;
-  }
-  .display-1 {
-    margin-bottom: 90px;
-    font-weight: bolder;
-  }
-  #tracklist i.bi.bi-three-dots-vertical {
-    display: none;
-  }
-  .footerDekstop {
-    position: fixed;
-    width: 100%;
-    margin-left: -10px;
-  }
-  .row.row-cols-3 {
-    display: inline-flex;
-    margin-left: 20px;
-  }
-  .follow {
-    margin-left: 50px;
-  }
-  .play {
-    display: none;
-  }
-  .follow.btn {
-    border: 1px solid white;
   }
 }
-.sidebar_left,
-.sidebar_right {
+.search-body {
+  background-color: var(--color-grey);
+}
+.search-body .dynamicContent {
+  margin: 1em;
+}
+.search-body .dynamicContent h4 {
+  font-size: 0.8em;
+  color: white;
+  font-weight: bold;
+}
+.search-body .dynamicContent p {
+  color: rgb(60, 60, 60);
+}
+.search-body .searchInput {
+  border-radius: 20px;
+}
+.search-body nav {
   padding: 0;
-  font-size: 0.9em;
-  color: rgb(160, 160, 160);
-  background-color: rgb(10, 10, 10);
-  left: 0;
+  z-index: 1;
+  background-color: black;
   position: sticky;
+  top: 0;
+  padding: 0.5em;
+}
+.search-body nav i {
+  color: white;
+}
+.search-body nav #input {
+  width: 300px;
+  padding: 0.2em;
+}
+.search-body nav input {
+  color: black;
+  margin: 0;
+}
+.search-body #dynamic {
+  color: white;
+}
+.search-body #dynamic .smallMusic {
+  width: 200px;
+}
+.search-body #dynamic .code {
+  border-radius: 20px;
+  font-weight: bold;
+  border: none;
+  padding: 0.5em;
+  background-color: rgb(10, 10, 10);
+}
+.search-body #dynamic span {
+  font-size: 0.7em;
+}
+.search-body #dynamic p {
+  margin: 0;
+  font-weight: bold;
+}
+.search-body #dynamic .cardList {
+  width: 170px;
+  background-color: rgb(30, 30, 30);
+}
+.search-body #dynamic .containerDynamic {
+  padding: 0.5em;
+  width: 300px;
+  background-color: rgb(30, 30, 30);
+}
+.search-body #dynamic .containerDynamic img {
+  width: 100px;
+}
+.search-body footer {
+  color: white;
+}
+.search-body a:hover, .search-body a {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+.search-body input {
+  border: none;
+  color: white;
+  margin: auto;
+  background-color: rgb(40, 40, 40);
+}
+.search-body .card {
+  width: 150px;
+  height: 100px;
+}
+.search-body h1 {
+  color: white;
+}
+.search-body h2 {
+  color: white;
+}
+@media screen and (max-width: 768px) {
+  .search-body .sidebar_left {
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  .search-body .sidebar_right {
+    display: none;
+  }
+}
+@media screen and (min-width: 767px) {
+  .search-body .mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .search-body .dekstop {
+    display: none;
+  }
 }
 
 .index-body {

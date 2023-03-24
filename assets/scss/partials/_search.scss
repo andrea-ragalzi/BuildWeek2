@@ -1,30 +1,125 @@
 @import 'colors';
 
 .search-body {
-    background-color: var(--color-black);
-    h1{
+    .dynamicContent{
+    margin: 1em;
+        h4{ font-size: 0.8em;
+            color: white;
+            font-weight: bold;
+        }
+        p{
+            color: rgb(60, 60, 60);
+        }
+    }
+    .searchInput{
+        border-radius: 20px;
+    }
+    nav{
+        padding: 0;
+        z-index: 1;
+        background-color:black;
+        position: sticky;
+        top: 0;
+        i{
+            color: white;
+        }
+
+        #input{
+            width: 300px;
+            padding: 0.2em;
+        }
+        input{
+            color: black;
+            margin: 0;
+        }
+            padding: 0.5em;
+            
+    }
+    
+    #dynamic{
+        .smallMusic{
+            width: 200px;
+        }
+
+        .code{
+            border-radius: 20px;
+            font-weight: bold;
+            border: none;
+            padding: 0.5em;
+            background-color: rgb(10, 10, 10);
+        }
+        span{
+            font-size: 0.7em;
+        }
+        color: white;
+        p{
+            margin: 0;
+            font-weight: bold;
+        }
+        .cardList{
+            width: 170px;
+            background-color: rgb(30, 30, 30);
+        }
+        .containerDynamic{
+            img{
+                width: 100px;
+            }
+            padding: 0.5em;
+            width: 300px;
+            background-color: rgb(30, 30, 30);
+        }
+
+    }
+
+
+    footer{
         color: white;
     }
-    .navbar{
+    a:hover,a{
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+    }
+    input{
+        border: none;
         color: white;
-        background-color: rgba(70, 70, 70, 0.8);
-        margin: 2em;
-        border-radius: 5px;
-        padding: 0.5em;
+        margin: auto;
+        background-color: rgb(40, 40, 40);
+    }
+    .card{
+        width: 150px;
+        height: 100px;
+    }
+
+    h1{
+        color: white;
     }
     h2{
         color: white;
     }
-    .icon{
-        color: white;
-        margin-top: 15px;
+    background-color:var(--color-grey);
+    @media screen and (max-width:768px) {
+        .sidebar_left {
+            display: none;
+        }
     }
-    .playbar{
-        color: white;
+    
+    @media screen and (max-width:992px) {
+        .sidebar_right {
+            display: none;
+        }
     }
-    .card{
-        background-image: url(https://play-lh.googleusercontent.com/P2VMEenhpIsubG2oWbvuLGrs0GyyzLiDosGTg8bi8htRXg9Uf0eUtHiUjC28p1jgHzo=w600-h300-pc0xffffff-pd);
-        background-size: cover;
+    
+    @media screen and (min-width:767px) {
+        .mobile {
+            display: none;
+        }
+    }
+    
+    @media screen and (max-width:768px) {
+        .dekstop {
+            display: none;
+        }
     }
     @media screen and (min-width:1200px){
        .mobile{
