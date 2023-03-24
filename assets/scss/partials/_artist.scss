@@ -16,10 +16,13 @@
 .bodyContain{
     padding: 0 1em;
 }
-    #coverImg {
-        height: 400px;
-    }
-
+#coverImg {
+    height: 300px;
+    margin-top: -10px;
+    margin-left: -22px;
+    margin-right: -23px;    
+}
+      
     #followers {
         margin-top: 20px;
         font-size: 0.8em;
@@ -132,6 +135,13 @@
         .footerDekstop{
             display: none;
         }
+
+        .col-8 {
+            width: 100%;
+        }
+
+
+        
     }
     
     @media screen and (max-width:992px) {
@@ -139,11 +149,48 @@
             display: none;
         }
 
+
+
     }
     
     @media screen and (min-width:767px) {
         .mobile , .albumFooter{
             display: none;
+        }
+
+        .footerMobile {
+            display: none;
+        }
+
+        .follow {
+            border-color: white;
+        }
+
+        i.bi.bi-shuffle {
+            display: none;
+        }
+        #tracklist i.bi.bi-three-dots-vertical {
+            display: none;
+        }
+
+        i.bi.bi-three-dots-vertical {
+            position: relative;
+            bottom: 30px;
+            left: 150px;
+        }
+
+        .follow {
+            position: relative;
+            left: 50px;
+        }
+
+        .bi-play-circle-fill::before {
+            font-size: 1.8em;
+        }
+
+        .sidebar_right > div {
+            margin: 0.5em;
+            width: 110%;
         }
     }
     
@@ -153,3 +200,4 @@
         }
 }
 }
+
