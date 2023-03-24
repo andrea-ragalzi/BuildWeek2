@@ -303,6 +303,9 @@ i:hover {
 .search-body .searchInput {
   border-radius: 20px;
 }
+.search-body .cerca {
+  height: 50px;
+}
 .search-body nav {
   padding: 0;
   z-index: 1;
@@ -354,6 +357,66 @@ i:hover {
 .search-body #dynamic .containerDynamic img {
   width: 100px;
 }
+.search-body .podcast {
+  background-color: rgb(255, 72, 0);
+  color: white;
+  font-size: 1.2em;
+}
+.search-body .events {
+  background-color: rgb(94, 34, 234);
+  color: white;
+  font-size: 1.2em;
+}
+.search-body .created {
+  background-color: rgb(43, 42, 122);
+  color: white;
+  font-size: 1.2em;
+}
+.search-body .new {
+  background-color: rgb(255, 86, 86);
+  color: white;
+  font-size: 1.2em;
+}
+.search-body .sanremo {
+  background-color: rgb(203, 90, 255);
+  color: white;
+  font-size: 1.2em;
+}
+.search-body .pop {
+  background-color: green;
+  color: white;
+  font-size: 1.2em;
+}
+.search-body .hipHop {
+  background-color: rgb(157, 100, 0);
+  color: white;
+  font-size: 1.2em;
+}
+.search-body .classified {
+  background-color: rgb(120, 91, 148);
+  color: white;
+  font-size: 1.2em;
+}
+.search-body .dance {
+  background-color: rgb(255, 106, 0);
+  color: white;
+  font-size: 1.2em;
+}
+.search-body .rock {
+  background-color: red;
+  color: white;
+  font-size: 1.2em;
+}
+.search-body .latina {
+  background-color: rgb(255, 116, 139);
+  color: white;
+  font-size: 1.2em;
+}
+.search-body .indie {
+  background-color: violet;
+  color: white;
+  font-size: 1.2em;
+}
 .search-body footer {
   color: white;
 }
@@ -369,7 +432,7 @@ i:hover {
   background-color: rgb(40, 40, 40);
 }
 .search-body .card {
-  width: 150px;
+  width: 40%;
   height: 100px;
 }
 .search-body h1 {
