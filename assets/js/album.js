@@ -1,8 +1,9 @@
 const ALBUM_API =
-  "https://striveschool-api.herokuapp.com/api/deezer/album/363782";
+  "https://striveschool-api.herokuapp.com/api/deezer/album/";
 
-const myAlbumMobile = function () {
-  fetch(ALBUM_API)
+const myAlbumMobile = function (albumId) {
+  const url = `${ALBUM_API}${albumId}`
+  fetch(url)
     .then((response) => {
       return response.json();
     })
@@ -69,12 +70,12 @@ const myAlbumMobile = function () {
       });
     });
 };
-myAlbumMobile();
 
 //VERSIONE DEKSTOP
 
-const myAlbumDekstop = function () {
-  fetch(ALBUM_API)
+const myAlbumDekstop = function (albumID) {
+  const url = `${ALBUM_API}${albumID}`
+  fetch(url)
     .then((response) => {
       return response.json();
     })
@@ -99,8 +100,8 @@ const myAlbumDekstop = function () {
     </div>
   </div>
   `;
-      events.tracks.data.forEach((music,i) => {
-i++
+      events.tracks.data.forEach((music, i) => {
+        i++
         console.log(music)
         let musicAlbum = document.getElementById("brani");
         musicAlbum.innerHTML += `
@@ -136,9 +137,9 @@ i++
       `;
 
 
-
-      let musicBar = document.getElementsByClassName('musicBar')[0]
-      musicBar.innerHTML = `
+        //FOOTER
+        let musicBar = document.getElementsByClassName('musicBar')[0]
+        musicBar.innerHTML = `
     <span class="mx-2">0.00</span>
                 <div class="progress bar" role="progressbar" aria-label="Basic example" aria-valuenow="" aria-valuemin="0"
                   aria-valuemax="${music.duration}">
@@ -162,11 +163,11 @@ i++
                 </div>
               </div>
       `
-      
+
 
       });
 
-//FOOTER
+      //FOOTER
 
       let play = document.getElementById('playFill')
       let pause = document.getElementById('pause')
@@ -182,5 +183,19 @@ i++
       })
     });
 };
-myAlbumDekstop()
 
+const urlSearchParams = new URLSearchParams(window.location.search);
+const albumId = urlSearchParams.get('albumId');
+myAlbumMobile(albumId);
+myAlbumDekstop(albumId)
+
+const localArray = JSON.parse(localStorage.getItem('savedAlbums'));
+console.log(localArray)
+localArray.forEach(lc=>{
+    console.log(lc)
+    let casualList=document.getElementById('casuaList')
+    casualList.classList.add('list-unstyled')
+    let newLi = document.createElement('li')
+    newLi.innerHTML=lc;
+    casualList.appendChild(newLi)
+})
