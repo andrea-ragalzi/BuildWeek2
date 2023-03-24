@@ -172,6 +172,17 @@
             display: none;
         }
 
+        i.bi.bi-three-dots-vertical {
+            position: relative;
+            bottom: 30px;
+            left: 150px;
+        }
+
+        .follow {
+            position: relative;
+            left: 50px;
+        }
+
         .bi-play-circle-fill::before {
             font-size: 1.8em;
         }

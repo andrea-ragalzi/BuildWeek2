@@ -251,6 +251,15 @@ i:hover {
   .artist-body #tracklist i.bi.bi-three-dots-vertical {
     display: none;
   }
+  .artist-body i.bi.bi-three-dots-vertical {
+    position: relative;
+    bottom: 30px;
+    left: 150px;
+  }
+  .artist-body .follow {
+    position: relative;
+    left: 50px;
+  }
   .artist-body .bi-play-circle-fill::before {
     font-size: 1.8em;
   }
