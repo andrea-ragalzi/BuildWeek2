@@ -102,7 +102,6 @@ const myAlbumDekstop = function (albumID) {
   `;
       events.tracks.data.forEach((music, i) => {
         i++
-        console.log(music)
         let musicAlbum = document.getElementById("brani");
         musicAlbum.innerHTML += `
       <div class="d-flex">
@@ -183,6 +182,8 @@ const myAlbumDekstop = function (albumID) {
       })
     });
 };
+
+
 
 const urlSearchParams = new URLSearchParams(window.location.search);
 const albumId = urlSearchParams.get('albumId');
