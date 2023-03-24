@@ -103,10 +103,10 @@
 .albumFooter {
   position: sticky;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.915);
 }
 .albumFooter .playBar {
-  background-color: rgba(70, 70, 70, 0.8);
+  background-color: rgba(77, 77, 77, 0.727);
 }
 .albumFooter div i + p {
   font-size: 0.7em;
