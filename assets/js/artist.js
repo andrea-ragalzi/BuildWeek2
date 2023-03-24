@@ -53,7 +53,9 @@ const albumTitleRef = document.getElementById('albumTitle');
 const listenersRef = document.getElementById('listeners');
 const albumsRef = document.getElementById('tracklist');
 
-const artistId = 412;
+
+const urlSearchParams = new URLSearchParams(window.location.search);
+const artistId = urlSearchParams.get('artistId');
 
 window.onload = async () => {
     const artist = await fetchArtist(artistId);
