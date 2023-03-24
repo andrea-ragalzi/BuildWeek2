@@ -1,8 +1,10 @@
 @import 'colors';
 
 .search-body {
+    color: white;
     .dynamicContent{
     margin: 1em;
+    
         h4{ font-size: 0.8em;
             color: white;
             font-weight: bold;
@@ -13,6 +15,11 @@
     }
     .searchInput{
         border-radius: 20px;
+        
+    }
+
+    .cerca {
+        height: 50px;
     }
     nav{
         padding: 0;
@@ -68,8 +75,131 @@
             width: 300px;
             background-color: rgb(30, 30, 30);
         }
+        
 
     }
+              // SCSS PER LE CARD
+    .podcast {
+        background-color: rgb(255, 72, 0);
+        color: white;
+        font-size: 1.2em;
+        overflow: hidden;
+
+    }
+
+    .events {
+        background-color: rgb(94, 34, 234);
+        color: white;
+        font-size: 1.2em;    
+        overflow: hidden;
+    }
+
+    .created {
+        background-color: rgb(43, 42, 122);
+        color: white;
+        font-size: 1.2em;
+        overflow: hidden;
+    }
+
+    .new {
+        background-color: rgb(255, 86, 86);
+        color: white;
+        font-size: 1.2em;
+        font-weight: bold;
+        overflow: hidden;
+    }
+
+    .sanremo {
+        background-color: rgb(203, 90, 255);
+        color: white;
+        font-size: 1.2em;
+        overflow: hidden;
+
+    }
+
+    .pop {
+        background-color: green;
+        color: white;
+        font-size: 1.2em;
+        overflow: hidden;
+
+    }
+
+    .hipHop {
+        background-color: rgb(157, 100, 0);
+        color: white;
+        font-size: 1.2em;
+        overflow: hidden;
+
+    }
+
+    .classified {
+        background-color: rgb(120, 91, 148);
+        color: white;
+        font-size: 1.2em;
+        overflow: hidden;
+
+    }
+
+    .dance {
+        background-color: rgb(255, 106, 0);
+        color: white;
+        font-size: 1.2em;
+        overflow: hidden;
+
+    }
+
+    .rock {
+        background-color: red;
+        color: white;
+        font-size: 1.2em;
+        overflow: hidden;
+
+    }
+
+    .latina {
+        background-color: rgb(255, 116, 139);
+        color: white;
+        font-size: 1.2em;
+        overflow: hidden;
+
+    }
+
+    .indie {
+        background-color: violet;
+        color: white;
+        font-size: 1.2em;
+        overflow: hidden;
+    }
+
+    .card-body {
+        position: relative;
+      }
+
+      
+      .card-text {
+        position: relative;
+        padding-bottom: 50px;
+        
+      }
+      
+      .card-text img {
+        position: absolute;
+        bottom: 20;
+        right: -23%;
+        transform: translateY(50%) rotate(30deg);
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 10px;
+      }
+      
+      
+      
+      
+
+
+
+
 
 
     footer{
@@ -87,8 +217,8 @@
         background-color: rgb(40, 40, 40);
     }
     .card{
-        width: 150px;
-        height: 100px;
+        width:  40%;
+        height: 110px;
     }
 
     h1{

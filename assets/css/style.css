@@ -63,8 +63,6 @@
   width: 25px;
 }
 .album-body .bodyContain {
-  overflow-y: scroll;
-  height: 100vh;
   padding: 0;
 }
 .album-body .bodyContain #album {
@@ -103,10 +101,10 @@
 .albumFooter {
   position: sticky;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.915);
 }
 .albumFooter .playBar {
-  background-color: rgba(70, 70, 70, 0.8);
+  background-color: rgba(77, 77, 77, 0.727);
 }
 .albumFooter div i + p {
   font-size: 0.7em;
@@ -117,9 +115,21 @@ i:hover {
 }
 
 .artist-body {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 50%, rgba(255, 255, 255, 0.466) 100%);
+  margin: 0;
+  padding: 0;
   background-color: var(--color-black);
   color: var(--color-white);
-  margin: 10px;
+}
+.artist-body h1 {
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.artist-body .artistCol {
+  padding: 0;
+}
+.artist-body .bodyContain {
+  padding: 0 1em;
 }
 .artist-body #coverImg {
   height: 400px;
@@ -129,14 +139,8 @@ i:hover {
   margin-top: 20px;
   font-size: 0.8em;
 }
-.artist-body .img-song {
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-}
-.artist-body .row p {
-  margin: 0;
-  line-height: 1;
+.artist-body .tracklist img {
+  width: 75px;
 }
 .artist-body #albumTitle {
   font-weight: bold;
@@ -167,10 +171,6 @@ i:hover {
   width: 24px;
   height: 0px;
   margin-left: 130px;
-}
-.artist-body .row i {
-  display: flex;
-  align-items: center;
 }
 .artist-body #albumTitle {
   width: 200px;
@@ -224,6 +224,9 @@ i:hover {
   .artist-body .footerDekstop {
     display: none;
   }
+  .artist-body .col-8 {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 992px) {
   .artist-body .sidebar_right {
@@ -231,8 +234,36 @@ i:hover {
   }
 }
 @media screen and (min-width: 767px) {
-  .artist-body .mobile {
+  .artist-body .mobile, .artist-body .albumFooter {
     display: none;
+  }
+  .artist-body .footerMobile {
+    display: none;
+  }
+  .artist-body .follow {
+    border-color: white;
+  }
+  .artist-body i.bi.bi-shuffle {
+    display: none;
+  }
+  .artist-body #tracklist i.bi.bi-three-dots-vertical {
+    display: none;
+  }
+  .artist-body i.bi.bi-three-dots-vertical {
+    position: relative;
+    bottom: 30px;
+    left: 150px;
+  }
+  .artist-body .follow {
+    position: relative;
+    left: 50px;
+  }
+  .artist-body .bi-play-circle-fill::before {
+    font-size: 1.8em;
+  }
+  .artist-body .sidebar_right > div {
+    margin: 0.5em;
+    width: 110%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -259,19 +290,6 @@ i:hover {
 .index-body #albumsBig .rounded img {
   width: 150px;
 }
-.index-body .artistButton {
-  background-color: var(--color-grey);
-  border: none;
-  color: var(--color-grey-light);
-  font-size: 1em;
-}
-
-.index-article a {
-  background-color: #1FDF64;
-  border-radius: 38%;
-  padding: 0.7em;
-  color: rgb(20, 20, 20);
-}
 
 @media screen and (max-width: 768px) {
   .sidebar_left {
@@ -294,6 +312,7 @@ i:hover {
   }
 }
 .search-body {
+  color: white;
   background-color: var(--color-grey);
 }
 .search-body .dynamicContent {
@@ -309,6 +328,9 @@ i:hover {
 }
 .search-body .searchInput {
   border-radius: 20px;
+}
+.search-body .cerca {
+  height: 50px;
 }
 .search-body nav {
   padding: 0;
@@ -361,6 +383,95 @@ i:hover {
 .search-body #dynamic .containerDynamic img {
   width: 100px;
 }
+.search-body .podcast {
+  background-color: rgb(255, 72, 0);
+  color: white;
+  font-size: 1.2em;
+  overflow: hidden;
+}
+.search-body .events {
+  background-color: rgb(94, 34, 234);
+  color: white;
+  font-size: 1.2em;
+  overflow: hidden;
+}
+.search-body .created {
+  background-color: rgb(43, 42, 122);
+  color: white;
+  font-size: 1.2em;
+  overflow: hidden;
+}
+.search-body .new {
+  background-color: rgb(255, 86, 86);
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  overflow: hidden;
+}
+.search-body .sanremo {
+  background-color: rgb(203, 90, 255);
+  color: white;
+  font-size: 1.2em;
+  overflow: hidden;
+}
+.search-body .pop {
+  background-color: green;
+  color: white;
+  font-size: 1.2em;
+  overflow: hidden;
+}
+.search-body .hipHop {
+  background-color: rgb(157, 100, 0);
+  color: white;
+  font-size: 1.2em;
+  overflow: hidden;
+}
+.search-body .classified {
+  background-color: rgb(120, 91, 148);
+  color: white;
+  font-size: 1.2em;
+  overflow: hidden;
+}
+.search-body .dance {
+  background-color: rgb(255, 106, 0);
+  color: white;
+  font-size: 1.2em;
+  overflow: hidden;
+}
+.search-body .rock {
+  background-color: red;
+  color: white;
+  font-size: 1.2em;
+  overflow: hidden;
+}
+.search-body .latina {
+  background-color: rgb(255, 116, 139);
+  color: white;
+  font-size: 1.2em;
+  overflow: hidden;
+}
+.search-body .indie {
+  background-color: violet;
+  color: white;
+  font-size: 1.2em;
+  overflow: hidden;
+}
+.search-body .card-body {
+  position: relative;
+}
+.search-body .card-text {
+  position: relative;
+  padding-bottom: 50px;
+}
+.search-body .card-text img {
+  position: absolute;
+  bottom: 20;
+  right: -23%;
+  transform: translateY(50%) rotate(30deg);
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+}
 .search-body footer {
   color: white;
 }
@@ -376,8 +487,8 @@ i:hover {
   background-color: rgb(40, 40, 40);
 }
 .search-body .card {
-  width: 150px;
-  height: 100px;
+  width: 40%;
+  height: 110px;
 }
 .search-body h1 {
   color: white;
@@ -512,6 +623,16 @@ body {
   width: 30%;
 }
 
+.bodyContain {
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.sidebar_left, .sidebar_right {
+  padding-right: 0;
+  background-color: #000000;
+}
+
 .sidebar_right span {
   color: white;
   font-weight: bold;
@@ -528,12 +649,8 @@ body {
   margin-right: 10px;
 }
 
-.utents {
-  overflow-y: scroll;
-  height: 500px;
-}
-
 .casual-music {
+  font-size: 0.7em;
   overflow-y: scroll;
   height: 400px;
 }/*# sourceMappingURL=style.css.map */
