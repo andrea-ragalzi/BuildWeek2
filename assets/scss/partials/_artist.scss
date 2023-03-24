@@ -151,6 +151,17 @@
         .footerMobile {
             display: none;
         }
+
+        .follow {
+            border-color: white;
+        }
+
+        i.bi.bi-shuffle {
+            display: none;
+        }
+        #tracklist i.bi.bi-three-dots-vertical {
+            display: none;
+        }
     }
     
     @media screen and (max-width:768px) {

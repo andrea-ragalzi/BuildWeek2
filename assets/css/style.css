@@ -237,6 +237,15 @@ i:hover {
   .artist-body .footerMobile {
     display: none;
   }
+  .artist-body .follow {
+    border-color: white;
+  }
+  .artist-body i.bi.bi-shuffle {
+    display: none;
+  }
+  .artist-body #tracklist i.bi.bi-three-dots-vertical {
+    display: none;
+  }
 }
 @media screen and (max-width: 768px) {
   .artist-body .dekstop {
