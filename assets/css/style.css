@@ -234,6 +234,9 @@ i:hover {
   .artist-body .mobile {
     display: none;
   }
+  .artist-body .footerMobile {
+    display: none;
+  }
 }
 @media screen and (max-width: 768px) {
   .artist-body .dekstop {

@@ -139,10 +139,16 @@
             display: none;
         }
 
+
+
     }
     
     @media screen and (min-width:767px) {
         .mobile {
+            display: none;
+        }
+
+        .footerMobile {
             display: none;
         }
     }
