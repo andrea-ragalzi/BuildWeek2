@@ -63,8 +63,6 @@
   width: 25px;
 }
 .album-body .bodyContain {
-  overflow-y: scroll;
-  height: 100vh;
   padding: 0;
 }
 .album-body .bodyContain #album {
@@ -117,26 +115,31 @@ i:hover {
 }
 
 .artist-body {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 50%, rgba(255, 255, 255, 0.466) 100%);
+  margin: 0;
+  padding: 0;
   background-color: var(--color-black);
   color: var(--color-white);
-  margin: 10px;
+}
+.artist-body h1 {
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.artist-body .artistCol {
+  padding: 0;
+}
+.artist-body .bodyContain {
+  padding: 0 1em;
 }
 .artist-body #coverImg {
   height: 400px;
-  margin-top: -10px;
 }
 .artist-body #followers {
   margin-top: 20px;
   font-size: 0.8em;
 }
-.artist-body .img-song {
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-}
-.artist-body .row p {
-  margin: 0;
-  line-height: 1;
+.artist-body .tracklist img {
+  width: 75px;
 }
 .artist-body #albumTitle {
   font-weight: bold;
@@ -167,10 +170,6 @@ i:hover {
   width: 24px;
   height: 0px;
   margin-left: 130px;
-}
-.artist-body .row i {
-  display: flex;
-  align-items: center;
 }
 .artist-body #albumTitle {
   width: 200px;
@@ -231,7 +230,7 @@ i:hover {
   }
 }
 @media screen and (min-width: 767px) {
-  .artist-body .mobile {
+  .artist-body .mobile, .artist-body .albumFooter {
     display: none;
   }
 }
@@ -259,6 +258,12 @@ i:hover {
 .index-body #albumsBig .rounded img {
   width: 150px;
 }
+.index-body .artistButton {
+  background-color: var(--color-grey);
+  border: none;
+  color: var(--color-grey-light);
+  font-size: 1em;
+}
 
 @media screen and (max-width: 768px) {
   .sidebar_left {
@@ -281,6 +286,7 @@ i:hover {
   }
 }
 .search-body {
+  color: white;
   background-color: var(--color-grey);
 }
 .search-body .dynamicContent {
@@ -421,7 +427,7 @@ i:hover {
   --color-black-light: #1a1a1a;
   --color-black-dark: black;
   --color-grey: #121212;
-  --color-grey-light: #2c2c2c;
+  --color-grey-light: #929292;
   --color-grey-dark: black;
   --color-white: #FFFFFF;
   --color-white-light: white;
@@ -472,13 +478,15 @@ body {
   font-size: 0.7em;
   color: rgb(140, 140, 140);
 }
-.footerDekstop .bi-play-fill, .footerDekstop .bi-pause-fill {
+.footerDekstop .bi-play-fill,
+.footerDekstop .bi-pause-fill {
   border-radius: 50%;
   background-color: white;
   padding: 0.2em;
   color: black;
 }
-.footerDekstop .bi-shuffle:hover, .footerDekstop .bi-arrow-return-left:hover {
+.footerDekstop .bi-shuffle:hover,
+.footerDekstop .bi-arrow-return-left:hover {
   color: var(--color-green-dark);
 }
 .footerDekstop .progress {
@@ -497,6 +505,16 @@ body {
   width: 30%;
 }
 
+.bodyContain {
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.sidebar_left, .sidebar_right {
+  padding-right: 0;
+  background-color: #000000;
+}
+
 .sidebar_right span {
   color: white;
   font-weight: bold;
@@ -506,10 +524,6 @@ body {
   margin: 0.5em;
 }
 
-a {
-  color: black;
-}
-
 ::-webkit-scrollbar {
   width: 0.8em;
   height: 0.8em;
@@ -517,32 +531,21 @@ a {
   margin-right: 10px;
 }
 
-.utents {
-  overflow-y: scroll;
-  height: 500px;
-}
-
 .casual-music {
+  font-size: 0.7em;
   overflow-y: scroll;
   height: 400px;
-}
-
-.row .sidebar_left,
-.row .sidebar_right {
-  padding: 0;
-  font-size: 0.7em;
-  color: rgb(160, 160, 160);
-  background-color: rgb(10, 10, 10);
-  left: 0;
-  position: sticky;
-}
-
-#icons {
-  margin: 0.5em;
-  border-bottom: 1px solid rgb(75, 75, 75);
-}
-
-.small {
-  font-size: 0.7em;
+  background-color: #000000;
   color: rgb(140, 140, 140);
+}
+
+.utents {
+  font-size: 0.7em;
+  overflow-y: scroll;
+  height: 100vh;
+  background-color: #000000;
+}
+
+li:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
