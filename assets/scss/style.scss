@@ -21,6 +21,27 @@ body {
     /* Prevent text from wrapping */
 }
 
+.big-album {
+    border-radius: 25px;
+}
+
+.big-album:hover {
+    cursor: pointer;
+}
+
+.artistButton {
+    background-color: var(--color-grey);
+    border: none;
+    color: var(--color-grey-light);
+    font-size: 1em;
+}
+
+.artistButton:hover {
+    text-decoration: underline;
+    color: var(--color-black);
+    background-color: var(--color-grey-light);
+}
+
 @keyframes cyclic-scroll {
     0% {
         transform: translateX(0%);
