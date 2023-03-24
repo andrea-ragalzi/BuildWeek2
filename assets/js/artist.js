@@ -81,6 +81,9 @@ window.onload = async () => {
         albumsRef.appendChild(createSongRef(song,i));
     });
 }
+
+
+
 const localArray = JSON.parse(localStorage.getItem('savedAlbums'));
 console.log(localArray)
 localArray.forEach(lc=>{
@@ -90,4 +93,7 @@ localArray.forEach(lc=>{
     let newLi = document.createElement('li')
     newLi.innerHTML=lc;
     casualList.appendChild(newLi)
+
+
+    
 })

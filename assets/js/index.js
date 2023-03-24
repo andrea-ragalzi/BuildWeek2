@@ -169,5 +169,9 @@ window.onload = async () => {
             window.location.href = url.href;
         });
     });
+
+
+
+    
     localStorage.setItem('savedAlbums', JSON.stringify(savedAlbums));
 }
