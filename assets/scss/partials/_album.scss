@@ -39,19 +39,6 @@
 }
 
 
-
-
-ul {
-    padding: 0;
-}
-
-li {
-    color: rgb(140, 140, 140);
-    font-size: 0.9em;
-    margin: 0.2em 0;
-    list-style: none;
-}
-
 .titleAlbumMain {
     color: rgb(140, 140, 140);
     border-bottom: 1px solid rgb(80, 80, 80);
@@ -81,8 +68,6 @@ li {
 }
 
 .bodyContain {
-    overflow-y: scroll;
-    height: 100vh;
     #album {
         font-size: 0.7em;
     }
