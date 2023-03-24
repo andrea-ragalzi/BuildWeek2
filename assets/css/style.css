@@ -30,15 +30,6 @@
     display: none;
   }
 }
-.album-body ul {
-  padding: 0;
-}
-.album-body li {
-  color: rgb(140, 140, 140);
-  font-size: 0.9em;
-  margin: 0.2em 0;
-  list-style: none;
-}
 .album-body .titleAlbumMain {
   color: rgb(140, 140, 140);
   border-bottom: 1px solid rgb(80, 80, 80);
@@ -132,8 +123,10 @@ i:hover {
   padding: 0 1em;
 }
 .artist-body #coverImg {
-  height: 400px;
+  height: 300px;
   margin-top: -10px;
+  margin-left: -22px;
+  margin-right: -23px;
 }
 .artist-body #followers {
   margin-top: 20px;
@@ -290,12 +283,6 @@ i:hover {
 .index-body #albumsBig .rounded img {
   width: 150px;
 }
-.index-body .artistButton {
-  background-color: var(--color-grey);
-  border: none;
-  color: var(--color-grey-light);
-  font-size: 1em;
-}
 
 @media screen and (max-width: 768px) {
   .sidebar_left {
@@ -318,8 +305,18 @@ i:hover {
   }
 }
 .search-body {
-  color: white;
   background-color: var(--color-grey);
+}
+.search-body .dynamicContent {
+  margin: 1em;
+}
+.search-body .dynamicContent h4 {
+  font-size: 0.8em;
+  color: white;
+  font-weight: bold;
+}
+.search-body .dynamicContent p {
+  color: rgb(60, 60, 60);
 }
 .search-body .searchInput {
   border-radius: 20px;
@@ -560,6 +557,27 @@ body {
   /* Prevent text from wrapping */
 }
 
+.big-album {
+  border-radius: 25px;
+}
+
+.big-album:hover {
+  cursor: pointer;
+}
+
+.artistButton {
+  background-color: var(--color-grey);
+  border: none;
+  color: var(--color-grey-light);
+  font-size: 1em;
+}
+
+.artistButton:hover {
+  text-decoration: underline;
+  color: var(--color-black);
+  background-color: var(--color-grey-light);
+}
+
 @keyframes cyclic-scroll {
   0% {
     transform: translateX(0%);
@@ -648,4 +666,17 @@ body {
   font-size: 0.7em;
   overflow-y: scroll;
   height: 400px;
+  background-color: #000000;
+  color: rgb(140, 140, 140);
+}
+
+.utents {
+  font-size: 0.7em;
+  overflow-y: scroll;
+  height: 100vh;
+  background-color: #000000;
+}
+
+li:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
