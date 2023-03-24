@@ -9,7 +9,7 @@
     @include color-palette(#000000, #121212, #FFFFFF, #1FDF64);
 }
 
-body{
+body {
 
     height: 100%;
 }
@@ -33,15 +33,18 @@ body{
 
 .footerDekstop {
     .imgBar {
-        img{
+        img {
             width: 40px;
         }
+
         p:last-of-type {
             color: rgb(140, 140, 140);
         }
-        i:hover{
+
+        i:hover {
             color: var(--color-green-dark);
         }
+
         p {
             font-size: 0.7em;
             margin-bottom: 0;
@@ -53,15 +56,19 @@ body{
         color: rgb(140, 140, 140);
     }
 
-    .bi-play-fill,.bi-pause-fill {
+    .bi-play-fill,
+    .bi-pause-fill {
         border-radius: 50%;
         background-color: white;
         padding: 0.2em;
         color: black;
     }
-    .bi-shuffle:hover,.bi-arrow-return-left:hover{
+
+    .bi-shuffle:hover,
+    .bi-arrow-return-left:hover {
         color: var(--color-green-dark);
     }
+
     .progress {
         height: 3px;
         background-color: rgb(70, 70, 70);
@@ -74,9 +81,10 @@ body{
     bottom: 0;
 
     .settingsBar {
-        i:hover{
+        i:hover {
             color: var(--color-green-dark);
         }
+
         font-size: 0.7em;
         color: rgb(180, 180, 180);
 
@@ -85,6 +93,7 @@ body{
         }
     }
 }
+
 .sidebar_right span {
     color: white;
     font-weight: bold;
@@ -94,9 +103,6 @@ body{
     margin: 0.5em;
 }
 
-a {
-    color: black;
-}
 ::-webkit-scrollbar {
     width: 0.8em;
     height: 0.8em;
@@ -104,35 +110,12 @@ a {
     margin-right: 10px;
 }
 
-.utents{
+.utents {
     overflow-y: scroll;
     height: 500px;
 }
+
 .casual-music {
     overflow-y: scroll;
     height: 400px;
-}
-
-.row {
-
-    .sidebar_left,
-    .sidebar_right {
-        padding: 0;
-        font-size: 0.7em;
-        color: rgb(160, 160, 160);
-        background-color: rgb(10, 10, 10);
-        left: 0;
-        position: sticky;
-
-    }
-}
-
-#icons {
-    margin: 0.5em;
-    border-bottom: 1px solid rgb(75, 75, 75);
-}
-
-.small {
-    font-size: 0.7em;
-    color: rgb(140, 140, 140);
 }

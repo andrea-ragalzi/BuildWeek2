@@ -283,6 +283,17 @@ i:hover {
 .search-body {
   background-color: var(--color-grey);
 }
+.search-body .dynamicContent {
+  margin: 1em;
+}
+.search-body .dynamicContent h4 {
+  font-size: 0.8em;
+  color: white;
+  font-weight: bold;
+}
+.search-body .dynamicContent p {
+  color: rgb(60, 60, 60);
+}
 .search-body .searchInput {
   border-radius: 20px;
 }
